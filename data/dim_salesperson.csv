@@ -1,0 +1,13 @@
+salesperson_id,salesperson_name,branch_id,active,hire_date
+1,Aryan Maharaj,1,True,2022-01-02
+2,Harsh Chahal,2,True,2023-09-25
+3,Ayushman Chander,3,True,2021-11-15
+4,Rushil Saini,1,True,2021-11-18
+5,Abeer Dutta,2,True,2024-04-08
+6,Arunima Dugal,3,True,2021-11-09
+7,Harsh Chanda,1,True,2022-09-05
+8,Hemangini Lalla,2,True,2024-10-24
+9,Jeet Radhakrishnan,3,True,2021-03-04
+10,Janaki Handa,1,True,2024-04-20
+11,Vedant Mann,2,True,2025-09-15
+12,Harrison Rai,3,True,2022-03-03
