@@ -1,1340 +1,2264 @@
 incentive_id,employee_id,branch_id,year,month,role,incentive_amount_inr,basis
-1,1,1,2024,1,Lead Generator,4474,On-time
-2,3,1,2024,1,Lead Generator,2333,Collection
-3,4,1,2024,1,Salesperson,8539,Collection
-4,11,1,2024,1,Installation Engineer,7307,On-time
-5,14,1,2024,1,Installation Manager,6847,New AMC
-6,15,1,2024,1,Service Sales Person,7321,Target Achievement
-7,17,1,2024,1,Service Supervisor,2586,Collection
-8,18,1,2024,1,Service Supervisor,1855,Quality
-9,19,1,2024,1,Service Technician,1059,Quality
-10,21,1,2024,1,Service Technician,3676,On-time
-11,23,1,2024,1,Service Technician,4360,Collection
-12,25,1,2024,1,Service Technician,4440,Target Achievement
-13,26,1,2024,1,Service Technician,1202,Quality
-14,28,2,2024,1,Lead Generator,4808,Collection
-15,29,2,2024,1,Lead Generator,4562,On-time
-16,30,2,2024,1,Salesperson,8945,On-time
-17,32,2,2024,1,Salesperson,7124,Target Achievement
-18,41,2,2024,1,Service Sales Person,3531,New AMC
-19,43,2,2024,1,Service Supervisor,2711,New AMC
-20,46,2,2024,1,Service Technician,1276,Quality
-21,47,2,2024,1,Service Technician,1009,Quality
-22,51,2,2024,1,Service Technician,3560,New AMC
-23,54,3,2024,1,Lead Generator,5015,Collection
-24,55,3,2024,1,Lead Generator,1310,Target Achievement
-25,56,3,2024,1,Salesperson,13122,Quality
-26,57,3,2024,1,Salesperson,5272,New AMC
-27,62,3,2024,1,Installation Engineer,7798,On-time
-28,63,3,2024,1,Installation Engineer,6880,Quality
-29,64,3,2024,1,Installation Engineer,7828,Quality
-30,67,3,2024,1,Service Sales Person,5604,New AMC
-31,73,3,2024,1,Service Technician,1001,Collection
-32,75,3,2024,1,Service Technician,2043,On-time
-33,76,3,2024,1,Service Technician,4253,New AMC
-34,4,1,2024,2,Salesperson,5094,On-time
-35,6,1,2024,2,Salesperson,9333,On-time
-36,8,1,2024,2,Salesperson,5659,Target Achievement
-37,9,1,2024,2,Sales Manager,6309,New AMC
-38,11,1,2024,2,Installation Engineer,5727,Target Achievement
-39,12,1,2024,2,Installation Engineer,5146,New AMC
-40,15,1,2024,2,Service Sales Person,6946,Quality
-41,17,1,2024,2,Service Supervisor,2769,Collection
-42,18,1,2024,2,Service Supervisor,3168,Quality
-43,22,1,2024,2,Service Technician,1698,On-time
-44,24,1,2024,2,Service Technician,3765,On-time
-45,25,1,2024,2,Service Technician,1193,New AMC
-46,26,1,2024,2,Service Technician,2840,New AMC
-47,28,2,2024,2,Lead Generator,3885,On-time
-48,31,2,2024,2,Salesperson,7802,Collection
-49,32,2,2024,2,Salesperson,5121,Collection
-50,34,2,2024,2,Salesperson,11646,Quality
-51,35,2,2024,2,Sales Manager,15687,Target Achievement
-52,36,2,2024,2,Installation Engineer,7231,Quality
-53,41,2,2024,2,Service Sales Person,9781,Quality
-54,43,2,2024,2,Service Supervisor,3400,New AMC
-55,45,2,2024,2,Service Technician,2075,New AMC
-56,47,2,2024,2,Service Technician,1792,On-time
-57,48,2,2024,2,Service Technician,3485,Quality
-58,50,2,2024,2,Service Technician,2921,New AMC
-59,55,3,2024,2,Lead Generator,2195,Target Achievement
-60,57,3,2024,2,Salesperson,6440,Target Achievement
-61,58,3,2024,2,Salesperson,9493,New AMC
-62,59,3,2024,2,Salesperson,13622,New AMC
-63,60,3,2024,2,Salesperson,12671,New AMC
-64,61,3,2024,2,Sales Manager,21469,On-time
-65,64,3,2024,2,Installation Engineer,2377,On-time
-66,66,3,2024,2,Installation Manager,8898,Target Achievement
-67,67,3,2024,2,Service Sales Person,9840,Target Achievement
-68,69,3,2024,2,Service Supervisor,5618,New AMC
-69,70,3,2024,2,Service Supervisor,5877,Collection
-70,72,3,2024,2,Service Technician,2974,Target Achievement
-71,75,3,2024,2,Service Technician,3683,New AMC
-72,78,3,2024,2,Service Technician,2913,On-time
-73,1,1,2024,3,Lead Generator,5284,On-time
-74,3,1,2024,3,Lead Generator,4269,Target Achievement
-75,4,1,2024,3,Salesperson,6902,Target Achievement
-76,7,1,2024,3,Salesperson,11156,Quality
-77,8,1,2024,3,Salesperson,9419,Quality
-78,9,1,2024,3,Sales Manager,17872,Quality
-79,11,1,2024,3,Installation Engineer,4454,Collection
-80,14,1,2024,3,Installation Manager,11025,Target Achievement
-81,15,1,2024,3,Service Sales Person,7975,Target Achievement
-82,17,1,2024,3,Service Supervisor,6660,Target Achievement
-83,18,1,2024,3,Service Supervisor,7130,Target Achievement
-84,19,1,2024,3,Service Technician,3367,Quality
-85,21,1,2024,3,Service Technician,3937,New AMC
-86,22,1,2024,3,Service Technician,3395,On-time
-87,26,1,2024,3,Service Technician,4199,New AMC
-88,27,2,2024,3,Lead Generator,2196,Collection
-89,30,2,2024,3,Salesperson,5380,Quality
-90,31,2,2024,3,Salesperson,7635,Quality
-91,32,2,2024,3,Salesperson,12270,New AMC
-92,34,2,2024,3,Salesperson,4469,Quality
-93,38,2,2024,3,Installation Engineer,6971,Quality
-94,39,2,2024,3,Installation Engineer,8198,New AMC
-95,40,2,2024,3,Installation Manager,11251,Target Achievement
-96,44,2,2024,3,Service Supervisor,6260,Collection
-97,47,2,2024,3,Service Technician,1673,On-time
-98,48,2,2024,3,Service Technician,2215,Collection
-99,50,2,2024,3,Service Technician,3884,Quality
-100,52,2,2024,3,Service Technician,4041,Collection
-101,53,3,2024,3,Lead Generator,4895,On-time
-102,55,3,2024,3,Lead Generator,2111,New AMC
-103,56,3,2024,3,Salesperson,6194,Collection
-104,60,3,2024,3,Salesperson,4304,Collection
-105,61,3,2024,3,Sales Manager,20514,Collection
-106,62,3,2024,3,Installation Engineer,6548,Target Achievement
-107,65,3,2024,3,Installation Engineer,8634,Quality
-108,69,3,2024,3,Service Supervisor,3839,Quality
-109,74,3,2024,3,Service Technician,1024,On-time
-110,76,3,2024,3,Service Technician,2223,On-time
-111,77,3,2024,3,Service Technician,1921,On-time
-112,78,3,2024,3,Service Technician,3369,New AMC
-113,4,1,2024,4,Salesperson,11637,Target Achievement
-114,5,1,2024,4,Salesperson,12580,Collection
-115,6,1,2024,4,Salesperson,10721,New AMC
-116,7,1,2024,4,Salesperson,10586,New AMC
-117,8,1,2024,4,Salesperson,7332,On-time
-118,14,1,2024,4,Installation Manager,4613,Target Achievement
-119,16,1,2024,4,Service Sales Person,7458,Collection
-120,17,1,2024,4,Service Supervisor,5613,Quality
-121,19,1,2024,4,Service Technician,3243,Collection
-122,23,1,2024,4,Service Technician,3758,Quality
-123,25,1,2024,4,Service Technician,4005,Quality
-124,26,1,2024,4,Service Technician,1602,New AMC
-125,27,2,2024,4,Lead Generator,1229,Target Achievement
-126,28,2,2024,4,Lead Generator,2952,Collection
-127,30,2,2024,4,Salesperson,9610,Quality
-128,33,2,2024,4,Salesperson,12123,On-time
-129,35,2,2024,4,Sales Manager,12668,New AMC
-130,36,2,2024,4,Installation Engineer,7019,Target Achievement
-131,37,2,2024,4,Installation Engineer,5595,On-time
-132,38,2,2024,4,Installation Engineer,2376,New AMC
-133,39,2,2024,4,Installation Engineer,7053,Quality
-134,45,2,2024,4,Service Technician,1552,New AMC
-135,47,2,2024,4,Service Technician,1006,Collection
-136,50,2,2024,4,Service Technician,2268,Quality
-137,51,2,2024,4,Service Technician,3710,On-time
-138,52,2,2024,4,Service Technician,1126,Collection
-139,55,3,2024,4,Lead Generator,3606,Quality
-140,59,3,2024,4,Salesperson,6162,Collection
-141,61,3,2024,4,Sales Manager,10443,On-time
-142,64,3,2024,4,Installation Engineer,3231,Collection
-143,66,3,2024,4,Installation Manager,9904,Quality
-144,67,3,2024,4,Service Sales Person,8305,Quality
-145,69,3,2024,4,Service Supervisor,2597,Collection
-146,70,3,2024,4,Service Supervisor,5287,On-time
-147,71,3,2024,4,Service Technician,2487,Quality
-148,74,3,2024,4,Service Technician,2995,Quality
-149,75,3,2024,4,Service Technician,3632,New AMC
-150,76,3,2024,4,Service Technician,3062,New AMC
-151,77,3,2024,4,Service Technician,3433,Target Achievement
-152,1,1,2024,5,Lead Generator,3120,New AMC
-153,5,1,2024,5,Salesperson,6055,Quality
-154,6,1,2024,5,Salesperson,11742,Collection
-155,7,1,2024,5,Salesperson,6549,Quality
-156,9,1,2024,5,Sales Manager,14570,Quality
-157,11,1,2024,5,Installation Engineer,3385,Target Achievement
-158,14,1,2024,5,Installation Manager,11408,Target Achievement
-159,18,1,2024,5,Service Supervisor,6768,Target Achievement
-160,19,1,2024,5,Service Technician,3212,Collection
-161,22,1,2024,5,Service Technician,3891,New AMC
-162,23,1,2024,5,Service Technician,4476,Target Achievement
-163,24,1,2024,5,Service Technician,4423,On-time
-164,25,1,2024,5,Service Technician,1959,Collection
-165,27,2,2024,5,Lead Generator,1334,On-time
-166,31,2,2024,5,Salesperson,9015,On-time
-167,32,2,2024,5,Salesperson,13096,New AMC
-168,37,2,2024,5,Installation Engineer,4098,Collection
-169,41,2,2024,5,Service Sales Person,5379,Quality
-170,44,2,2024,5,Service Supervisor,6216,New AMC
-171,46,2,2024,5,Service Technician,1951,Quality
-172,49,2,2024,5,Service Technician,3907,Target Achievement
-173,50,2,2024,5,Service Technician,1177,Collection
-174,52,2,2024,5,Service Technician,1689,On-time
-175,53,3,2024,5,Lead Generator,3494,Target Achievement
-176,54,3,2024,5,Lead Generator,4980,Target Achievement
-177,55,3,2024,5,Lead Generator,4521,New AMC
-178,56,3,2024,5,Salesperson,5683,Target Achievement
-179,59,3,2024,5,Salesperson,12896,On-time
-180,60,3,2024,5,Salesperson,12354,New AMC
-181,64,3,2024,5,Installation Engineer,4301,Target Achievement
-182,66,3,2024,5,Installation Manager,5094,Collection
-183,69,3,2024,5,Service Supervisor,4928,Collection
-184,71,3,2024,5,Service Technician,3250,Target Achievement
-185,72,3,2024,5,Service Technician,1467,New AMC
-186,74,3,2024,5,Service Technician,3141,Quality
-187,78,3,2024,5,Service Technician,3782,New AMC
-188,1,1,2024,6,Lead Generator,1566,Collection
-189,4,1,2024,6,Salesperson,13305,On-time
-190,7,1,2024,6,Salesperson,6947,New AMC
-191,8,1,2024,6,Salesperson,5142,Target Achievement
-192,9,1,2024,6,Sales Manager,7852,Target Achievement
-193,11,1,2024,6,Installation Engineer,6836,On-time
-194,15,1,2024,6,Service Sales Person,8334,Target Achievement
-195,17,1,2024,6,Service Supervisor,6458,Target Achievement
-196,23,1,2024,6,Service Technician,4163,Target Achievement
-197,31,2,2024,6,Salesperson,9949,Collection
-198,32,2,2024,6,Salesperson,4744,Collection
-199,35,2,2024,6,Sales Manager,13007,New AMC
-200,36,2,2024,6,Installation Engineer,3187,New AMC
-201,37,2,2024,6,Installation Engineer,3433,Collection
-202,38,2,2024,6,Installation Engineer,5346,New AMC
-203,39,2,2024,6,Installation Engineer,5603,New AMC
-204,41,2,2024,6,Service Sales Person,5429,New AMC
-205,43,2,2024,6,Service Supervisor,5527,New AMC
-206,44,2,2024,6,Service Supervisor,6401,New AMC
-207,45,2,2024,6,Service Technician,1681,On-time
-208,48,2,2024,6,Service Technician,3575,Target Achievement
-209,49,2,2024,6,Service Technician,3096,On-time
-210,52,2,2024,6,Service Technician,2949,On-time
-211,53,3,2024,6,Lead Generator,4346,Collection
-212,55,3,2024,6,Lead Generator,1675,On-time
-213,56,3,2024,6,Salesperson,5364,Target Achievement
-214,58,3,2024,6,Salesperson,10772,Collection
-215,59,3,2024,6,Salesperson,13022,New AMC
-216,60,3,2024,6,Salesperson,8655,Collection
-217,64,3,2024,6,Installation Engineer,3794,New AMC
-218,65,3,2024,6,Installation Engineer,8430,On-time
-219,67,3,2024,6,Service Sales Person,5697,Quality
-220,69,3,2024,6,Service Supervisor,3091,New AMC
-221,71,3,2024,6,Service Technician,1466,Collection
-222,72,3,2024,6,Service Technician,4007,Collection
-223,74,3,2024,6,Service Technician,2670,Collection
-224,76,3,2024,6,Service Technician,1263,On-time
-225,1,1,2024,7,Lead Generator,2958,On-time
-226,3,1,2024,7,Lead Generator,1844,Collection
-227,5,1,2024,7,Salesperson,9104,Target Achievement
-228,7,1,2024,7,Salesperson,11783,Target Achievement
-229,9,1,2024,7,Sales Manager,20822,Collection
-230,11,1,2024,7,Installation Engineer,6703,Collection
-231,12,1,2024,7,Installation Engineer,6196,Quality
-232,14,1,2024,7,Installation Manager,2838,Collection
-233,15,1,2024,7,Service Sales Person,10262,Target Achievement
-234,18,1,2024,7,Service Supervisor,6494,Quality
-235,21,1,2024,7,Service Technician,1217,Collection
-236,22,1,2024,7,Service Technician,2433,New AMC
-237,25,1,2024,7,Service Technician,2687,New AMC
-238,26,1,2024,7,Service Technician,3171,Collection
-239,27,2,2024,7,Lead Generator,3269,Quality
-240,29,2,2024,7,Lead Generator,4883,Target Achievement
-241,30,2,2024,7,Salesperson,4544,Collection
-242,31,2,2024,7,Salesperson,10847,Quality
-243,33,2,2024,7,Salesperson,4997,Collection
-244,34,2,2024,7,Salesperson,9559,New AMC
-245,35,2,2024,7,Sales Manager,8401,Target Achievement
-246,36,2,2024,7,Installation Engineer,2156,Collection
-247,38,2,2024,7,Installation Engineer,2622,Collection
-248,43,2,2024,7,Service Supervisor,4499,Collection
-249,44,2,2024,7,Service Supervisor,7003,On-time
-250,45,2,2024,7,Service Technician,3005,Quality
-251,49,2,2024,7,Service Technician,2367,On-time
-252,51,2,2024,7,Service Technician,2413,Target Achievement
-253,52,2,2024,7,Service Technician,1181,On-time
-254,55,3,2024,7,Lead Generator,1957,Target Achievement
-255,57,3,2024,7,Salesperson,10181,New AMC
-256,58,3,2024,7,Salesperson,7737,On-time
-257,59,3,2024,7,Salesperson,13578,Collection
-258,61,3,2024,7,Sales Manager,14013,Collection
-259,62,3,2024,7,Installation Engineer,5663,New AMC
-260,64,3,2024,7,Installation Engineer,2736,Collection
-261,65,3,2024,7,Installation Engineer,6717,Quality
-262,66,3,2024,7,Installation Manager,10672,New AMC
-263,67,3,2024,7,Service Sales Person,7149,New AMC
-264,69,3,2024,7,Service Supervisor,7121,New AMC
-265,70,3,2024,7,Service Supervisor,2364,On-time
-266,71,3,2024,7,Service Technician,2322,New AMC
-267,73,3,2024,7,Service Technician,2870,Target Achievement
-268,74,3,2024,7,Service Technician,2611,On-time
-269,76,3,2024,7,Service Technician,4268,Target Achievement
-270,77,3,2024,7,Service Technician,3242,On-time
-271,78,3,2024,7,Service Technician,3926,Quality
-272,3,1,2024,8,Lead Generator,1546,Collection
-273,5,1,2024,8,Salesperson,11322,Target Achievement
-274,6,1,2024,8,Salesperson,7906,New AMC
-275,8,1,2024,8,Salesperson,9901,Target Achievement
-276,9,1,2024,8,Sales Manager,7645,On-time
-277,11,1,2024,8,Installation Engineer,6647,Target Achievement
-278,14,1,2024,8,Installation Manager,9494,Quality
-279,16,1,2024,8,Service Sales Person,10721,On-time
-280,17,1,2024,8,Service Supervisor,5998,On-time
-281,18,1,2024,8,Service Supervisor,5211,On-time
-282,22,1,2024,8,Service Technician,3469,On-time
-283,24,1,2024,8,Service Technician,2177,Collection
-284,25,1,2024,8,Service Technician,1805,Collection
-285,28,2,2024,8,Lead Generator,5159,Collection
-286,33,2,2024,8,Salesperson,13500,New AMC
-287,34,2,2024,8,Salesperson,13834,Collection
-288,35,2,2024,8,Sales Manager,19246,New AMC
-289,36,2,2024,8,Installation Engineer,5416,Target Achievement
-290,38,2,2024,8,Installation Engineer,3158,Target Achievement
-291,40,2,2024,8,Installation Manager,9698,Target Achievement
-292,41,2,2024,8,Service Sales Person,6038,Target Achievement
-293,44,2,2024,8,Service Supervisor,4081,New AMC
-294,46,2,2024,8,Service Technician,2016,Target Achievement
-295,50,2,2024,8,Service Technician,1751,Collection
-296,52,2,2024,8,Service Technician,2717,Target Achievement
-297,55,3,2024,8,Lead Generator,5316,Quality
-298,57,3,2024,8,Salesperson,9635,Quality
-299,58,3,2024,8,Salesperson,7289,Collection
-300,60,3,2024,8,Salesperson,5113,Quality
-301,61,3,2024,8,Sales Manager,5741,Quality
-302,62,3,2024,8,Installation Engineer,3936,Target Achievement
-303,63,3,2024,8,Installation Engineer,6795,Target Achievement
-304,64,3,2024,8,Installation Engineer,5629,New AMC
-305,65,3,2024,8,Installation Engineer,7241,On-time
-306,66,3,2024,8,Installation Manager,4503,Target Achievement
-307,67,3,2024,8,Service Sales Person,7348,On-time
-308,69,3,2024,8,Service Supervisor,4139,New AMC
-309,70,3,2024,8,Service Supervisor,5062,Target Achievement
-310,72,3,2024,8,Service Technician,1845,Quality
-311,73,3,2024,8,Service Technician,2489,Quality
-312,74,3,2024,8,Service Technician,2541,On-time
-313,75,3,2024,8,Service Technician,2576,Quality
-314,76,3,2024,8,Service Technician,1130,Target Achievement
-315,78,3,2024,8,Service Technician,1420,Collection
-316,1,1,2024,9,Lead Generator,3122,Quality
-317,3,1,2024,9,Lead Generator,3106,On-time
-318,5,1,2024,9,Salesperson,4520,On-time
-319,6,1,2024,9,Salesperson,4393,On-time
-320,8,1,2024,9,Salesperson,8473,New AMC
-321,14,1,2024,9,Installation Manager,3831,Quality
-322,16,1,2024,9,Service Sales Person,5477,Target Achievement
-323,18,1,2024,9,Service Supervisor,6596,Target Achievement
-324,19,1,2024,9,Service Technician,1810,On-time
-325,21,1,2024,9,Service Technician,2970,Collection
-326,25,1,2024,9,Service Technician,2189,New AMC
-327,26,1,2024,9,Service Technician,3723,Quality
-328,27,2,2024,9,Lead Generator,1942,On-time
-329,29,2,2024,9,Lead Generator,2948,On-time
-330,30,2,2024,9,Salesperson,14398,Collection
-331,31,2,2024,9,Salesperson,5615,On-time
-332,32,2,2024,9,Salesperson,12659,Collection
-333,34,2,2024,9,Salesperson,12257,New AMC
-334,35,2,2024,9,Sales Manager,10291,Quality
-335,36,2,2024,9,Installation Engineer,5883,Collection
-336,38,2,2024,9,Installation Engineer,8668,New AMC
-337,41,2,2024,9,Service Sales Person,2965,Quality
-338,43,2,2024,9,Service Supervisor,4461,Quality
-339,44,2,2024,9,Service Supervisor,3880,Collection
-340,45,2,2024,9,Service Technician,3295,On-time
-341,47,2,2024,9,Service Technician,2960,New AMC
-342,48,2,2024,9,Service Technician,1966,Target Achievement
-343,52,2,2024,9,Service Technician,4356,Collection
-344,53,3,2024,9,Lead Generator,1584,Collection
-345,54,3,2024,9,Lead Generator,2721,Quality
-346,55,3,2024,9,Lead Generator,3887,Collection
-347,56,3,2024,9,Salesperson,8734,New AMC
-348,58,3,2024,9,Salesperson,11570,On-time
-349,62,3,2024,9,Installation Engineer,4654,On-time
-350,63,3,2024,9,Installation Engineer,5591,On-time
-351,65,3,2024,9,Installation Engineer,4183,On-time
-352,66,3,2024,9,Installation Manager,7152,On-time
-353,67,3,2024,9,Service Sales Person,8859,Quality
-354,69,3,2024,9,Service Supervisor,5179,New AMC
-355,71,3,2024,9,Service Technician,3506,Collection
-356,72,3,2024,9,Service Technician,2150,Quality
-357,73,3,2024,9,Service Technician,4468,Target Achievement
-358,74,3,2024,9,Service Technician,3037,On-time
-359,76,3,2024,9,Service Technician,2580,On-time
-360,77,3,2024,9,Service Technician,2985,Collection
-361,1,1,2024,10,Lead Generator,2010,Target Achievement
-362,3,1,2024,10,Lead Generator,4835,Target Achievement
-363,4,1,2024,10,Salesperson,8874,Quality
-364,5,1,2024,10,Salesperson,7833,Quality
-365,6,1,2024,10,Salesperson,3736,Quality
-366,8,1,2024,10,Salesperson,6142,New AMC
-367,9,1,2024,10,Sales Manager,18539,Target Achievement
-368,11,1,2024,10,Installation Engineer,7316,New AMC
-369,15,1,2024,10,Service Sales Person,8262,Target Achievement
-370,16,1,2024,10,Service Sales Person,7105,Quality
-371,19,1,2024,10,Service Technician,2561,Collection
-372,22,1,2024,10,Service Technician,1073,Target Achievement
-373,25,1,2024,10,Service Technician,3224,Quality
-374,27,2,2024,10,Lead Generator,1957,Target Achievement
-375,29,2,2024,10,Lead Generator,3132,Target Achievement
-376,30,2,2024,10,Salesperson,12157,Quality
-377,31,2,2024,10,Salesperson,10939,Quality
-378,32,2,2024,10,Salesperson,5671,On-time
-379,35,2,2024,10,Sales Manager,9482,Quality
-380,36,2,2024,10,Installation Engineer,2852,New AMC
-381,41,2,2024,10,Service Sales Person,8930,On-time
-382,46,2,2024,10,Service Technician,2655,Target Achievement
-383,48,2,2024,10,Service Technician,1165,Quality
-384,49,2,2024,10,Service Technician,3874,Target Achievement
-385,52,2,2024,10,Service Technician,3043,Collection
-386,57,3,2024,10,Salesperson,11624,New AMC
-387,59,3,2024,10,Salesperson,6388,Quality
-388,60,3,2024,10,Salesperson,3339,Collection
-389,61,3,2024,10,Sales Manager,10996,Quality
-390,62,3,2024,10,Installation Engineer,8266,Target Achievement
-391,63,3,2024,10,Installation Engineer,4229,On-time
-392,64,3,2024,10,Installation Engineer,5621,On-time
-393,65,3,2024,10,Installation Engineer,2741,On-time
-394,69,3,2024,10,Service Supervisor,1775,On-time
-395,71,3,2024,10,Service Technician,2799,Quality
-396,72,3,2024,10,Service Technician,4095,Target Achievement
-397,73,3,2024,10,Service Technician,1274,Quality
-398,74,3,2024,10,Service Technician,2729,On-time
-399,75,3,2024,10,Service Technician,3347,Collection
-400,76,3,2024,10,Service Technician,3545,New AMC
-401,77,3,2024,10,Service Technician,3575,Target Achievement
-402,78,3,2024,10,Service Technician,1880,On-time
-403,4,1,2024,11,Salesperson,11740,New AMC
-404,6,1,2024,11,Salesperson,9304,New AMC
-405,8,1,2024,11,Salesperson,13206,New AMC
-406,11,1,2024,11,Installation Engineer,3198,Collection
-407,12,1,2024,11,Installation Engineer,4260,Collection
-408,15,1,2024,11,Service Sales Person,5266,Quality
-409,16,1,2024,11,Service Sales Person,7889,On-time
-410,17,1,2024,11,Service Supervisor,5448,Quality
-411,18,1,2024,11,Service Supervisor,2184,Target Achievement
-412,19,1,2024,11,Service Technician,3102,On-time
-413,21,1,2024,11,Service Technician,1557,Collection
-414,24,1,2024,11,Service Technician,4203,Collection
-415,26,1,2024,11,Service Technician,3431,Target Achievement
-416,28,2,2024,11,Lead Generator,5372,New AMC
-417,30,2,2024,11,Salesperson,7106,Quality
-418,32,2,2024,11,Salesperson,8833,Target Achievement
-419,33,2,2024,11,Salesperson,7783,Quality
-420,34,2,2024,11,Salesperson,13422,New AMC
-421,35,2,2024,11,Sales Manager,19467,On-time
-422,38,2,2024,11,Installation Engineer,3736,On-time
-423,40,2,2024,11,Installation Manager,12428,Target Achievement
-424,41,2,2024,11,Service Sales Person,7875,Quality
-425,47,2,2024,11,Service Technician,1248,Collection
-426,50,2,2024,11,Service Technician,3231,Collection
-427,59,3,2024,11,Salesperson,8745,Target Achievement
-428,61,3,2024,11,Sales Manager,11586,Target Achievement
-429,63,3,2024,11,Installation Engineer,6110,On-time
-430,66,3,2024,11,Installation Manager,8774,On-time
-431,67,3,2024,11,Service Sales Person,5766,Target Achievement
-432,70,3,2024,11,Service Supervisor,3363,Target Achievement
-433,71,3,2024,11,Service Technician,1420,Target Achievement
-434,75,3,2024,11,Service Technician,1681,New AMC
-435,1,1,2024,12,Lead Generator,2558,New AMC
-436,7,1,2024,12,Salesperson,4600,Quality
-437,8,1,2024,12,Salesperson,8327,Target Achievement
-438,9,1,2024,12,Sales Manager,16924,Collection
-439,11,1,2024,12,Installation Engineer,3142,Collection
-440,15,1,2024,12,Service Sales Person,4219,Quality
-441,16,1,2024,12,Service Sales Person,7144,Collection
-442,17,1,2024,12,Service Supervisor,4723,New AMC
-443,18,1,2024,12,Service Supervisor,6444,Target Achievement
-444,21,1,2024,12,Service Technician,3599,On-time
-445,23,1,2024,12,Service Technician,3082,Quality
-446,25,1,2024,12,Service Technician,3758,Collection
-447,27,2,2024,12,Lead Generator,1928,New AMC
-448,30,2,2024,12,Salesperson,8875,New AMC
-449,31,2,2024,12,Salesperson,7654,New AMC
-450,33,2,2024,12,Salesperson,11879,Quality
-451,34,2,2024,12,Salesperson,13309,New AMC
-452,37,2,2024,12,Installation Engineer,2358,Quality
-453,38,2,2024,12,Installation Engineer,3489,Target Achievement
-454,39,2,2024,12,Installation Engineer,7513,New AMC
-455,43,2,2024,12,Service Supervisor,2132,On-time
-456,47,2,2024,12,Service Technician,1387,Quality
-457,49,2,2024,12,Service Technician,2451,Target Achievement
-458,51,2,2024,12,Service Technician,3604,Quality
-459,53,3,2024,12,Lead Generator,4225,Target Achievement
-460,54,3,2024,12,Lead Generator,3439,Collection
-461,56,3,2024,12,Salesperson,5503,New AMC
-462,59,3,2024,12,Salesperson,6442,On-time
-463,60,3,2024,12,Salesperson,9116,Target Achievement
-464,61,3,2024,12,Sales Manager,19524,Quality
-465,65,3,2024,12,Installation Engineer,2355,New AMC
-466,66,3,2024,12,Installation Manager,9266,New AMC
-467,67,3,2024,12,Service Sales Person,8897,New AMC
-468,69,3,2024,12,Service Supervisor,4573,New AMC
-469,70,3,2024,12,Service Supervisor,5000,Quality
-470,71,3,2024,12,Service Technician,2704,Quality
-471,72,3,2024,12,Service Technician,1634,Quality
-472,74,3,2024,12,Service Technician,4303,New AMC
-473,75,3,2024,12,Service Technician,3325,On-time
-474,76,3,2024,12,Service Technician,3445,Collection
-475,77,3,2024,12,Service Technician,3957,New AMC
-476,78,3,2024,12,Service Technician,1966,New AMC
-477,1,1,2025,1,Lead Generator,3385,Target Achievement
-478,3,1,2025,1,Lead Generator,2403,New AMC
-479,5,1,2025,1,Salesperson,10148,Collection
-480,7,1,2025,1,Salesperson,13400,Collection
-481,14,1,2025,1,Installation Manager,12005,Target Achievement
-482,16,1,2025,1,Service Sales Person,8587,On-time
-483,17,1,2025,1,Service Supervisor,2037,On-time
-484,19,1,2025,1,Service Technician,4422,Target Achievement
-485,23,1,2025,1,Service Technician,3078,Collection
-486,25,1,2025,1,Service Technician,1280,On-time
-487,26,1,2025,1,Service Technician,2976,On-time
-488,30,2,2025,1,Salesperson,7148,On-time
-489,33,2,2025,1,Salesperson,8554,Quality
-490,40,2,2025,1,Installation Manager,4867,Collection
-491,43,2,2025,1,Service Supervisor,5097,New AMC
-492,44,2,2025,1,Service Supervisor,1662,Target Achievement
-493,45,2,2025,1,Service Technician,3247,Quality
-494,47,2,2025,1,Service Technician,3103,Target Achievement
-495,50,2,2025,1,Service Technician,3629,Quality
-496,51,2,2025,1,Service Technician,1224,Quality
-497,52,2,2025,1,Service Technician,3292,Quality
-498,58,3,2025,1,Salesperson,7626,Collection
-499,59,3,2025,1,Salesperson,6719,Target Achievement
-500,60,3,2025,1,Salesperson,10346,Collection
-501,61,3,2025,1,Sales Manager,7789,Target Achievement
-502,62,3,2025,1,Installation Engineer,6237,Target Achievement
-503,63,3,2025,1,Installation Engineer,2200,Target Achievement
-504,64,3,2025,1,Installation Engineer,2906,Quality
-505,65,3,2025,1,Installation Engineer,2724,Collection
-506,69,3,2025,1,Service Supervisor,5460,New AMC
-507,71,3,2025,1,Service Technician,3423,Target Achievement
-508,73,3,2025,1,Service Technician,1256,Quality
-509,74,3,2025,1,Service Technician,4109,On-time
-510,75,3,2025,1,Service Technician,1108,On-time
-511,76,3,2025,1,Service Technician,2793,On-time
-512,77,3,2025,1,Service Technician,1082,Quality
-513,1,1,2025,2,Lead Generator,3028,On-time
-514,3,1,2025,2,Lead Generator,4645,Quality
-515,4,1,2025,2,Salesperson,10693,Target Achievement
-516,7,1,2025,2,Salesperson,11796,Target Achievement
-517,8,1,2025,2,Salesperson,12676,Target Achievement
-518,9,1,2025,2,Sales Manager,11297,New AMC
-519,11,1,2025,2,Installation Engineer,8889,Collection
-520,14,1,2025,2,Installation Manager,9430,Quality
-521,15,1,2025,2,Service Sales Person,5624,Target Achievement
-522,16,1,2025,2,Service Sales Person,8911,On-time
-523,18,1,2025,2,Service Supervisor,3685,Collection
-524,24,1,2025,2,Service Technician,2811,Quality
-525,25,1,2025,2,Service Technician,4288,Target Achievement
-526,26,1,2025,2,Service Technician,3542,Target Achievement
-527,28,2,2025,2,Lead Generator,1536,New AMC
-528,30,2,2025,2,Salesperson,4431,New AMC
-529,31,2,2025,2,Salesperson,3627,New AMC
-530,33,2,2025,2,Salesperson,13214,Quality
-531,36,2,2025,2,Installation Engineer,2410,Quality
-532,43,2,2025,2,Service Supervisor,4840,On-time
-533,44,2,2025,2,Service Supervisor,6543,On-time
-534,45,2,2025,2,Service Technician,4429,Quality
-535,47,2,2025,2,Service Technician,1537,New AMC
-536,49,2,2025,2,Service Technician,3743,Collection
-537,50,2,2025,2,Service Technician,2335,Quality
-538,53,3,2025,2,Lead Generator,2508,New AMC
-539,54,3,2025,2,Lead Generator,1971,Target Achievement
-540,55,3,2025,2,Lead Generator,5176,Quality
-541,56,3,2025,2,Salesperson,11839,Collection
-542,57,3,2025,2,Salesperson,5991,Quality
-543,61,3,2025,2,Sales Manager,20688,Collection
-544,63,3,2025,2,Installation Engineer,3703,Target Achievement
-545,64,3,2025,2,Installation Engineer,3318,On-time
-546,66,3,2025,2,Installation Manager,3680,Target Achievement
-547,67,3,2025,2,Service Sales Person,3692,Target Achievement
-548,70,3,2025,2,Service Supervisor,1828,Collection
-549,74,3,2025,2,Service Technician,1284,Target Achievement
-550,76,3,2025,2,Service Technician,3111,Quality
-551,77,3,2025,2,Service Technician,1467,Collection
-552,1,1,2025,3,Lead Generator,4825,New AMC
-553,3,1,2025,3,Lead Generator,4566,Collection
-554,5,1,2025,3,Salesperson,5708,Quality
-555,7,1,2025,3,Salesperson,13663,Quality
-556,9,1,2025,3,Sales Manager,7613,Collection
-557,12,1,2025,3,Installation Engineer,2648,New AMC
-558,15,1,2025,3,Service Sales Person,2770,New AMC
-559,16,1,2025,3,Service Sales Person,9628,Collection
-560,21,1,2025,3,Service Technician,1225,New AMC
-561,23,1,2025,3,Service Technician,3927,Collection
-562,24,1,2025,3,Service Technician,3741,New AMC
-563,25,1,2025,3,Service Technician,4154,New AMC
-564,26,1,2025,3,Service Technician,3135,New AMC
-565,27,2,2025,3,Lead Generator,2636,On-time
-566,33,2,2025,3,Salesperson,10289,Target Achievement
-567,37,2,2025,3,Installation Engineer,5256,Collection
-568,38,2,2025,3,Installation Engineer,6295,Target Achievement
-569,39,2,2025,3,Installation Engineer,2524,New AMC
-570,43,2,2025,3,Service Supervisor,5003,New AMC
-571,45,2,2025,3,Service Technician,3646,Collection
-572,46,2,2025,3,Service Technician,1583,New AMC
-573,49,2,2025,3,Service Technician,4381,Target Achievement
-574,50,2,2025,3,Service Technician,2394,Collection
-575,56,3,2025,3,Salesperson,9222,New AMC
-576,57,3,2025,3,Salesperson,7551,Quality
-577,58,3,2025,3,Salesperson,9491,Quality
-578,59,3,2025,3,Salesperson,6356,New AMC
-579,60,3,2025,3,Salesperson,4671,Collection
-580,63,3,2025,3,Installation Engineer,2524,Quality
-581,64,3,2025,3,Installation Engineer,7887,On-time
-582,66,3,2025,3,Installation Manager,9663,Quality
-583,70,3,2025,3,Service Supervisor,2821,On-time
-584,72,3,2025,3,Service Technician,2225,Collection
-585,74,3,2025,3,Service Technician,4109,Collection
-586,76,3,2025,3,Service Technician,2390,On-time
-587,77,3,2025,3,Service Technician,1968,Collection
-588,1,1,2025,4,Lead Generator,2040,New AMC
-589,4,1,2025,4,Salesperson,12871,Quality
-590,5,1,2025,4,Salesperson,8991,New AMC
-591,7,1,2025,4,Salesperson,13692,Collection
-592,8,1,2025,4,Salesperson,9672,Target Achievement
-593,9,1,2025,4,Sales Manager,16807,New AMC
-594,11,1,2025,4,Installation Engineer,4680,Collection
-595,23,1,2025,4,Service Technician,3562,On-time
-596,24,1,2025,4,Service Technician,1136,Collection
-597,25,1,2025,4,Service Technician,1559,New AMC
-598,27,2,2025,4,Lead Generator,2845,New AMC
-599,28,2,2025,4,Lead Generator,4911,On-time
-600,29,2,2025,4,Lead Generator,3883,Target Achievement
-601,30,2,2025,4,Salesperson,6275,Target Achievement
-602,31,2,2025,4,Salesperson,4577,Collection
-603,32,2,2025,4,Salesperson,13507,New AMC
-604,33,2,2025,4,Salesperson,11272,On-time
-605,35,2,2025,4,Sales Manager,18714,Collection
-606,37,2,2025,4,Installation Engineer,4105,New AMC
-607,41,2,2025,4,Service Sales Person,8315,Target Achievement
-608,43,2,2025,4,Service Supervisor,4334,Quality
-609,45,2,2025,4,Service Technician,1442,New AMC
-610,49,2,2025,4,Service Technician,1038,On-time
-611,50,2,2025,4,Service Technician,2013,Collection
-612,53,3,2025,4,Lead Generator,1647,Quality
-613,54,3,2025,4,Lead Generator,2944,New AMC
-614,55,3,2025,4,Lead Generator,3119,Collection
-615,56,3,2025,4,Salesperson,13358,On-time
-616,58,3,2025,4,Salesperson,4090,Target Achievement
-617,60,3,2025,4,Salesperson,4456,Target Achievement
-618,63,3,2025,4,Installation Engineer,8015,On-time
-619,65,3,2025,4,Installation Engineer,5979,Target Achievement
-620,67,3,2025,4,Service Sales Person,3278,On-time
-621,69,3,2025,4,Service Supervisor,3222,Quality
-622,72,3,2025,4,Service Technician,2337,Collection
-623,73,3,2025,4,Service Technician,3076,On-time
-624,76,3,2025,4,Service Technician,2310,Collection
-625,77,3,2025,4,Service Technician,2777,Quality
-626,78,3,2025,4,Service Technician,4339,New AMC
-627,3,1,2025,5,Lead Generator,1916,Collection
-628,4,1,2025,5,Salesperson,10711,On-time
-629,5,1,2025,5,Salesperson,5565,Quality
-630,6,1,2025,5,Salesperson,9768,On-time
-631,8,1,2025,5,Salesperson,12290,Quality
-632,12,1,2025,5,Installation Engineer,7981,On-time
-633,14,1,2025,5,Installation Manager,4949,On-time
-634,15,1,2025,5,Service Sales Person,3187,Target Achievement
-635,16,1,2025,5,Service Sales Person,4905,Quality
-636,18,1,2025,5,Service Supervisor,3034,New AMC
-637,22,1,2025,5,Service Technician,1504,New AMC
-638,23,1,2025,5,Service Technician,4223,Target Achievement
-639,24,1,2025,5,Service Technician,1002,Quality
-640,28,2,2025,5,Lead Generator,5190,Quality
-641,29,2,2025,5,Lead Generator,3130,On-time
-642,30,2,2025,5,Salesperson,8466,On-time
-643,31,2,2025,5,Salesperson,13355,Collection
-644,32,2,2025,5,Salesperson,13711,Target Achievement
-645,34,2,2025,5,Salesperson,10996,Collection
-646,35,2,2025,5,Sales Manager,5388,Target Achievement
-647,36,2,2025,5,Installation Engineer,3705,New AMC
-648,37,2,2025,5,Installation Engineer,7132,On-time
-649,38,2,2025,5,Installation Engineer,2090,Target Achievement
-650,40,2,2025,5,Installation Manager,5014,Quality
-651,44,2,2025,5,Service Supervisor,2028,Quality
-652,49,2,2025,5,Service Technician,4004,Collection
-653,50,2,2025,5,Service Technician,4009,Quality
-654,51,2,2025,5,Service Technician,4296,On-time
-655,52,2,2025,5,Service Technician,2235,New AMC
-656,54,3,2025,5,Lead Generator,4629,On-time
-657,57,3,2025,5,Salesperson,5285,Target Achievement
-658,58,3,2025,5,Salesperson,4863,New AMC
-659,60,3,2025,5,Salesperson,3356,Collection
-660,61,3,2025,5,Sales Manager,7786,New AMC
-661,62,3,2025,5,Installation Engineer,2119,Quality
-662,63,3,2025,5,Installation Engineer,7710,On-time
-663,66,3,2025,5,Installation Manager,9978,Quality
-664,67,3,2025,5,Service Sales Person,4811,New AMC
-665,69,3,2025,5,Service Supervisor,6363,Target Achievement
-666,70,3,2025,5,Service Supervisor,1629,Quality
-667,71,3,2025,5,Service Technician,2815,Quality
-668,72,3,2025,5,Service Technician,1114,New AMC
-669,75,3,2025,5,Service Technician,1062,Collection
-670,76,3,2025,5,Service Technician,3507,Quality
-671,3,1,2025,6,Lead Generator,3449,Collection
-672,4,1,2025,6,Salesperson,3925,Quality
-673,5,1,2025,6,Salesperson,5156,Quality
-674,6,1,2025,6,Salesperson,12980,Collection
-675,7,1,2025,6,Salesperson,9406,New AMC
-676,11,1,2025,6,Installation Engineer,3043,Quality
-677,12,1,2025,6,Installation Engineer,6614,Collection
-678,14,1,2025,6,Installation Manager,8679,Collection
-679,16,1,2025,6,Service Sales Person,8379,On-time
-680,17,1,2025,6,Service Supervisor,2291,Target Achievement
-681,19,1,2025,6,Service Technician,1012,Quality
-682,21,1,2025,6,Service Technician,2646,Quality
-683,22,1,2025,6,Service Technician,1642,Target Achievement
-684,24,1,2025,6,Service Technician,2872,On-time
-685,25,1,2025,6,Service Technician,3999,New AMC
-686,27,2,2025,6,Lead Generator,3967,Collection
-687,32,2,2025,6,Salesperson,4674,New AMC
-688,33,2,2025,6,Salesperson,13682,Target Achievement
-689,37,2,2025,6,Installation Engineer,3850,Collection
-690,40,2,2025,6,Installation Manager,8623,Quality
-691,41,2,2025,6,Service Sales Person,6386,Quality
-692,44,2,2025,6,Service Supervisor,2962,Target Achievement
-693,45,2,2025,6,Service Technician,1529,Target Achievement
-694,47,2,2025,6,Service Technician,3781,Collection
-695,48,2,2025,6,Service Technician,1655,New AMC
-696,51,2,2025,6,Service Technician,3728,Quality
-697,54,3,2025,6,Lead Generator,3073,Quality
-698,56,3,2025,6,Salesperson,5522,Quality
-699,60,3,2025,6,Salesperson,7991,Target Achievement
-700,61,3,2025,6,Sales Manager,12349,On-time
-701,63,3,2025,6,Installation Engineer,6770,New AMC
-702,64,3,2025,6,Installation Engineer,2919,Target Achievement
-703,70,3,2025,6,Service Supervisor,5880,Collection
-704,75,3,2025,6,Service Technician,4179,On-time
-705,76,3,2025,6,Service Technician,2259,Collection
-706,77,3,2025,6,Service Technician,4480,New AMC
-707,1,1,2025,7,Lead Generator,3245,New AMC
-708,6,1,2025,7,Salesperson,6280,Collection
-709,14,1,2025,7,Installation Manager,11568,Target Achievement
-710,16,1,2025,7,Service Sales Person,8826,Quality
-711,17,1,2025,7,Service Supervisor,5980,Collection
-712,22,1,2025,7,Service Technician,3158,Collection
-713,23,1,2025,7,Service Technician,1923,Quality
-714,24,1,2025,7,Service Technician,1588,New AMC
-715,25,1,2025,7,Service Technician,2392,Target Achievement
-716,26,1,2025,7,Service Technician,2289,Collection
-717,27,2,2025,7,Lead Generator,2239,Quality
-718,28,2,2025,7,Lead Generator,4232,Quality
-719,29,2,2025,7,Lead Generator,4560,Collection
-720,32,2,2025,7,Salesperson,8288,Target Achievement
-721,33,2,2025,7,Salesperson,11738,Target Achievement
-722,34,2,2025,7,Salesperson,8759,On-time
-723,36,2,2025,7,Installation Engineer,2595,Quality
-724,37,2,2025,7,Installation Engineer,3596,On-time
-725,40,2,2025,7,Installation Manager,11208,On-time
-726,43,2,2025,7,Service Supervisor,5559,New AMC
-727,45,2,2025,7,Service Technician,3779,Quality
-728,47,2,2025,7,Service Technician,2444,New AMC
-729,49,2,2025,7,Service Technician,3000,New AMC
-730,52,2,2025,7,Service Technician,3306,Collection
-731,53,3,2025,7,Lead Generator,3561,New AMC
-732,56,3,2025,7,Salesperson,3307,On-time
-733,58,3,2025,7,Salesperson,8926,Quality
-734,59,3,2025,7,Salesperson,9894,New AMC
-735,61,3,2025,7,Sales Manager,11703,On-time
-736,62,3,2025,7,Installation Engineer,6240,New AMC
-737,63,3,2025,7,Installation Engineer,5922,On-time
-738,65,3,2025,7,Installation Engineer,5725,Collection
-739,66,3,2025,7,Installation Manager,7388,On-time
-740,70,3,2025,7,Service Supervisor,5790,On-time
-741,71,3,2025,7,Service Technician,4384,Collection
-742,73,3,2025,7,Service Technician,4373,On-time
-743,3,1,2025,8,Lead Generator,3920,Collection
-744,9,1,2025,8,Sales Manager,20918,Quality
-745,12,1,2025,8,Installation Engineer,8699,New AMC
-746,14,1,2025,8,Installation Manager,3816,Quality
-747,18,1,2025,8,Service Supervisor,6848,New AMC
-748,21,1,2025,8,Service Technician,3797,Collection
-749,24,1,2025,8,Service Technician,1472,Target Achievement
-750,25,1,2025,8,Service Technician,1987,On-time
-751,26,1,2025,8,Service Technician,3782,Quality
-752,27,2,2025,8,Lead Generator,2868,Collection
-753,28,2,2025,8,Lead Generator,5184,Quality
-754,33,2,2025,8,Salesperson,13925,Quality
-755,34,2,2025,8,Salesperson,3322,New AMC
-756,36,2,2025,8,Installation Engineer,6791,New AMC
-757,37,2,2025,8,Installation Engineer,3156,Target Achievement
-758,38,2,2025,8,Installation Engineer,4720,Target Achievement
-759,40,2,2025,8,Installation Manager,11918,Collection
-760,41,2,2025,8,Service Sales Person,2794,Target Achievement
-761,43,2,2025,8,Service Supervisor,2723,On-time
-762,45,2,2025,8,Service Technician,1448,Quality
-763,47,2,2025,8,Service Technician,2588,New AMC
-764,48,2,2025,8,Service Technician,1731,On-time
-765,51,2,2025,8,Service Technician,2616,On-time
-766,54,3,2025,8,Lead Generator,2121,Target Achievement
-767,55,3,2025,8,Lead Generator,1793,Target Achievement
-768,56,3,2025,8,Salesperson,8101,Target Achievement
-769,57,3,2025,8,Salesperson,14024,New AMC
-770,58,3,2025,8,Salesperson,7450,Target Achievement
-771,59,3,2025,8,Salesperson,12413,Collection
-772,60,3,2025,8,Salesperson,5508,Target Achievement
-773,62,3,2025,8,Installation Engineer,5318,Target Achievement
-774,64,3,2025,8,Installation Engineer,8761,Target Achievement
-775,65,3,2025,8,Installation Engineer,2275,On-time
-776,66,3,2025,8,Installation Manager,3622,Quality
-777,67,3,2025,8,Service Sales Person,6234,Target Achievement
-778,69,3,2025,8,Service Supervisor,3872,New AMC
-779,70,3,2025,8,Service Supervisor,7073,Collection
-780,77,3,2025,8,Service Technician,2261,Target Achievement
-781,1,1,2025,9,Lead Generator,3332,Collection
-782,4,1,2025,9,Salesperson,6960,On-time
-783,5,1,2025,9,Salesperson,7375,Quality
-784,8,1,2025,9,Salesperson,8139,Collection
-785,9,1,2025,9,Sales Manager,6092,New AMC
-786,11,1,2025,9,Installation Engineer,4142,Collection
-787,12,1,2025,9,Installation Engineer,8772,On-time
-788,18,1,2025,9,Service Supervisor,2890,Quality
-789,19,1,2025,9,Service Technician,1752,Target Achievement
-790,22,1,2025,9,Service Technician,3353,Collection
-791,23,1,2025,9,Service Technician,3792,Collection
-792,24,1,2025,9,Service Technician,2825,Collection
-793,25,1,2025,9,Service Technician,1492,Target Achievement
-794,26,1,2025,9,Service Technician,1407,Collection
-795,27,2,2025,9,Lead Generator,3984,Quality
-796,32,2,2025,9,Salesperson,7519,Target Achievement
-797,36,2,2025,9,Installation Engineer,5663,Target Achievement
-798,37,2,2025,9,Installation Engineer,5183,New AMC
-799,38,2,2025,9,Installation Engineer,8615,Target Achievement
-800,39,2,2025,9,Installation Engineer,2098,Target Achievement
-801,40,2,2025,9,Installation Manager,4942,Quality
-802,41,2,2025,9,Service Sales Person,3817,Quality
-803,44,2,2025,9,Service Supervisor,4662,New AMC
-804,47,2,2025,9,Service Technician,3637,New AMC
-805,48,2,2025,9,Service Technician,4300,Target Achievement
-806,49,2,2025,9,Service Technician,2773,Collection
-807,51,2,2025,9,Service Technician,1745,Collection
-808,55,3,2025,9,Lead Generator,2186,Collection
-809,56,3,2025,9,Salesperson,6495,Quality
-810,59,3,2025,9,Salesperson,8349,New AMC
-811,62,3,2025,9,Installation Engineer,2470,On-time
-812,65,3,2025,9,Installation Engineer,6888,Collection
-813,69,3,2025,9,Service Supervisor,1978,New AMC
-814,70,3,2025,9,Service Supervisor,3034,Quality
-815,71,3,2025,9,Service Technician,3267,New AMC
-816,72,3,2025,9,Service Technician,1062,Collection
-817,74,3,2025,9,Service Technician,1028,Quality
-818,75,3,2025,9,Service Technician,1024,Collection
-819,76,3,2025,9,Service Technician,3787,New AMC
-820,77,3,2025,9,Service Technician,1837,New AMC
-821,78,3,2025,9,Service Technician,2869,Target Achievement
-822,4,1,2025,10,Salesperson,4232,New AMC
-823,6,1,2025,10,Salesperson,13894,Collection
-824,8,1,2025,10,Salesperson,12553,Target Achievement
-825,9,1,2025,10,Sales Manager,7045,Quality
-826,11,1,2025,10,Installation Engineer,7892,Collection
-827,12,1,2025,10,Installation Engineer,5813,Collection
-828,15,1,2025,10,Service Sales Person,8487,Target Achievement
-829,19,1,2025,10,Service Technician,1372,Target Achievement
-830,24,1,2025,10,Service Technician,3255,Target Achievement
-831,27,2,2025,10,Lead Generator,1573,Collection
-832,28,2,2025,10,Lead Generator,3858,New AMC
-833,29,2,2025,10,Lead Generator,4916,Collection
-834,30,2,2025,10,Salesperson,14343,Collection
-835,32,2,2025,10,Salesperson,4163,Quality
-836,33,2,2025,10,Salesperson,5505,Collection
-837,35,2,2025,10,Sales Manager,19234,Quality
-838,36,2,2025,10,Installation Engineer,5376,Target Achievement
-839,37,2,2025,10,Installation Engineer,2438,New AMC
-840,38,2,2025,10,Installation Engineer,5410,Quality
-841,40,2,2025,10,Installation Manager,12466,Collection
-842,41,2,2025,10,Service Sales Person,9872,Quality
-843,44,2,2025,10,Service Supervisor,2217,Target Achievement
-844,45,2,2025,10,Service Technician,1325,Quality
-845,48,2,2025,10,Service Technician,3588,Collection
-846,49,2,2025,10,Service Technician,1142,Collection
-847,51,2,2025,10,Service Technician,1987,On-time
-848,54,3,2025,10,Lead Generator,3683,On-time
-849,55,3,2025,10,Lead Generator,1356,Collection
-850,56,3,2025,10,Salesperson,9203,Target Achievement
-851,58,3,2025,10,Salesperson,5994,Target Achievement
-852,60,3,2025,10,Salesperson,5451,Collection
-853,62,3,2025,10,Installation Engineer,4993,Quality
-854,63,3,2025,10,Installation Engineer,4372,Collection
-855,69,3,2025,10,Service Supervisor,4033,New AMC
-856,70,3,2025,10,Service Supervisor,2747,Quality
-857,72,3,2025,10,Service Technician,3023,Target Achievement
-858,76,3,2025,10,Service Technician,1322,On-time
-859,77,3,2025,10,Service Technician,3482,On-time
-860,78,3,2025,10,Service Technician,1353,Quality
-861,1,1,2025,11,Lead Generator,2590,New AMC
-862,7,1,2025,11,Salesperson,12735,On-time
-863,8,1,2025,11,Salesperson,7807,Collection
-864,9,1,2025,11,Sales Manager,18819,New AMC
-865,14,1,2025,11,Installation Manager,4496,Quality
-866,15,1,2025,11,Service Sales Person,7697,Target Achievement
-867,19,1,2025,11,Service Technician,3867,On-time
-868,21,1,2025,11,Service Technician,3245,Quality
-869,23,1,2025,11,Service Technician,4386,New AMC
-870,24,1,2025,11,Service Technician,1149,Target Achievement
-871,27,2,2025,11,Lead Generator,1351,Target Achievement
-872,29,2,2025,11,Lead Generator,3263,Target Achievement
-873,30,2,2025,11,Salesperson,11431,Collection
-874,31,2,2025,11,Salesperson,8080,New AMC
-875,37,2,2025,11,Installation Engineer,5522,Collection
-876,38,2,2025,11,Installation Engineer,6040,New AMC
-877,40,2,2025,11,Installation Manager,4306,Collection
-878,41,2,2025,11,Service Sales Person,3408,New AMC
-879,43,2,2025,11,Service Supervisor,3393,Quality
-880,45,2,2025,11,Service Technician,1643,Target Achievement
-881,47,2,2025,11,Service Technician,2014,New AMC
-882,48,2,2025,11,Service Technician,1224,New AMC
-883,52,2,2025,11,Service Technician,4224,On-time
-884,53,3,2025,11,Lead Generator,2952,Quality
-885,54,3,2025,11,Lead Generator,3613,New AMC
-886,55,3,2025,11,Lead Generator,3710,Collection
-887,56,3,2025,11,Salesperson,8549,Collection
-888,59,3,2025,11,Salesperson,6338,Quality
-889,63,3,2025,11,Installation Engineer,3763,Quality
-890,65,3,2025,11,Installation Engineer,2509,Target Achievement
-891,66,3,2025,11,Installation Manager,10931,New AMC
-892,69,3,2025,11,Service Supervisor,2629,Quality
-893,72,3,2025,11,Service Technician,1942,Target Achievement
-894,74,3,2025,11,Service Technician,4063,Quality
-895,75,3,2025,11,Service Technician,3357,New AMC
-896,76,3,2025,11,Service Technician,4161,Quality
-897,77,3,2025,11,Service Technician,4013,New AMC
-898,78,3,2025,11,Service Technician,2551,Collection
-899,3,1,2025,12,Lead Generator,2405,Collection
-900,4,1,2025,12,Salesperson,13183,New AMC
-901,6,1,2025,12,Salesperson,10847,Quality
-902,7,1,2025,12,Salesperson,10886,Target Achievement
-903,8,1,2025,12,Salesperson,5808,Target Achievement
-904,9,1,2025,12,Sales Manager,12397,Quality
-905,12,1,2025,12,Installation Engineer,2541,Quality
-906,16,1,2025,12,Service Sales Person,10162,Target Achievement
-907,19,1,2025,12,Service Technician,4093,Collection
-908,21,1,2025,12,Service Technician,2208,Target Achievement
-909,22,1,2025,12,Service Technician,2931,On-time
-910,23,1,2025,12,Service Technician,2586,New AMC
-911,26,1,2025,12,Service Technician,2155,Target Achievement
-912,27,2,2025,12,Lead Generator,3160,New AMC
-913,28,2,2025,12,Lead Generator,2158,New AMC
-914,30,2,2025,12,Salesperson,4391,On-time
-915,35,2,2025,12,Sales Manager,12635,Collection
-916,36,2,2025,12,Installation Engineer,8497,Quality
-917,37,2,2025,12,Installation Engineer,2140,Quality
-918,40,2,2025,12,Installation Manager,12347,Target Achievement
-919,41,2,2025,12,Service Sales Person,7801,On-time
-920,43,2,2025,12,Service Supervisor,6702,On-time
-921,45,2,2025,12,Service Technician,2604,Quality
-922,46,2,2025,12,Service Technician,1593,On-time
-923,48,2,2025,12,Service Technician,3237,Target Achievement
-924,50,2,2025,12,Service Technician,4181,Quality
-925,54,3,2025,12,Lead Generator,1676,Quality
-926,55,3,2025,12,Lead Generator,5175,On-time
-927,56,3,2025,12,Salesperson,10056,Target Achievement
-928,59,3,2025,12,Salesperson,14395,Quality
-929,61,3,2025,12,Sales Manager,7987,On-time
-930,62,3,2025,12,Installation Engineer,6506,Target Achievement
-931,63,3,2025,12,Installation Engineer,4963,Quality
-932,64,3,2025,12,Installation Engineer,8973,Collection
-933,65,3,2025,12,Installation Engineer,3570,New AMC
-934,66,3,2025,12,Installation Manager,9002,Collection
-935,69,3,2025,12,Service Supervisor,5052,On-time
-936,70,3,2025,12,Service Supervisor,4544,Collection
-937,73,3,2025,12,Service Technician,3695,New AMC
-938,78,3,2025,12,Service Technician,3106,On-time
-939,1,1,2026,1,Lead Generator,2862,Quality
-940,4,1,2026,1,Salesperson,7289,Collection
-941,5,1,2026,1,Salesperson,5466,On-time
-942,7,1,2026,1,Salesperson,6920,On-time
-943,11,1,2026,1,Installation Engineer,4979,New AMC
-944,12,1,2026,1,Installation Engineer,5983,On-time
-945,14,1,2026,1,Installation Manager,4290,Target Achievement
-946,18,1,2026,1,Service Supervisor,6058,Collection
-947,21,1,2026,1,Service Technician,1751,New AMC
-948,25,1,2026,1,Service Technician,4049,On-time
-949,30,2,2026,1,Salesperson,12533,On-time
-950,31,2,2026,1,Salesperson,6866,Quality
-951,32,2,2026,1,Salesperson,10730,Collection
-952,33,2,2026,1,Salesperson,7646,Quality
-953,36,2,2026,1,Installation Engineer,6819,Target Achievement
-954,37,2,2026,1,Installation Engineer,4601,Target Achievement
-955,38,2,2026,1,Installation Engineer,5133,Quality
-956,40,2,2026,1,Installation Manager,7632,New AMC
-957,44,2,2026,1,Service Supervisor,5840,Quality
-958,45,2,2026,1,Service Technician,3997,On-time
-959,46,2,2026,1,Service Technician,2189,On-time
-960,48,2,2026,1,Service Technician,1294,Target Achievement
-961,49,2,2026,1,Service Technician,3346,New AMC
-962,51,2,2026,1,Service Technician,1868,New AMC
-963,57,3,2026,1,Salesperson,4940,Collection
-964,60,3,2026,1,Salesperson,5734,Quality
-965,61,3,2026,1,Sales Manager,21187,Target Achievement
-966,62,3,2026,1,Installation Engineer,7377,Quality
-967,63,3,2026,1,Installation Engineer,8115,Quality
-968,64,3,2026,1,Installation Engineer,2275,Quality
-969,66,3,2026,1,Installation Manager,12119,On-time
-970,69,3,2026,1,Service Supervisor,6028,Target Achievement
-971,70,3,2026,1,Service Supervisor,7112,Target Achievement
-972,71,3,2026,1,Service Technician,2861,Collection
-973,73,3,2026,1,Service Technician,3978,On-time
-974,74,3,2026,1,Service Technician,3408,Quality
-975,77,3,2026,1,Service Technician,3918,Target Achievement
-976,78,3,2026,1,Service Technician,4170,Quality
-977,1,1,2026,2,Lead Generator,1808,Collection
-978,3,1,2026,2,Lead Generator,1965,On-time
-979,5,1,2026,2,Salesperson,8712,Quality
-980,9,1,2026,2,Sales Manager,15903,New AMC
-981,14,1,2026,2,Installation Manager,8135,On-time
-982,15,1,2026,2,Service Sales Person,2624,New AMC
-983,17,1,2026,2,Service Supervisor,4134,Target Achievement
-984,22,1,2026,2,Service Technician,2820,Collection
-985,23,1,2026,2,Service Technician,3922,Collection
-986,25,1,2026,2,Service Technician,1492,Collection
-987,26,1,2026,2,Service Technician,1933,On-time
-988,27,2,2026,2,Lead Generator,3334,Target Achievement
-989,28,2,2026,2,Lead Generator,2062,Target Achievement
-990,29,2,2026,2,Lead Generator,1858,Collection
-991,30,2,2026,2,Salesperson,4183,Target Achievement
-992,32,2,2026,2,Salesperson,8223,Target Achievement
-993,36,2,2026,2,Installation Engineer,7850,Target Achievement
-994,39,2,2026,2,Installation Engineer,5933,New AMC
-995,40,2,2026,2,Installation Manager,10660,On-time
-996,41,2,2026,2,Service Sales Person,8429,Collection
-997,43,2,2026,2,Service Supervisor,3291,On-time
-998,44,2,2026,2,Service Supervisor,6668,Collection
-999,45,2,2026,2,Service Technician,3983,Target Achievement
-1000,47,2,2026,2,Service Technician,1904,Quality
-1001,48,2,2026,2,Service Technician,3374,Quality
-1002,49,2,2026,2,Service Technician,1120,Quality
-1003,53,3,2026,2,Lead Generator,3956,New AMC
-1004,54,3,2026,2,Lead Generator,2574,On-time
-1005,58,3,2026,2,Salesperson,9188,Quality
-1006,59,3,2026,2,Salesperson,4396,On-time
-1007,60,3,2026,2,Salesperson,9355,Quality
-1008,61,3,2026,2,Sales Manager,19036,New AMC
-1009,62,3,2026,2,Installation Engineer,6313,New AMC
-1010,64,3,2026,2,Installation Engineer,4677,New AMC
-1011,66,3,2026,2,Installation Manager,6972,Quality
-1012,67,3,2026,2,Service Sales Person,7097,Target Achievement
-1013,69,3,2026,2,Service Supervisor,2482,Target Achievement
-1014,70,3,2026,2,Service Supervisor,2783,New AMC
-1015,71,3,2026,2,Service Technician,2253,Collection
-1016,72,3,2026,2,Service Technician,3807,Target Achievement
-1017,74,3,2026,2,Service Technician,1904,Collection
-1018,76,3,2026,2,Service Technician,3230,New AMC
-1019,77,3,2026,2,Service Technician,2963,Target Achievement
-1020,78,3,2026,2,Service Technician,3200,Target Achievement
-1021,1,1,2026,3,Lead Generator,5105,Target Achievement
-1022,3,1,2026,3,Lead Generator,3219,New AMC
-1023,4,1,2026,3,Salesperson,12766,On-time
-1024,7,1,2026,3,Salesperson,5540,New AMC
-1025,8,1,2026,3,Salesperson,6156,Quality
-1026,9,1,2026,3,Sales Manager,17241,New AMC
-1027,12,1,2026,3,Installation Engineer,4955,Collection
-1028,16,1,2026,3,Service Sales Person,6561,Quality
-1029,19,1,2026,3,Service Technician,1771,On-time
-1030,21,1,2026,3,Service Technician,2003,New AMC
-1031,22,1,2026,3,Service Technician,3687,New AMC
-1032,31,2,2026,3,Salesperson,9321,New AMC
-1033,32,2,2026,3,Salesperson,10715,Collection
-1034,34,2,2026,3,Salesperson,3997,New AMC
-1035,35,2,2026,3,Sales Manager,7496,New AMC
-1036,38,2,2026,3,Installation Engineer,7439,Target Achievement
-1037,39,2,2026,3,Installation Engineer,5806,Quality
-1038,41,2,2026,3,Service Sales Person,3925,Target Achievement
-1039,43,2,2026,3,Service Supervisor,5459,Collection
-1040,44,2,2026,3,Service Supervisor,3598,Collection
-1041,47,2,2026,3,Service Technician,2326,Quality
-1042,50,2,2026,3,Service Technician,1905,Collection
-1043,52,2,2026,3,Service Technician,2708,Target Achievement
-1044,55,3,2026,3,Lead Generator,3420,Quality
-1045,57,3,2026,3,Salesperson,12224,New AMC
-1046,59,3,2026,3,Salesperson,6365,Quality
-1047,61,3,2026,3,Sales Manager,14684,Quality
-1048,62,3,2026,3,Installation Engineer,8698,New AMC
-1049,63,3,2026,3,Installation Engineer,7010,Target Achievement
-1050,64,3,2026,3,Installation Engineer,2894,Quality
-1051,66,3,2026,3,Installation Manager,8337,Quality
-1052,69,3,2026,3,Service Supervisor,1803,Target Achievement
-1053,70,3,2026,3,Service Supervisor,5437,Target Achievement
-1054,72,3,2026,3,Service Technician,4414,New AMC
-1055,75,3,2026,3,Service Technician,1229,New AMC
-1056,76,3,2026,3,Service Technician,4104,New AMC
-1057,77,3,2026,3,Service Technician,4481,On-time
-1058,78,3,2026,3,Service Technician,3788,On-time
-1059,6,1,2026,4,Salesperson,7407,On-time
-1060,7,1,2026,4,Salesperson,8834,New AMC
-1061,11,1,2026,4,Installation Engineer,3298,Target Achievement
-1062,12,1,2026,4,Installation Engineer,3255,On-time
-1063,14,1,2026,4,Installation Manager,10254,New AMC
-1064,15,1,2026,4,Service Sales Person,6850,Target Achievement
-1065,17,1,2026,4,Service Supervisor,1982,New AMC
-1066,18,1,2026,4,Service Supervisor,2110,Target Achievement
-1067,24,1,2026,4,Service Technician,1573,Collection
-1068,25,1,2026,4,Service Technician,1812,On-time
-1069,28,2,2026,4,Lead Generator,4280,Quality
-1070,29,2,2026,4,Lead Generator,4472,Quality
-1071,30,2,2026,4,Salesperson,12968,New AMC
-1072,32,2,2026,4,Salesperson,12146,On-time
-1073,37,2,2026,4,Installation Engineer,3572,Collection
-1074,41,2,2026,4,Service Sales Person,10381,Quality
-1075,45,2,2026,4,Service Technician,1735,New AMC
-1076,47,2,2026,4,Service Technician,3663,Target Achievement
-1077,48,2,2026,4,Service Technician,2047,On-time
-1078,49,2,2026,4,Service Technician,2820,On-time
-1079,50,2,2026,4,Service Technician,1308,Collection
-1080,51,2,2026,4,Service Technician,2939,Collection
-1081,53,3,2026,4,Lead Generator,2742,Quality
-1082,56,3,2026,4,Salesperson,3720,Target Achievement
-1083,57,3,2026,4,Salesperson,10335,On-time
-1084,59,3,2026,4,Salesperson,9387,New AMC
-1085,60,3,2026,4,Salesperson,12551,Collection
-1086,61,3,2026,4,Sales Manager,21574,Quality
-1087,62,3,2026,4,Installation Engineer,8525,Quality
-1088,67,3,2026,4,Service Sales Person,10768,New AMC
-1089,69,3,2026,4,Service Supervisor,2570,Quality
-1090,71,3,2026,4,Service Technician,2123,Collection
-1091,72,3,2026,4,Service Technician,4169,New AMC
-1092,73,3,2026,4,Service Technician,2287,Target Achievement
-1093,75,3,2026,4,Service Technician,3373,Quality
-1094,76,3,2026,4,Service Technician,1695,Quality
-1095,78,3,2026,4,Service Technician,3904,Collection
-1096,1,1,2026,5,Lead Generator,2137,Target Achievement
-1097,3,1,2026,5,Lead Generator,4509,Collection
-1098,5,1,2026,5,Salesperson,7182,On-time
-1099,11,1,2026,5,Installation Engineer,7389,On-time
-1100,16,1,2026,5,Service Sales Person,9500,Collection
-1101,17,1,2026,5,Service Supervisor,2048,Target Achievement
-1102,18,1,2026,5,Service Supervisor,4687,On-time
-1103,19,1,2026,5,Service Technician,3897,Quality
-1104,21,1,2026,5,Service Technician,3397,Target Achievement
-1105,24,1,2026,5,Service Technician,4228,Target Achievement
-1106,30,2,2026,5,Salesperson,10976,New AMC
-1107,34,2,2026,5,Salesperson,6362,New AMC
-1108,35,2,2026,5,Sales Manager,6852,On-time
-1109,38,2,2026,5,Installation Engineer,4455,On-time
-1110,39,2,2026,5,Installation Engineer,2651,Quality
-1111,40,2,2026,5,Installation Manager,8942,Collection
-1112,41,2,2026,5,Service Sales Person,4171,On-time
-1113,44,2,2026,5,Service Supervisor,6755,Quality
-1114,46,2,2026,5,Service Technician,3970,New AMC
-1115,48,2,2026,5,Service Technician,2529,Collection
-1116,50,2,2026,5,Service Technician,1355,New AMC
-1117,52,2,2026,5,Service Technician,1570,Quality
-1118,53,3,2026,5,Lead Generator,3498,Quality
-1119,57,3,2026,5,Salesperson,11443,On-time
-1120,58,3,2026,5,Salesperson,9531,New AMC
-1121,59,3,2026,5,Salesperson,4058,New AMC
-1122,61,3,2026,5,Sales Manager,12276,New AMC
-1123,62,3,2026,5,Installation Engineer,6007,Target Achievement
-1124,63,3,2026,5,Installation Engineer,5569,Collection
-1125,64,3,2026,5,Installation Engineer,6639,Target Achievement
-1126,65,3,2026,5,Installation Engineer,6328,On-time
-1127,66,3,2026,5,Installation Manager,12241,On-time
-1128,67,3,2026,5,Service Sales Person,6067,Target Achievement
-1129,71,3,2026,5,Service Technician,2868,Target Achievement
-1130,74,3,2026,5,Service Technician,2716,New AMC
-1131,76,3,2026,5,Service Technician,2014,On-time
-1132,77,3,2026,5,Service Technician,1218,New AMC
-1133,78,3,2026,5,Service Technician,4177,On-time
-1134,3,1,2026,6,Lead Generator,3767,New AMC
-1135,6,1,2026,6,Salesperson,6523,Target Achievement
-1136,8,1,2026,6,Salesperson,14180,Target Achievement
-1137,9,1,2026,6,Sales Manager,18174,Quality
-1138,15,1,2026,6,Service Sales Person,8861,New AMC
-1139,19,1,2026,6,Service Technician,2520,On-time
-1140,21,1,2026,6,Service Technician,3948,Collection
-1141,22,1,2026,6,Service Technician,3718,Target Achievement
-1142,23,1,2026,6,Service Technician,1737,Target Achievement
-1143,25,1,2026,6,Service Technician,3184,Target Achievement
-1144,26,1,2026,6,Service Technician,2056,New AMC
-1145,27,2,2026,6,Lead Generator,4864,Target Achievement
-1146,29,2,2026,6,Lead Generator,5208,On-time
-1147,30,2,2026,6,Salesperson,12361,New AMC
-1148,31,2,2026,6,Salesperson,8077,New AMC
-1149,33,2,2026,6,Salesperson,4168,Target Achievement
-1150,35,2,2026,6,Sales Manager,15969,On-time
-1151,36,2,2026,6,Installation Engineer,7975,New AMC
-1152,37,2,2026,6,Installation Engineer,4293,Target Achievement
-1153,39,2,2026,6,Installation Engineer,4925,Quality
-1154,40,2,2026,6,Installation Manager,3704,Collection
-1155,43,2,2026,6,Service Supervisor,6986,On-time
-1156,45,2,2026,6,Service Technician,3044,On-time
-1157,47,2,2026,6,Service Technician,4235,On-time
-1158,48,2,2026,6,Service Technician,3794,Collection
-1159,51,2,2026,6,Service Technician,3611,Collection
-1160,53,3,2026,6,Lead Generator,4431,On-time
-1161,54,3,2026,6,Lead Generator,2338,Collection
-1162,55,3,2026,6,Lead Generator,3704,Collection
-1163,56,3,2026,6,Salesperson,12268,On-time
-1164,57,3,2026,6,Salesperson,10662,On-time
-1165,58,3,2026,6,Salesperson,8590,New AMC
-1166,60,3,2026,6,Salesperson,13159,Collection
-1167,67,3,2026,6,Service Sales Person,9288,Target Achievement
-1168,69,3,2026,6,Service Supervisor,3686,On-time
-1169,73,3,2026,6,Service Technician,2720,Collection
-1170,75,3,2026,6,Service Technician,4407,Target Achievement
-1171,76,3,2026,6,Service Technician,1070,New AMC
-1172,77,3,2026,6,Service Technician,1436,On-time
-1173,1,1,2026,7,Lead Generator,3966,New AMC
-1174,4,1,2026,7,Salesperson,7445,Collection
-1175,6,1,2026,7,Salesperson,13254,New AMC
-1176,7,1,2026,7,Salesperson,4662,On-time
-1177,8,1,2026,7,Salesperson,10053,Target Achievement
-1178,11,1,2026,7,Installation Engineer,3087,Collection
-1179,12,1,2026,7,Installation Engineer,6203,Collection
-1180,16,1,2026,7,Service Sales Person,2630,New AMC
-1181,17,1,2026,7,Service Supervisor,3970,On-time
-1182,21,1,2026,7,Service Technician,1823,New AMC
-1183,22,1,2026,7,Service Technician,2872,Collection
-1184,23,1,2026,7,Service Technician,3981,Collection
-1185,26,1,2026,7,Service Technician,4333,Target Achievement
-1186,27,2,2026,7,Lead Generator,1286,On-time
-1187,28,2,2026,7,Lead Generator,4353,On-time
-1188,30,2,2026,7,Salesperson,10952,Target Achievement
-1189,35,2,2026,7,Sales Manager,18815,Collection
-1190,36,2,2026,7,Installation Engineer,3323,Target Achievement
-1191,37,2,2026,7,Installation Engineer,7377,On-time
-1192,39,2,2026,7,Installation Engineer,3807,Collection
-1193,40,2,2026,7,Installation Manager,6844,On-time
-1194,41,2,2026,7,Service Sales Person,2831,Target Achievement
-1195,43,2,2026,7,Service Supervisor,5050,Collection
-1196,46,2,2026,7,Service Technician,1832,New AMC
-1197,47,2,2026,7,Service Technician,2944,Collection
-1198,49,2,2026,7,Service Technician,1849,Quality
-1199,51,2,2026,7,Service Technician,2978,Target Achievement
-1200,54,3,2026,7,Lead Generator,2120,On-time
-1201,55,3,2026,7,Lead Generator,2443,Collection
-1202,56,3,2026,7,Salesperson,5860,Quality
-1203,58,3,2026,7,Salesperson,9155,New AMC
-1204,59,3,2026,7,Salesperson,12681,New AMC
-1205,60,3,2026,7,Salesperson,12238,Quality
-1206,64,3,2026,7,Installation Engineer,3840,On-time
-1207,65,3,2026,7,Installation Engineer,7240,Collection
-1208,66,3,2026,7,Installation Manager,10796,Collection
-1209,69,3,2026,7,Service Supervisor,5725,Collection
-1210,70,3,2026,7,Service Supervisor,4998,New AMC
-1211,72,3,2026,7,Service Technician,1446,Target Achievement
-1212,73,3,2026,7,Service Technician,1213,Quality
-1213,76,3,2026,7,Service Technician,1158,New AMC
-1214,78,3,2026,7,Service Technician,1579,Quality
-1215,1,1,2026,8,Lead Generator,1651,New AMC
-1216,3,1,2026,8,Lead Generator,3454,Quality
-1217,4,1,2026,8,Salesperson,10217,Collection
-1218,5,1,2026,8,Salesperson,12102,Target Achievement
-1219,6,1,2026,8,Salesperson,12029,Target Achievement
-1220,7,1,2026,8,Salesperson,12456,Collection
-1221,8,1,2026,8,Salesperson,8249,Target Achievement
-1222,11,1,2026,8,Installation Engineer,4142,On-time
-1223,14,1,2026,8,Installation Manager,5204,Target Achievement
-1224,15,1,2026,8,Service Sales Person,10722,New AMC
-1225,17,1,2026,8,Service Supervisor,4381,Collection
-1226,18,1,2026,8,Service Supervisor,3442,Target Achievement
-1227,19,1,2026,8,Service Technician,2331,Target Achievement
-1228,21,1,2026,8,Service Technician,3573,On-time
-1229,24,1,2026,8,Service Technician,1025,New AMC
-1230,25,1,2026,8,Service Technician,1384,Target Achievement
-1231,26,1,2026,8,Service Technician,3896,Quality
-1232,28,2,2026,8,Lead Generator,2493,On-time
-1233,30,2,2026,8,Salesperson,11101,On-time
-1234,31,2,2026,8,Salesperson,9701,On-time
-1235,34,2,2026,8,Salesperson,11082,New AMC
-1236,35,2,2026,8,Sales Manager,4902,Target Achievement
-1237,36,2,2026,8,Installation Engineer,2510,Collection
-1238,37,2,2026,8,Installation Engineer,8221,On-time
-1239,41,2,2026,8,Service Sales Person,7999,Quality
-1240,44,2,2026,8,Service Supervisor,4087,Quality
-1241,46,2,2026,8,Service Technician,4334,Collection
-1242,48,2,2026,8,Service Technician,3946,New AMC
-1243,49,2,2026,8,Service Technician,1525,New AMC
-1244,50,2,2026,8,Service Technician,2780,On-time
-1245,56,3,2026,8,Salesperson,6654,Quality
-1246,61,3,2026,8,Sales Manager,9101,Target Achievement
-1247,62,3,2026,8,Installation Engineer,5919,Collection
-1248,64,3,2026,8,Installation Engineer,4037,Quality
-1249,66,3,2026,8,Installation Manager,10709,Collection
-1250,67,3,2026,8,Service Sales Person,6847,New AMC
-1251,69,3,2026,8,Service Supervisor,3186,On-time
-1252,71,3,2026,8,Service Technician,3087,On-time
-1253,73,3,2026,8,Service Technician,1170,Collection
-1254,74,3,2026,8,Service Technician,3566,On-time
-1255,3,1,2026,9,Lead Generator,1683,Target Achievement
-1256,4,1,2026,9,Salesperson,6320,Collection
-1257,6,1,2026,9,Salesperson,5738,On-time
-1258,9,1,2026,9,Sales Manager,6651,On-time
-1259,11,1,2026,9,Installation Engineer,8956,Quality
-1260,12,1,2026,9,Installation Engineer,2728,New AMC
-1261,14,1,2026,9,Installation Manager,3246,New AMC
-1262,16,1,2026,9,Service Sales Person,7202,Target Achievement
-1263,19,1,2026,9,Service Technician,4168,On-time
-1264,22,1,2026,9,Service Technician,4025,Collection
-1265,23,1,2026,9,Service Technician,3409,Target Achievement
-1266,24,1,2026,9,Service Technician,2519,Quality
-1267,27,2,2026,9,Lead Generator,4909,On-time
-1268,28,2,2026,9,Lead Generator,1834,New AMC
-1269,29,2,2026,9,Lead Generator,1211,Collection
-1270,30,2,2026,9,Salesperson,3678,On-time
-1271,31,2,2026,9,Salesperson,6212,Quality
-1272,32,2,2026,9,Salesperson,5483,Quality
-1273,35,2,2026,9,Sales Manager,5282,Quality
-1274,36,2,2026,9,Installation Engineer,8614,On-time
-1275,37,2,2026,9,Installation Engineer,2070,Collection
-1276,40,2,2026,9,Installation Manager,5419,Collection
-1277,41,2,2026,9,Service Sales Person,6321,On-time
-1278,43,2,2026,9,Service Supervisor,5723,Collection
-1279,46,2,2026,9,Service Technician,2377,New AMC
-1280,47,2,2026,9,Service Technician,1676,Collection
-1281,48,2,2026,9,Service Technician,3159,Target Achievement
-1282,49,2,2026,9,Service Technician,3555,Target Achievement
-1283,51,2,2026,9,Service Technician,1475,Target Achievement
-1284,52,2,2026,9,Service Technician,2422,Collection
-1285,53,3,2026,9,Lead Generator,3616,Quality
-1286,58,3,2026,9,Salesperson,9714,On-time
-1287,59,3,2026,9,Salesperson,5299,On-time
-1288,63,3,2026,9,Installation Engineer,3092,New AMC
-1289,66,3,2026,9,Installation Manager,10919,New AMC
-1290,67,3,2026,9,Service Sales Person,5875,Target Achievement
-1291,69,3,2026,9,Service Supervisor,5375,Quality
-1292,70,3,2026,9,Service Supervisor,3893,On-time
-1293,72,3,2026,9,Service Technician,4068,Collection
-1294,73,3,2026,9,Service Technician,3785,Collection
-1295,75,3,2026,9,Service Technician,4448,Collection
-1296,76,3,2026,9,Service Technician,3200,Target Achievement
-1297,1,1,2026,10,Lead Generator,1835,Collection
-1298,4,1,2026,10,Salesperson,10507,Target Achievement
-1299,6,1,2026,10,Salesperson,14081,New AMC
-1300,7,1,2026,10,Salesperson,12823,Target Achievement
-1301,9,1,2026,10,Sales Manager,13801,Collection
-1302,11,1,2026,10,Installation Engineer,6992,Target Achievement
-1303,14,1,2026,10,Installation Manager,10999,On-time
-1304,15,1,2026,10,Service Sales Person,3819,Collection
-1305,17,1,2026,10,Service Supervisor,1957,Target Achievement
-1306,18,1,2026,10,Service Supervisor,4949,Target Achievement
-1307,19,1,2026,10,Service Technician,1272,Quality
-1308,23,1,2026,10,Service Technician,4491,On-time
-1309,24,1,2026,10,Service Technician,4126,New AMC
-1310,25,1,2026,10,Service Technician,2381,On-time
-1311,28,2,2026,10,Lead Generator,1758,Target Achievement
-1312,30,2,2026,10,Salesperson,9072,Quality
-1313,33,2,2026,10,Salesperson,6486,On-time
-1314,40,2,2026,10,Installation Manager,11523,On-time
-1315,41,2,2026,10,Service Sales Person,9855,Quality
-1316,43,2,2026,10,Service Supervisor,3915,Target Achievement
-1317,45,2,2026,10,Service Technician,3945,On-time
-1318,46,2,2026,10,Service Technician,2034,Quality
-1319,47,2,2026,10,Service Technician,1969,New AMC
-1320,50,2,2026,10,Service Technician,2373,Target Achievement
-1321,51,2,2026,10,Service Technician,1886,On-time
-1322,52,2,2026,10,Service Technician,2236,Target Achievement
-1323,53,3,2026,10,Lead Generator,3229,On-time
-1324,54,3,2026,10,Lead Generator,1798,On-time
-1325,55,3,2026,10,Lead Generator,3026,New AMC
-1326,56,3,2026,10,Salesperson,4889,Quality
-1327,58,3,2026,10,Salesperson,3290,Quality
-1328,59,3,2026,10,Salesperson,8769,Quality
-1329,60,3,2026,10,Salesperson,4051,Quality
-1330,62,3,2026,10,Installation Engineer,4676,Quality
-1331,63,3,2026,10,Installation Engineer,7272,Target Achievement
-1332,65,3,2026,10,Installation Engineer,8058,New AMC
-1333,66,3,2026,10,Installation Manager,7651,Target Achievement
-1334,67,3,2026,10,Service Sales Person,10569,Collection
-1335,69,3,2026,10,Service Supervisor,6751,Quality
-1336,73,3,2026,10,Service Technician,3538,Collection
-1337,75,3,2026,10,Service Technician,3114,New AMC
-1338,76,3,2026,10,Service Technician,3706,On-time
-1339,77,3,2026,10,Service Technician,4178,On-time
+1,1,1,2024,1,Lead Generator,3660,Collection
+2,3,1,2024,1,Lead Generator,1939,Collection
+3,5,1,2024,1,Salesperson,11319,Quality
+4,6,1,2024,1,Salesperson,11073,Quality
+5,7,1,2024,1,Salesperson,5194,Collection
+6,8,1,2024,1,Salesperson,10575,On-time
+7,9,1,2024,1,Sales Manager,11938,Quality
+8,14,1,2024,1,Installation Manager,8387,Quality
+9,15,1,2024,1,Service Sales Person,8719,New AMC
+10,16,1,2024,1,Service Sales Person,7350,New AMC
+11,17,1,2024,1,Service Supervisor,5493,Target Achievement
+12,19,1,2024,1,Service Technician,2600,New AMC
+13,23,1,2024,1,Service Technician,1892,Quality
+14,24,1,2024,1,Service Technician,3669,Collection
+15,25,1,2024,1,Service Technician,2046,Quality
+16,27,2,2024,1,Lead Generator,3642,Quality
+17,28,2,2024,1,Lead Generator,2031,Target Achievement
+18,30,2,2024,1,Salesperson,13038,Target Achievement
+19,34,2,2024,1,Salesperson,13537,Target Achievement
+20,35,2,2024,1,Sales Manager,15418,Collection
+21,37,2,2024,1,Installation Engineer,7782,New AMC
+22,38,2,2024,1,Installation Engineer,8952,Target Achievement
+23,39,2,2024,1,Installation Engineer,8846,On-time
+24,40,2,2024,1,Installation Manager,5486,Collection
+25,43,2,2024,1,Service Supervisor,1779,On-time
+26,47,2,2024,1,Service Technician,2817,On-time
+27,48,2,2024,1,Service Technician,4092,New AMC
+28,53,3,2024,1,Lead Generator,2459,Collection
+29,57,3,2024,1,Salesperson,7172,Quality
+30,59,3,2024,1,Salesperson,12432,New AMC
+31,61,3,2024,1,Sales Manager,9368,Quality
+32,64,3,2024,1,Installation Engineer,7815,Target Achievement
+33,65,3,2024,1,Installation Engineer,2355,Collection
+34,67,3,2024,1,Service Sales Person,4054,On-time
+35,69,3,2024,1,Service Supervisor,4659,Target Achievement
+36,70,3,2024,1,Service Supervisor,6641,Target Achievement
+37,71,3,2024,1,Service Technician,3767,New AMC
+38,72,3,2024,1,Service Technician,1776,Target Achievement
+39,75,3,2024,1,Service Technician,4030,On-time
+40,76,3,2024,1,Service Technician,3860,New AMC
+41,80,4,2024,1,Lead Generator,2580,Target Achievement
+42,82,4,2024,1,Salesperson,5822,Collection
+43,84,4,2024,1,Salesperson,9857,Collection
+44,86,4,2024,1,Salesperson,10401,Target Achievement
+45,87,4,2024,1,Sales Manager,7043,New AMC
+46,89,4,2024,1,Installation Engineer,6283,Quality
+47,94,4,2024,1,Service Sales Person,9077,New AMC
+48,95,4,2024,1,Service Supervisor,2088,Collection
+49,97,4,2024,1,Service Technician,4157,On-time
+50,100,4,2024,1,Service Technician,2171,New AMC
+51,102,4,2024,1,Service Technician,1607,Target Achievement
+52,103,4,2024,1,Service Technician,1635,Target Achievement
+53,104,4,2024,1,Service Technician,3418,On-time
+54,107,5,2024,1,Lead Generator,4167,Target Achievement
+55,109,5,2024,1,Salesperson,12917,Target Achievement
+56,114,5,2024,1,Installation Engineer,8327,Target Achievement
+57,122,5,2024,1,Service Supervisor,4974,Collection
+58,123,5,2024,1,Service Technician,1482,Collection
+59,128,5,2024,1,Service Technician,2709,New AMC
+60,129,5,2024,1,Service Technician,1593,New AMC
+61,130,5,2024,1,Service Technician,1716,Collection
+62,1,1,2024,2,Lead Generator,3208,New AMC
+63,3,1,2024,2,Lead Generator,3361,New AMC
+64,5,1,2024,2,Salesperson,7238,New AMC
+65,6,1,2024,2,Salesperson,11054,New AMC
+66,7,1,2024,2,Salesperson,12803,New AMC
+67,8,1,2024,2,Salesperson,5381,On-time
+68,12,1,2024,2,Installation Engineer,7150,Target Achievement
+69,14,1,2024,2,Installation Manager,8671,On-time
+70,17,1,2024,2,Service Supervisor,4719,On-time
+71,18,1,2024,2,Service Supervisor,5794,Collection
+72,21,1,2024,2,Service Technician,1396,On-time
+73,22,1,2024,2,Service Technician,1676,Target Achievement
+74,24,1,2024,2,Service Technician,3366,Collection
+75,25,1,2024,2,Service Technician,4069,New AMC
+76,26,1,2024,2,Service Technician,2704,Collection
+77,30,2,2024,2,Salesperson,6071,New AMC
+78,31,2,2024,2,Salesperson,13488,On-time
+79,33,2,2024,2,Salesperson,7596,Quality
+80,34,2,2024,2,Salesperson,6183,New AMC
+81,36,2,2024,2,Installation Engineer,2933,Collection
+82,37,2,2024,2,Installation Engineer,8014,Collection
+83,39,2,2024,2,Installation Engineer,5340,Collection
+84,41,2,2024,2,Service Sales Person,3031,On-time
+85,45,2,2024,2,Service Technician,2465,On-time
+86,46,2,2024,2,Service Technician,1536,Collection
+87,48,2,2024,2,Service Technician,2845,Target Achievement
+88,50,2,2024,2,Service Technician,3682,Target Achievement
+89,52,2,2024,2,Service Technician,4337,Collection
+90,53,3,2024,2,Lead Generator,4022,Collection
+91,54,3,2024,2,Lead Generator,3717,Quality
+92,55,3,2024,2,Lead Generator,1216,Collection
+93,56,3,2024,2,Salesperson,13683,Target Achievement
+94,59,3,2024,2,Salesperson,12988,Quality
+95,61,3,2024,2,Sales Manager,5844,Collection
+96,62,3,2024,2,Installation Engineer,4867,New AMC
+97,65,3,2024,2,Installation Engineer,5374,New AMC
+98,66,3,2024,2,Installation Manager,8879,Collection
+99,67,3,2024,2,Service Sales Person,6539,Quality
+100,70,3,2024,2,Service Supervisor,6510,Target Achievement
+101,71,3,2024,2,Service Technician,1420,Collection
+102,72,3,2024,2,Service Technician,3389,Quality
+103,74,3,2024,2,Service Technician,1561,Collection
+104,75,3,2024,2,Service Technician,2987,New AMC
+105,76,3,2024,2,Service Technician,1750,Target Achievement
+106,77,3,2024,2,Service Technician,1078,Collection
+107,79,4,2024,2,Lead Generator,1573,Collection
+108,83,4,2024,2,Salesperson,8999,Collection
+109,84,4,2024,2,Salesperson,14007,On-time
+110,85,4,2024,2,Salesperson,9618,Quality
+111,89,4,2024,2,Installation Engineer,4735,On-time
+112,92,4,2024,2,Installation Manager,6756,Target Achievement
+113,93,4,2024,2,Service Sales Person,2834,On-time
+114,96,4,2024,2,Service Supervisor,2610,Target Achievement
+115,98,4,2024,2,Service Technician,3181,New AMC
+116,99,4,2024,2,Service Technician,2417,On-time
+117,100,4,2024,2,Service Technician,4243,Collection
+118,103,4,2024,2,Service Technician,2919,Collection
+119,104,4,2024,2,Service Technician,2831,New AMC
+120,106,5,2024,2,Lead Generator,1642,Collection
+121,107,5,2024,2,Lead Generator,4030,Quality
+122,108,5,2024,2,Salesperson,12197,New AMC
+123,109,5,2024,2,Salesperson,9532,New AMC
+124,110,5,2024,2,Salesperson,14242,New AMC
+125,111,5,2024,2,Salesperson,4729,On-time
+126,112,5,2024,2,Salesperson,7432,New AMC
+127,114,5,2024,2,Installation Engineer,5741,Target Achievement
+128,115,5,2024,2,Installation Engineer,5222,On-time
+129,117,5,2024,2,Installation Engineer,8537,Target Achievement
+130,118,5,2024,2,Installation Manager,9078,On-time
+131,119,5,2024,2,Service Sales Person,9422,Quality
+132,121,5,2024,2,Service Supervisor,2061,Collection
+133,123,5,2024,2,Service Technician,3538,Target Achievement
+134,124,5,2024,2,Service Technician,2470,New AMC
+135,128,5,2024,2,Service Technician,3094,Target Achievement
+136,129,5,2024,2,Service Technician,1592,On-time
+137,130,5,2024,2,Service Technician,3323,Target Achievement
+138,3,1,2024,3,Lead Generator,4068,Quality
+139,5,1,2024,3,Salesperson,14295,On-time
+140,6,1,2024,3,Salesperson,11997,On-time
+141,7,1,2024,3,Salesperson,10422,On-time
+142,11,1,2024,3,Installation Engineer,6939,On-time
+143,14,1,2024,3,Installation Manager,6097,Collection
+144,15,1,2024,3,Service Sales Person,4334,Collection
+145,18,1,2024,3,Service Supervisor,6878,Collection
+146,24,1,2024,3,Service Technician,4218,New AMC
+147,25,1,2024,3,Service Technician,4323,Collection
+148,26,1,2024,3,Service Technician,4009,New AMC
+149,27,2,2024,3,Lead Generator,3249,Target Achievement
+150,29,2,2024,3,Lead Generator,1895,Target Achievement
+151,31,2,2024,3,Salesperson,11084,Target Achievement
+152,32,2,2024,3,Salesperson,8051,Target Achievement
+153,34,2,2024,3,Salesperson,8162,New AMC
+154,36,2,2024,3,Installation Engineer,4033,Target Achievement
+155,40,2,2024,3,Installation Manager,4904,Collection
+156,43,2,2024,3,Service Supervisor,4347,Target Achievement
+157,46,2,2024,3,Service Technician,4430,Quality
+158,48,2,2024,3,Service Technician,3010,Quality
+159,49,2,2024,3,Service Technician,2278,Collection
+160,51,2,2024,3,Service Technician,1598,Quality
+161,52,2,2024,3,Service Technician,1196,Quality
+162,53,3,2024,3,Lead Generator,2361,Target Achievement
+163,54,3,2024,3,Lead Generator,4077,Target Achievement
+164,55,3,2024,3,Lead Generator,3377,New AMC
+165,56,3,2024,3,Salesperson,11585,On-time
+166,57,3,2024,3,Salesperson,5147,Target Achievement
+167,58,3,2024,3,Salesperson,9797,On-time
+168,59,3,2024,3,Salesperson,8279,New AMC
+169,60,3,2024,3,Salesperson,10124,Target Achievement
+170,62,3,2024,3,Installation Engineer,3691,Quality
+171,63,3,2024,3,Installation Engineer,4979,Quality
+172,64,3,2024,3,Installation Engineer,5083,On-time
+173,65,3,2024,3,Installation Engineer,5153,Quality
+174,66,3,2024,3,Installation Manager,3166,Target Achievement
+175,69,3,2024,3,Service Supervisor,2273,Collection
+176,70,3,2024,3,Service Supervisor,4163,Quality
+177,71,3,2024,3,Service Technician,2588,On-time
+178,73,3,2024,3,Service Technician,1412,On-time
+179,74,3,2024,3,Service Technician,1373,On-time
+180,76,3,2024,3,Service Technician,2648,New AMC
+181,80,4,2024,3,Lead Generator,1642,Quality
+182,82,4,2024,3,Salesperson,7303,Target Achievement
+183,84,4,2024,3,Salesperson,13193,Target Achievement
+184,85,4,2024,3,Salesperson,5792,On-time
+185,86,4,2024,3,Salesperson,9504,Collection
+186,91,4,2024,3,Installation Engineer,4379,New AMC
+187,92,4,2024,3,Installation Manager,10426,Quality
+188,93,4,2024,3,Service Sales Person,3885,On-time
+189,95,4,2024,3,Service Supervisor,3931,On-time
+190,96,4,2024,3,Service Supervisor,7199,Collection
+191,97,4,2024,3,Service Technician,1754,On-time
+192,98,4,2024,3,Service Technician,3956,Collection
+193,100,4,2024,3,Service Technician,3830,New AMC
+194,102,4,2024,3,Service Technician,2144,Quality
+195,103,4,2024,3,Service Technician,2941,Collection
+196,105,5,2024,3,Lead Generator,5201,New AMC
+197,108,5,2024,3,Salesperson,3954,Quality
+198,109,5,2024,3,Salesperson,8923,Quality
+199,110,5,2024,3,Salesperson,7761,Collection
+200,111,5,2024,3,Salesperson,10546,On-time
+201,113,5,2024,3,Sales Manager,14209,New AMC
+202,114,5,2024,3,Installation Engineer,3933,Target Achievement
+203,118,5,2024,3,Installation Manager,12198,Collection
+204,119,5,2024,3,Service Sales Person,3168,Collection
+205,120,5,2024,3,Service Sales Person,5442,Quality
+206,121,5,2024,3,Service Supervisor,5183,Collection
+207,122,5,2024,3,Service Supervisor,4367,New AMC
+208,124,5,2024,3,Service Technician,3615,On-time
+209,130,5,2024,3,Service Technician,2327,On-time
+210,1,1,2024,4,Lead Generator,3355,On-time
+211,4,1,2024,4,Salesperson,6693,On-time
+212,5,1,2024,4,Salesperson,8173,On-time
+213,6,1,2024,4,Salesperson,11812,Quality
+214,7,1,2024,4,Salesperson,10358,New AMC
+215,9,1,2024,4,Sales Manager,16832,Collection
+216,11,1,2024,4,Installation Engineer,4301,Quality
+217,12,1,2024,4,Installation Engineer,8937,Target Achievement
+218,14,1,2024,4,Installation Manager,8503,On-time
+219,16,1,2024,4,Service Sales Person,6192,On-time
+220,17,1,2024,4,Service Supervisor,4776,Collection
+221,19,1,2024,4,Service Technician,1675,Target Achievement
+222,21,1,2024,4,Service Technician,4029,Target Achievement
+223,22,1,2024,4,Service Technician,2773,Quality
+224,23,1,2024,4,Service Technician,2447,Quality
+225,24,1,2024,4,Service Technician,1167,Quality
+226,26,1,2024,4,Service Technician,1919,New AMC
+227,27,2,2024,4,Lead Generator,4634,Target Achievement
+228,28,2,2024,4,Lead Generator,4389,New AMC
+229,31,2,2024,4,Salesperson,11017,Target Achievement
+230,32,2,2024,4,Salesperson,9473,Quality
+231,35,2,2024,4,Sales Manager,12294,Collection
+232,37,2,2024,4,Installation Engineer,2146,Target Achievement
+233,40,2,2024,4,Installation Manager,9027,Quality
+234,43,2,2024,4,Service Supervisor,2610,Target Achievement
+235,45,2,2024,4,Service Technician,2610,Target Achievement
+236,46,2,2024,4,Service Technician,3799,Quality
+237,47,2,2024,4,Service Technician,3418,Quality
+238,48,2,2024,4,Service Technician,1772,On-time
+239,51,2,2024,4,Service Technician,1975,Quality
+240,52,2,2024,4,Service Technician,1426,New AMC
+241,57,3,2024,4,Salesperson,11907,On-time
+242,61,3,2024,4,Sales Manager,12745,Target Achievement
+243,63,3,2024,4,Installation Engineer,2330,Quality
+244,64,3,2024,4,Installation Engineer,7749,Target Achievement
+245,67,3,2024,4,Service Sales Person,7304,Collection
+246,73,3,2024,4,Service Technician,3632,New AMC
+247,75,3,2024,4,Service Technician,1996,Quality
+248,76,3,2024,4,Service Technician,1043,Collection
+249,77,3,2024,4,Service Technician,2290,Quality
+250,78,3,2024,4,Service Technician,4133,Target Achievement
+251,79,4,2024,4,Lead Generator,2537,On-time
+252,80,4,2024,4,Lead Generator,3372,On-time
+253,81,4,2024,4,Lead Generator,1644,On-time
+254,84,4,2024,4,Salesperson,3550,On-time
+255,86,4,2024,4,Salesperson,8958,Quality
+256,87,4,2024,4,Sales Manager,19657,Target Achievement
+257,88,4,2024,4,Installation Engineer,2549,Quality
+258,89,4,2024,4,Installation Engineer,5459,On-time
+259,91,4,2024,4,Installation Engineer,6694,Collection
+260,92,4,2024,4,Installation Manager,9928,New AMC
+261,93,4,2024,4,Service Sales Person,8580,Target Achievement
+262,94,4,2024,4,Service Sales Person,4512,On-time
+263,97,4,2024,4,Service Technician,3668,New AMC
+264,99,4,2024,4,Service Technician,2907,New AMC
+265,102,4,2024,4,Service Technician,4126,New AMC
+266,104,4,2024,4,Service Technician,1599,Collection
+267,105,5,2024,4,Lead Generator,2556,Collection
+268,107,5,2024,4,Lead Generator,2633,Quality
+269,108,5,2024,4,Salesperson,10519,On-time
+270,109,5,2024,4,Salesperson,10896,Quality
+271,110,5,2024,4,Salesperson,4369,Target Achievement
+272,111,5,2024,4,Salesperson,9929,On-time
+273,112,5,2024,4,Salesperson,4982,Collection
+274,115,5,2024,4,Installation Engineer,8406,Collection
+275,117,5,2024,4,Installation Engineer,6863,Target Achievement
+276,119,5,2024,4,Service Sales Person,10745,New AMC
+277,121,5,2024,4,Service Supervisor,3553,Quality
+278,123,5,2024,4,Service Technician,2760,Target Achievement
+279,124,5,2024,4,Service Technician,2432,Quality
+280,126,5,2024,4,Service Technician,4194,New AMC
+281,128,5,2024,4,Service Technician,4055,On-time
+282,1,1,2024,5,Lead Generator,2241,On-time
+283,4,1,2024,5,Salesperson,14203,Target Achievement
+284,5,1,2024,5,Salesperson,10500,Quality
+285,11,1,2024,5,Installation Engineer,2497,Collection
+286,15,1,2024,5,Service Sales Person,7755,Collection
+287,25,1,2024,5,Service Technician,2733,Target Achievement
+288,27,2,2024,5,Lead Generator,2896,Target Achievement
+289,29,2,2024,5,Lead Generator,3666,On-time
+290,32,2,2024,5,Salesperson,10027,On-time
+291,33,2,2024,5,Salesperson,7688,Target Achievement
+292,35,2,2024,5,Sales Manager,10090,Target Achievement
+293,36,2,2024,5,Installation Engineer,2841,Target Achievement
+294,40,2,2024,5,Installation Manager,4708,New AMC
+295,45,2,2024,5,Service Technician,2132,New AMC
+296,50,2,2024,5,Service Technician,1437,Quality
+297,51,2,2024,5,Service Technician,2602,Target Achievement
+298,52,2,2024,5,Service Technician,3525,Collection
+299,53,3,2024,5,Lead Generator,1885,Collection
+300,56,3,2024,5,Salesperson,5625,Quality
+301,57,3,2024,5,Salesperson,9526,Collection
+302,58,3,2024,5,Salesperson,9446,New AMC
+303,59,3,2024,5,Salesperson,12888,Target Achievement
+304,61,3,2024,5,Sales Manager,17276,On-time
+305,63,3,2024,5,Installation Engineer,6165,Quality
+306,65,3,2024,5,Installation Engineer,7516,Collection
+307,67,3,2024,5,Service Sales Person,3856,New AMC
+308,71,3,2024,5,Service Technician,2773,New AMC
+309,72,3,2024,5,Service Technician,2392,New AMC
+310,74,3,2024,5,Service Technician,3712,Quality
+311,75,3,2024,5,Service Technician,4159,New AMC
+312,78,3,2024,5,Service Technician,1179,Quality
+313,79,4,2024,5,Lead Generator,2093,Target Achievement
+314,80,4,2024,5,Lead Generator,4508,New AMC
+315,83,4,2024,5,Salesperson,4265,On-time
+316,87,4,2024,5,Sales Manager,6658,Quality
+317,89,4,2024,5,Installation Engineer,4902,Target Achievement
+318,92,4,2024,5,Installation Manager,10092,Quality
+319,94,4,2024,5,Service Sales Person,8450,Target Achievement
+320,95,4,2024,5,Service Supervisor,4585,Collection
+321,97,4,2024,5,Service Technician,1719,New AMC
+322,100,4,2024,5,Service Technician,2013,On-time
+323,102,4,2024,5,Service Technician,2848,Target Achievement
+324,103,4,2024,5,Service Technician,4067,Quality
+325,107,5,2024,5,Lead Generator,1413,New AMC
+326,108,5,2024,5,Salesperson,10590,New AMC
+327,109,5,2024,5,Salesperson,11863,New AMC
+328,110,5,2024,5,Salesperson,9146,New AMC
+329,111,5,2024,5,Salesperson,10000,Quality
+330,112,5,2024,5,Salesperson,8655,Quality
+331,113,5,2024,5,Sales Manager,7847,Quality
+332,115,5,2024,5,Installation Engineer,8606,New AMC
+333,116,5,2024,5,Installation Engineer,6650,On-time
+334,117,5,2024,5,Installation Engineer,6891,Collection
+335,118,5,2024,5,Installation Manager,11079,New AMC
+336,119,5,2024,5,Service Sales Person,4719,New AMC
+337,120,5,2024,5,Service Sales Person,6770,Target Achievement
+338,121,5,2024,5,Service Supervisor,3205,New AMC
+339,123,5,2024,5,Service Technician,3171,Collection
+340,126,5,2024,5,Service Technician,4187,Collection
+341,3,1,2024,6,Lead Generator,5145,Target Achievement
+342,5,1,2024,6,Salesperson,11449,On-time
+343,6,1,2024,6,Salesperson,4075,On-time
+344,8,1,2024,6,Salesperson,14151,Target Achievement
+345,12,1,2024,6,Installation Engineer,6156,Collection
+346,15,1,2024,6,Service Sales Person,3072,On-time
+347,16,1,2024,6,Service Sales Person,7144,On-time
+348,21,1,2024,6,Service Technician,2233,On-time
+349,24,1,2024,6,Service Technician,2673,Quality
+350,31,2,2024,6,Salesperson,5562,Collection
+351,33,2,2024,6,Salesperson,10194,New AMC
+352,34,2,2024,6,Salesperson,3325,Target Achievement
+353,35,2,2024,6,Sales Manager,15589,Quality
+354,37,2,2024,6,Installation Engineer,6206,Target Achievement
+355,40,2,2024,6,Installation Manager,10162,Quality
+356,41,2,2024,6,Service Sales Person,2938,Quality
+357,43,2,2024,6,Service Supervisor,5268,Quality
+358,49,2,2024,6,Service Technician,2383,Collection
+359,50,2,2024,6,Service Technician,2099,Target Achievement
+360,51,2,2024,6,Service Technician,3233,Collection
+361,52,2,2024,6,Service Technician,1622,Target Achievement
+362,53,3,2024,6,Lead Generator,3742,Target Achievement
+363,54,3,2024,6,Lead Generator,1320,Target Achievement
+364,55,3,2024,6,Lead Generator,1743,Quality
+365,56,3,2024,6,Salesperson,4358,Collection
+366,59,3,2024,6,Salesperson,10921,New AMC
+367,61,3,2024,6,Sales Manager,16431,Target Achievement
+368,63,3,2024,6,Installation Engineer,2513,Quality
+369,64,3,2024,6,Installation Engineer,8218,On-time
+370,65,3,2024,6,Installation Engineer,2217,On-time
+371,66,3,2024,6,Installation Manager,7823,On-time
+372,67,3,2024,6,Service Sales Person,2598,Quality
+373,70,3,2024,6,Service Supervisor,4038,On-time
+374,71,3,2024,6,Service Technician,3871,Quality
+375,72,3,2024,6,Service Technician,3341,Target Achievement
+376,75,3,2024,6,Service Technician,3686,Target Achievement
+377,76,3,2024,6,Service Technician,3961,Target Achievement
+378,77,3,2024,6,Service Technician,2353,New AMC
+379,78,3,2024,6,Service Technician,4444,Collection
+380,80,4,2024,6,Lead Generator,4041,Quality
+381,81,4,2024,6,Lead Generator,2812,Target Achievement
+382,82,4,2024,6,Salesperson,11881,On-time
+383,84,4,2024,6,Salesperson,7370,Collection
+384,89,4,2024,6,Installation Engineer,5622,Quality
+385,91,4,2024,6,Installation Engineer,8577,Target Achievement
+386,92,4,2024,6,Installation Manager,9918,Target Achievement
+387,94,4,2024,6,Service Sales Person,3073,New AMC
+388,96,4,2024,6,Service Supervisor,2215,New AMC
+389,97,4,2024,6,Service Technician,1133,New AMC
+390,99,4,2024,6,Service Technician,4129,Quality
+391,103,4,2024,6,Service Technician,1205,Quality
+392,109,5,2024,6,Salesperson,9680,On-time
+393,110,5,2024,6,Salesperson,13087,On-time
+394,111,5,2024,6,Salesperson,14173,Quality
+395,113,5,2024,6,Sales Manager,7379,New AMC
+396,115,5,2024,6,Installation Engineer,7487,Collection
+397,116,5,2024,6,Installation Engineer,4671,Quality
+398,119,5,2024,6,Service Sales Person,5016,New AMC
+399,120,5,2024,6,Service Sales Person,3943,Target Achievement
+400,121,5,2024,6,Service Supervisor,6901,Quality
+401,122,5,2024,6,Service Supervisor,5919,Collection
+402,123,5,2024,6,Service Technician,1872,Quality
+403,129,5,2024,6,Service Technician,4310,Collection
+404,1,1,2024,7,Lead Generator,2222,Target Achievement
+405,3,1,2024,7,Lead Generator,1991,On-time
+406,5,1,2024,7,Salesperson,4205,Target Achievement
+407,6,1,2024,7,Salesperson,4923,Target Achievement
+408,8,1,2024,7,Salesperson,3657,Collection
+409,14,1,2024,7,Installation Manager,3596,Target Achievement
+410,16,1,2024,7,Service Sales Person,7467,Quality
+411,17,1,2024,7,Service Supervisor,2347,Collection
+412,19,1,2024,7,Service Technician,4020,New AMC
+413,21,1,2024,7,Service Technician,3805,Collection
+414,23,1,2024,7,Service Technician,1783,Quality
+415,25,1,2024,7,Service Technician,4269,Quality
+416,27,2,2024,7,Lead Generator,1903,Collection
+417,29,2,2024,7,Lead Generator,1588,New AMC
+418,31,2,2024,7,Salesperson,3693,New AMC
+419,32,2,2024,7,Salesperson,12837,Collection
+420,36,2,2024,7,Installation Engineer,2450,New AMC
+421,38,2,2024,7,Installation Engineer,7854,Collection
+422,39,2,2024,7,Installation Engineer,7483,New AMC
+423,40,2,2024,7,Installation Manager,11631,New AMC
+424,41,2,2024,7,Service Sales Person,7526,New AMC
+425,43,2,2024,7,Service Supervisor,3515,On-time
+426,49,2,2024,7,Service Technician,3215,Target Achievement
+427,53,3,2024,7,Lead Generator,3153,Collection
+428,54,3,2024,7,Lead Generator,3777,Target Achievement
+429,55,3,2024,7,Lead Generator,1514,New AMC
+430,58,3,2024,7,Salesperson,10007,New AMC
+431,60,3,2024,7,Salesperson,11670,Collection
+432,61,3,2024,7,Sales Manager,7600,New AMC
+433,64,3,2024,7,Installation Engineer,8762,Target Achievement
+434,65,3,2024,7,Installation Engineer,4788,Collection
+435,72,3,2024,7,Service Technician,2882,New AMC
+436,73,3,2024,7,Service Technician,2359,Quality
+437,74,3,2024,7,Service Technician,2966,Quality
+438,75,3,2024,7,Service Technician,1986,New AMC
+439,76,3,2024,7,Service Technician,1459,Collection
+440,79,4,2024,7,Lead Generator,1514,Quality
+441,80,4,2024,7,Lead Generator,4732,On-time
+442,82,4,2024,7,Salesperson,11043,Quality
+443,85,4,2024,7,Salesperson,5643,On-time
+444,87,4,2024,7,Sales Manager,10684,Collection
+445,89,4,2024,7,Installation Engineer,8219,Collection
+446,92,4,2024,7,Installation Manager,6694,On-time
+447,93,4,2024,7,Service Sales Person,4725,Collection
+448,95,4,2024,7,Service Supervisor,2720,New AMC
+449,97,4,2024,7,Service Technician,4022,Quality
+450,98,4,2024,7,Service Technician,2809,New AMC
+451,100,4,2024,7,Service Technician,4279,Collection
+452,102,4,2024,7,Service Technician,3022,Target Achievement
+453,103,4,2024,7,Service Technician,3501,New AMC
+454,104,4,2024,7,Service Technician,2340,Collection
+455,114,5,2024,7,Installation Engineer,7124,On-time
+456,115,5,2024,7,Installation Engineer,2273,Collection
+457,116,5,2024,7,Installation Engineer,3119,New AMC
+458,118,5,2024,7,Installation Manager,6638,New AMC
+459,119,5,2024,7,Service Sales Person,9823,On-time
+460,120,5,2024,7,Service Sales Person,7767,Target Achievement
+461,121,5,2024,7,Service Supervisor,3137,Target Achievement
+462,122,5,2024,7,Service Supervisor,2288,Collection
+463,123,5,2024,7,Service Technician,4221,New AMC
+464,124,5,2024,7,Service Technician,3522,On-time
+465,128,5,2024,7,Service Technician,3898,Collection
+466,130,5,2024,7,Service Technician,2052,New AMC
+467,5,1,2024,8,Salesperson,11086,Target Achievement
+468,6,1,2024,8,Salesperson,8668,Quality
+469,8,1,2024,8,Salesperson,4614,New AMC
+470,14,1,2024,8,Installation Manager,2907,On-time
+471,15,1,2024,8,Service Sales Person,4832,Collection
+472,18,1,2024,8,Service Supervisor,2196,Quality
+473,19,1,2024,8,Service Technician,2453,New AMC
+474,21,1,2024,8,Service Technician,2599,Collection
+475,22,1,2024,8,Service Technician,4174,On-time
+476,24,1,2024,8,Service Technician,1278,Target Achievement
+477,26,1,2024,8,Service Technician,1392,Target Achievement
+478,29,2,2024,8,Lead Generator,4809,On-time
+479,31,2,2024,8,Salesperson,9567,Target Achievement
+480,33,2,2024,8,Salesperson,4370,On-time
+481,34,2,2024,8,Salesperson,6444,Quality
+482,37,2,2024,8,Installation Engineer,4675,Collection
+483,38,2,2024,8,Installation Engineer,6152,On-time
+484,41,2,2024,8,Service Sales Person,5545,Collection
+485,43,2,2024,8,Service Supervisor,4443,Quality
+486,44,2,2024,8,Service Supervisor,6943,New AMC
+487,46,2,2024,8,Service Technician,1597,Collection
+488,47,2,2024,8,Service Technician,3347,On-time
+489,48,2,2024,8,Service Technician,1739,Quality
+490,49,2,2024,8,Service Technician,3052,On-time
+491,51,2,2024,8,Service Technician,3840,Quality
+492,54,3,2024,8,Lead Generator,4788,On-time
+493,55,3,2024,8,Lead Generator,2121,On-time
+494,56,3,2024,8,Salesperson,4250,Target Achievement
+495,57,3,2024,8,Salesperson,6540,Quality
+496,59,3,2024,8,Salesperson,6068,New AMC
+497,62,3,2024,8,Installation Engineer,3009,New AMC
+498,63,3,2024,8,Installation Engineer,8447,Target Achievement
+499,64,3,2024,8,Installation Engineer,2005,Quality
+500,69,3,2024,8,Service Supervisor,6921,Quality
+501,70,3,2024,8,Service Supervisor,4174,On-time
+502,71,3,2024,8,Service Technician,2645,On-time
+503,72,3,2024,8,Service Technician,4173,Collection
+504,73,3,2024,8,Service Technician,4284,Target Achievement
+505,75,3,2024,8,Service Technician,3436,Collection
+506,76,3,2024,8,Service Technician,1122,Target Achievement
+507,77,3,2024,8,Service Technician,1852,New AMC
+508,78,3,2024,8,Service Technician,3566,On-time
+509,79,4,2024,8,Lead Generator,1254,Target Achievement
+510,81,4,2024,8,Lead Generator,2148,Quality
+511,84,4,2024,8,Salesperson,4057,Quality
+512,89,4,2024,8,Installation Engineer,8009,Collection
+513,91,4,2024,8,Installation Engineer,8018,Quality
+514,92,4,2024,8,Installation Manager,12029,On-time
+515,93,4,2024,8,Service Sales Person,5364,New AMC
+516,95,4,2024,8,Service Supervisor,6172,On-time
+517,98,4,2024,8,Service Technician,1651,Target Achievement
+518,99,4,2024,8,Service Technician,1519,New AMC
+519,102,4,2024,8,Service Technician,1048,Collection
+520,103,4,2024,8,Service Technician,1622,New AMC
+521,104,4,2024,8,Service Technician,1059,Quality
+522,105,5,2024,8,Lead Generator,4626,On-time
+523,108,5,2024,8,Salesperson,11404,Quality
+524,109,5,2024,8,Salesperson,6415,New AMC
+525,110,5,2024,8,Salesperson,12727,Target Achievement
+526,111,5,2024,8,Salesperson,3258,Quality
+527,112,5,2024,8,Salesperson,9008,Quality
+528,113,5,2024,8,Sales Manager,5349,New AMC
+529,116,5,2024,8,Installation Engineer,2124,Collection
+530,117,5,2024,8,Installation Engineer,7015,Quality
+531,121,5,2024,8,Service Supervisor,4599,Collection
+532,122,5,2024,8,Service Supervisor,1962,Quality
+533,123,5,2024,8,Service Technician,1611,Quality
+534,124,5,2024,8,Service Technician,4056,Collection
+535,126,5,2024,8,Service Technician,2939,New AMC
+536,130,5,2024,8,Service Technician,1521,Quality
+537,1,1,2024,9,Lead Generator,3968,Collection
+538,3,1,2024,9,Lead Generator,3719,Collection
+539,5,1,2024,9,Salesperson,11172,On-time
+540,6,1,2024,9,Salesperson,4582,Target Achievement
+541,8,1,2024,9,Salesperson,3239,Quality
+542,9,1,2024,9,Sales Manager,12705,Quality
+543,11,1,2024,9,Installation Engineer,3284,Target Achievement
+544,14,1,2024,9,Installation Manager,8042,On-time
+545,15,1,2024,9,Service Sales Person,9598,New AMC
+546,17,1,2024,9,Service Supervisor,5289,Collection
+547,23,1,2024,9,Service Technician,1460,New AMC
+548,24,1,2024,9,Service Technician,4275,Target Achievement
+549,28,2,2024,9,Lead Generator,2310,Collection
+550,31,2,2024,9,Salesperson,9855,Quality
+551,32,2,2024,9,Salesperson,8515,Quality
+552,34,2,2024,9,Salesperson,5924,Target Achievement
+553,35,2,2024,9,Sales Manager,7342,Target Achievement
+554,37,2,2024,9,Installation Engineer,7562,Collection
+555,38,2,2024,9,Installation Engineer,3310,New AMC
+556,41,2,2024,9,Service Sales Person,8947,Quality
+557,45,2,2024,9,Service Technician,2561,Quality
+558,47,2,2024,9,Service Technician,1725,Quality
+559,51,2,2024,9,Service Technician,2497,Target Achievement
+560,52,2,2024,9,Service Technician,2572,On-time
+561,54,3,2024,9,Lead Generator,4062,New AMC
+562,55,3,2024,9,Lead Generator,1751,Target Achievement
+563,60,3,2024,9,Salesperson,11760,Collection
+564,65,3,2024,9,Installation Engineer,8358,On-time
+565,66,3,2024,9,Installation Manager,6326,Collection
+566,67,3,2024,9,Service Sales Person,10752,New AMC
+567,70,3,2024,9,Service Supervisor,4327,New AMC
+568,74,3,2024,9,Service Technician,1962,Collection
+569,80,4,2024,9,Lead Generator,4957,Target Achievement
+570,82,4,2024,9,Salesperson,11769,Quality
+571,83,4,2024,9,Salesperson,11960,Collection
+572,87,4,2024,9,Sales Manager,15160,Collection
+573,88,4,2024,9,Installation Engineer,3846,Quality
+574,89,4,2024,9,Installation Engineer,3176,New AMC
+575,91,4,2024,9,Installation Engineer,4785,Target Achievement
+576,92,4,2024,9,Installation Manager,6410,Collection
+577,93,4,2024,9,Service Sales Person,4478,Quality
+578,94,4,2024,9,Service Sales Person,8464,Quality
+579,95,4,2024,9,Service Supervisor,6081,Collection
+580,98,4,2024,9,Service Technician,2590,Target Achievement
+581,99,4,2024,9,Service Technician,3668,Target Achievement
+582,100,4,2024,9,Service Technician,2737,On-time
+583,103,4,2024,9,Service Technician,1297,Quality
+584,104,4,2024,9,Service Technician,1798,On-time
+585,107,5,2024,9,Lead Generator,4803,On-time
+586,109,5,2024,9,Salesperson,11118,New AMC
+587,111,5,2024,9,Salesperson,12093,Quality
+588,113,5,2024,9,Sales Manager,11733,New AMC
+589,115,5,2024,9,Installation Engineer,6000,New AMC
+590,118,5,2024,9,Installation Manager,9258,Collection
+591,119,5,2024,9,Service Sales Person,7122,New AMC
+592,122,5,2024,9,Service Supervisor,1653,On-time
+593,124,5,2024,9,Service Technician,2789,Quality
+594,126,5,2024,9,Service Technician,3092,New AMC
+595,129,5,2024,9,Service Technician,2438,On-time
+596,130,5,2024,9,Service Technician,3120,New AMC
+597,1,1,2024,10,Lead Generator,3553,On-time
+598,4,1,2024,10,Salesperson,9160,Collection
+599,5,1,2024,10,Salesperson,8443,On-time
+600,8,1,2024,10,Salesperson,11581,On-time
+601,9,1,2024,10,Sales Manager,21047,Collection
+602,12,1,2024,10,Installation Engineer,8746,On-time
+603,21,1,2024,10,Service Technician,3266,Collection
+604,27,2,2024,10,Lead Generator,5229,Quality
+605,29,2,2024,10,Lead Generator,5219,New AMC
+606,30,2,2024,10,Salesperson,4361,Quality
+607,34,2,2024,10,Salesperson,13696,New AMC
+608,36,2,2024,10,Installation Engineer,7594,Collection
+609,39,2,2024,10,Installation Engineer,2945,Target Achievement
+610,40,2,2024,10,Installation Manager,5564,On-time
+611,41,2,2024,10,Service Sales Person,9078,Quality
+612,43,2,2024,10,Service Supervisor,3824,Collection
+613,44,2,2024,10,Service Supervisor,6912,Quality
+614,49,2,2024,10,Service Technician,4351,Quality
+615,50,2,2024,10,Service Technician,1038,New AMC
+616,52,2,2024,10,Service Technician,3395,New AMC
+617,53,3,2024,10,Lead Generator,1893,Target Achievement
+618,54,3,2024,10,Lead Generator,2832,Target Achievement
+619,56,3,2024,10,Salesperson,13621,Collection
+620,57,3,2024,10,Salesperson,3726,Target Achievement
+621,58,3,2024,10,Salesperson,5446,On-time
+622,60,3,2024,10,Salesperson,4634,Quality
+623,62,3,2024,10,Installation Engineer,5177,New AMC
+624,63,3,2024,10,Installation Engineer,3462,On-time
+625,66,3,2024,10,Installation Manager,7326,On-time
+626,70,3,2024,10,Service Supervisor,2828,Target Achievement
+627,71,3,2024,10,Service Technician,1494,Target Achievement
+628,72,3,2024,10,Service Technician,2531,Target Achievement
+629,73,3,2024,10,Service Technician,4382,New AMC
+630,74,3,2024,10,Service Technician,2328,Target Achievement
+631,75,3,2024,10,Service Technician,3879,Collection
+632,76,3,2024,10,Service Technician,1721,Target Achievement
+633,78,3,2024,10,Service Technician,2659,Target Achievement
+634,80,4,2024,10,Lead Generator,5256,Target Achievement
+635,81,4,2024,10,Lead Generator,1365,On-time
+636,82,4,2024,10,Salesperson,4140,Quality
+637,83,4,2024,10,Salesperson,8313,Target Achievement
+638,84,4,2024,10,Salesperson,7745,New AMC
+639,85,4,2024,10,Salesperson,14146,Collection
+640,93,4,2024,10,Service Sales Person,5428,Target Achievement
+641,95,4,2024,10,Service Supervisor,4443,Collection
+642,97,4,2024,10,Service Technician,2175,On-time
+643,98,4,2024,10,Service Technician,2304,Quality
+644,102,4,2024,10,Service Technician,2543,Collection
+645,103,4,2024,10,Service Technician,1269,New AMC
+646,104,4,2024,10,Service Technician,2071,Collection
+647,105,5,2024,10,Lead Generator,5263,On-time
+648,110,5,2024,10,Salesperson,5781,Quality
+649,111,5,2024,10,Salesperson,5608,Target Achievement
+650,113,5,2024,10,Sales Manager,16098,Collection
+651,114,5,2024,10,Installation Engineer,7585,Collection
+652,115,5,2024,10,Installation Engineer,5651,Collection
+653,116,5,2024,10,Installation Engineer,2985,Target Achievement
+654,117,5,2024,10,Installation Engineer,2815,Collection
+655,118,5,2024,10,Installation Manager,9297,Quality
+656,123,5,2024,10,Service Technician,2349,Target Achievement
+657,129,5,2024,10,Service Technician,2831,Target Achievement
+658,130,5,2024,10,Service Technician,2591,New AMC
+659,1,1,2024,11,Lead Generator,5169,Target Achievement
+660,3,1,2024,11,Lead Generator,1258,Target Achievement
+661,4,1,2024,11,Salesperson,5648,Quality
+662,5,1,2024,11,Salesperson,5090,Quality
+663,7,1,2024,11,Salesperson,9324,New AMC
+664,11,1,2024,11,Installation Engineer,7274,New AMC
+665,12,1,2024,11,Installation Engineer,8601,Target Achievement
+666,14,1,2024,11,Installation Manager,7767,Collection
+667,16,1,2024,11,Service Sales Person,4188,Collection
+668,21,1,2024,11,Service Technician,1822,Collection
+669,22,1,2024,11,Service Technician,2029,Quality
+670,25,1,2024,11,Service Technician,2609,New AMC
+671,28,2,2024,11,Lead Generator,1482,On-time
+672,31,2,2024,11,Salesperson,11021,Collection
+673,34,2,2024,11,Salesperson,3956,New AMC
+674,35,2,2024,11,Sales Manager,9102,Quality
+675,36,2,2024,11,Installation Engineer,6535,New AMC
+676,37,2,2024,11,Installation Engineer,2125,Collection
+677,39,2,2024,11,Installation Engineer,2057,Quality
+678,40,2,2024,11,Installation Manager,2867,Collection
+679,41,2,2024,11,Service Sales Person,9089,New AMC
+680,43,2,2024,11,Service Supervisor,2940,New AMC
+681,44,2,2024,11,Service Supervisor,4591,Target Achievement
+682,47,2,2024,11,Service Technician,1322,New AMC
+683,49,2,2024,11,Service Technician,4341,Collection
+684,51,2,2024,11,Service Technician,3922,Target Achievement
+685,52,2,2024,11,Service Technician,1467,Quality
+686,53,3,2024,11,Lead Generator,4735,Collection
+687,54,3,2024,11,Lead Generator,3488,Collection
+688,56,3,2024,11,Salesperson,11316,Target Achievement
+689,60,3,2024,11,Salesperson,4391,Target Achievement
+690,64,3,2024,11,Installation Engineer,6510,Target Achievement
+691,67,3,2024,11,Service Sales Person,3146,Collection
+692,69,3,2024,11,Service Supervisor,5144,New AMC
+693,70,3,2024,11,Service Supervisor,6554,Collection
+694,71,3,2024,11,Service Technician,4482,Collection
+695,73,3,2024,11,Service Technician,1300,Quality
+696,74,3,2024,11,Service Technician,1720,Collection
+697,76,3,2024,11,Service Technician,4007,Quality
+698,77,3,2024,11,Service Technician,2688,Target Achievement
+699,78,3,2024,11,Service Technician,1219,New AMC
+700,79,4,2024,11,Lead Generator,3246,Quality
+701,81,4,2024,11,Lead Generator,5342,Collection
+702,82,4,2024,11,Salesperson,13163,Quality
+703,84,4,2024,11,Salesperson,4435,Target Achievement
+704,85,4,2024,11,Salesperson,4240,Quality
+705,88,4,2024,11,Installation Engineer,7177,Collection
+706,89,4,2024,11,Installation Engineer,2284,Collection
+707,92,4,2024,11,Installation Manager,5564,On-time
+708,95,4,2024,11,Service Supervisor,4911,On-time
+709,96,4,2024,11,Service Supervisor,1808,Collection
+710,97,4,2024,11,Service Technician,2876,Target Achievement
+711,99,4,2024,11,Service Technician,1873,Target Achievement
+712,102,4,2024,11,Service Technician,1703,Collection
+713,104,4,2024,11,Service Technician,2496,Quality
+714,105,5,2024,11,Lead Generator,2623,Collection
+715,110,5,2024,11,Salesperson,8066,New AMC
+716,111,5,2024,11,Salesperson,5494,Quality
+717,113,5,2024,11,Sales Manager,14514,Target Achievement
+718,117,5,2024,11,Installation Engineer,2644,On-time
+719,118,5,2024,11,Installation Manager,9750,On-time
+720,119,5,2024,11,Service Sales Person,3247,Quality
+721,120,5,2024,11,Service Sales Person,5180,New AMC
+722,126,5,2024,11,Service Technician,3979,On-time
+723,128,5,2024,11,Service Technician,2439,Collection
+724,129,5,2024,11,Service Technician,3920,New AMC
+725,3,1,2024,12,Lead Generator,1926,Quality
+726,4,1,2024,12,Salesperson,10263,Target Achievement
+727,8,1,2024,12,Salesperson,12374,On-time
+728,9,1,2024,12,Sales Manager,15578,Quality
+729,12,1,2024,12,Installation Engineer,8773,New AMC
+730,14,1,2024,12,Installation Manager,3217,Target Achievement
+731,17,1,2024,12,Service Supervisor,1801,Target Achievement
+732,19,1,2024,12,Service Technician,2719,Target Achievement
+733,21,1,2024,12,Service Technician,3572,Collection
+734,22,1,2024,12,Service Technician,2525,New AMC
+735,28,2,2024,12,Lead Generator,3313,Collection
+736,29,2,2024,12,Lead Generator,3624,New AMC
+737,31,2,2024,12,Salesperson,4922,Collection
+738,32,2,2024,12,Salesperson,4544,New AMC
+739,33,2,2024,12,Salesperson,6787,Quality
+740,35,2,2024,12,Sales Manager,7889,Target Achievement
+741,37,2,2024,12,Installation Engineer,4028,New AMC
+742,38,2,2024,12,Installation Engineer,2449,New AMC
+743,43,2,2024,12,Service Supervisor,6759,On-time
+744,44,2,2024,12,Service Supervisor,3936,Quality
+745,45,2,2024,12,Service Technician,3011,New AMC
+746,46,2,2024,12,Service Technician,3092,Collection
+747,47,2,2024,12,Service Technician,2671,Collection
+748,50,2,2024,12,Service Technician,1980,Quality
+749,54,3,2024,12,Lead Generator,2258,Quality
+750,56,3,2024,12,Salesperson,4015,Target Achievement
+751,57,3,2024,12,Salesperson,12493,New AMC
+752,59,3,2024,12,Salesperson,5259,Quality
+753,62,3,2024,12,Installation Engineer,3885,Target Achievement
+754,64,3,2024,12,Installation Engineer,8127,Quality
+755,65,3,2024,12,Installation Engineer,6714,New AMC
+756,66,3,2024,12,Installation Manager,11651,Quality
+757,67,3,2024,12,Service Sales Person,9632,New AMC
+758,69,3,2024,12,Service Supervisor,4082,Collection
+759,71,3,2024,12,Service Technician,2004,Collection
+760,72,3,2024,12,Service Technician,4119,New AMC
+761,74,3,2024,12,Service Technician,3389,Quality
+762,75,3,2024,12,Service Technician,3401,Target Achievement
+763,76,3,2024,12,Service Technician,1815,Target Achievement
+764,77,3,2024,12,Service Technician,2582,Quality
+765,79,4,2024,12,Lead Generator,1525,Quality
+766,82,4,2024,12,Salesperson,13549,Target Achievement
+767,85,4,2024,12,Salesperson,13098,Collection
+768,86,4,2024,12,Salesperson,7066,Target Achievement
+769,87,4,2024,12,Sales Manager,14069,On-time
+770,88,4,2024,12,Installation Engineer,5173,New AMC
+771,92,4,2024,12,Installation Manager,6036,Target Achievement
+772,93,4,2024,12,Service Sales Person,6320,New AMC
+773,94,4,2024,12,Service Sales Person,4316,New AMC
+774,96,4,2024,12,Service Supervisor,2195,On-time
+775,102,4,2024,12,Service Technician,2632,Collection
+776,103,4,2024,12,Service Technician,4248,Quality
+777,104,4,2024,12,Service Technician,1070,Quality
+778,107,5,2024,12,Lead Generator,5291,Target Achievement
+779,108,5,2024,12,Salesperson,10402,On-time
+780,109,5,2024,12,Salesperson,13405,On-time
+781,111,5,2024,12,Salesperson,8333,Quality
+782,112,5,2024,12,Salesperson,5100,On-time
+783,114,5,2024,12,Installation Engineer,6474,Target Achievement
+784,116,5,2024,12,Installation Engineer,8363,Quality
+785,120,5,2024,12,Service Sales Person,3353,Quality
+786,121,5,2024,12,Service Supervisor,6900,On-time
+787,122,5,2024,12,Service Supervisor,5028,Target Achievement
+788,126,5,2024,12,Service Technician,4498,Quality
+789,129,5,2024,12,Service Technician,1664,On-time
+790,130,5,2024,12,Service Technician,3253,Target Achievement
+791,1,1,2025,1,Lead Generator,2977,Quality
+792,3,1,2025,1,Lead Generator,5384,Collection
+793,4,1,2025,1,Salesperson,5713,New AMC
+794,5,1,2025,1,Salesperson,10288,Collection
+795,7,1,2025,1,Salesperson,10104,On-time
+796,8,1,2025,1,Salesperson,9088,Collection
+797,12,1,2025,1,Installation Engineer,7391,New AMC
+798,18,1,2025,1,Service Supervisor,4970,On-time
+799,19,1,2025,1,Service Technician,2385,Quality
+800,22,1,2025,1,Service Technician,2278,Collection
+801,23,1,2025,1,Service Technician,1708,On-time
+802,25,1,2025,1,Service Technician,2162,On-time
+803,28,2,2025,1,Lead Generator,2987,New AMC
+804,29,2,2025,1,Lead Generator,3589,On-time
+805,30,2,2025,1,Salesperson,4903,Target Achievement
+806,34,2,2025,1,Salesperson,12116,Collection
+807,36,2,2025,1,Installation Engineer,3502,New AMC
+808,40,2,2025,1,Installation Manager,11339,On-time
+809,46,2,2025,1,Service Technician,3916,On-time
+810,47,2,2025,1,Service Technician,2145,Quality
+811,48,2,2025,1,Service Technician,3353,Collection
+812,49,2,2025,1,Service Technician,2389,Quality
+813,52,2,2025,1,Service Technician,3409,Target Achievement
+814,53,3,2025,1,Lead Generator,2760,Target Achievement
+815,54,3,2025,1,Lead Generator,3080,Quality
+816,56,3,2025,1,Salesperson,8722,New AMC
+817,59,3,2025,1,Salesperson,11681,Quality
+818,60,3,2025,1,Salesperson,12791,On-time
+819,61,3,2025,1,Sales Manager,10511,On-time
+820,63,3,2025,1,Installation Engineer,2588,Target Achievement
+821,64,3,2025,1,Installation Engineer,6693,New AMC
+822,66,3,2025,1,Installation Manager,5232,New AMC
+823,73,3,2025,1,Service Technician,1544,Collection
+824,76,3,2025,1,Service Technician,1792,Quality
+825,77,3,2025,1,Service Technician,4414,Target Achievement
+826,78,3,2025,1,Service Technician,3688,Quality
+827,79,4,2025,1,Lead Generator,4869,Quality
+828,80,4,2025,1,Lead Generator,1365,Quality
+829,82,4,2025,1,Salesperson,13851,On-time
+830,84,4,2025,1,Salesperson,12057,Target Achievement
+831,85,4,2025,1,Salesperson,14224,Target Achievement
+832,86,4,2025,1,Salesperson,9157,Collection
+833,88,4,2025,1,Installation Engineer,7957,On-time
+834,89,4,2025,1,Installation Engineer,6817,Quality
+835,93,4,2025,1,Service Sales Person,9405,Target Achievement
+836,94,4,2025,1,Service Sales Person,10009,Quality
+837,95,4,2025,1,Service Supervisor,2410,Collection
+838,96,4,2025,1,Service Supervisor,2620,On-time
+839,98,4,2025,1,Service Technician,2722,Quality
+840,103,4,2025,1,Service Technician,3313,New AMC
+841,106,5,2025,1,Lead Generator,3486,On-time
+842,107,5,2025,1,Lead Generator,1312,New AMC
+843,109,5,2025,1,Salesperson,8268,Target Achievement
+844,113,5,2025,1,Sales Manager,13536,Collection
+845,114,5,2025,1,Installation Engineer,7845,Collection
+846,116,5,2025,1,Installation Engineer,2984,Collection
+847,117,5,2025,1,Installation Engineer,3867,On-time
+848,118,5,2025,1,Installation Manager,7780,Target Achievement
+849,119,5,2025,1,Service Sales Person,4125,Target Achievement
+850,120,5,2025,1,Service Sales Person,3716,Collection
+851,121,5,2025,1,Service Supervisor,2091,Target Achievement
+852,123,5,2025,1,Service Technician,2569,Target Achievement
+853,129,5,2025,1,Service Technician,3925,Target Achievement
+854,3,1,2025,2,Lead Generator,3560,New AMC
+855,4,1,2025,2,Salesperson,12183,On-time
+856,5,1,2025,2,Salesperson,11239,Collection
+857,6,1,2025,2,Salesperson,6583,On-time
+858,7,1,2025,2,Salesperson,13337,Collection
+859,8,1,2025,2,Salesperson,12745,Target Achievement
+860,11,1,2025,2,Installation Engineer,3808,Quality
+861,12,1,2025,2,Installation Engineer,6748,Quality
+862,14,1,2025,2,Installation Manager,3137,Quality
+863,18,1,2025,2,Service Supervisor,5275,New AMC
+864,19,1,2025,2,Service Technician,2145,On-time
+865,24,1,2025,2,Service Technician,2871,Quality
+866,25,1,2025,2,Service Technician,1373,On-time
+867,26,1,2025,2,Service Technician,2923,Quality
+868,27,2,2025,2,Lead Generator,4759,New AMC
+869,28,2,2025,2,Lead Generator,3788,New AMC
+870,30,2,2025,2,Salesperson,7484,New AMC
+871,32,2,2025,2,Salesperson,7968,Quality
+872,33,2,2025,2,Salesperson,9463,Target Achievement
+873,34,2,2025,2,Salesperson,4965,Target Achievement
+874,35,2,2025,2,Sales Manager,8350,New AMC
+875,36,2,2025,2,Installation Engineer,4507,Collection
+876,37,2,2025,2,Installation Engineer,7615,Target Achievement
+877,39,2,2025,2,Installation Engineer,3808,Collection
+878,41,2,2025,2,Service Sales Person,7753,New AMC
+879,43,2,2025,2,Service Supervisor,4742,Target Achievement
+880,44,2,2025,2,Service Supervisor,5120,Target Achievement
+881,45,2,2025,2,Service Technician,4254,Target Achievement
+882,46,2,2025,2,Service Technician,2683,New AMC
+883,47,2,2025,2,Service Technician,3989,On-time
+884,50,2,2025,2,Service Technician,1731,New AMC
+885,51,2,2025,2,Service Technician,1924,Quality
+886,52,2,2025,2,Service Technician,3591,New AMC
+887,54,3,2025,2,Lead Generator,2973,Collection
+888,57,3,2025,2,Salesperson,8749,Quality
+889,60,3,2025,2,Salesperson,5667,On-time
+890,61,3,2025,2,Sales Manager,9617,New AMC
+891,62,3,2025,2,Installation Engineer,7374,New AMC
+892,72,3,2025,2,Service Technician,2912,New AMC
+893,73,3,2025,2,Service Technician,3348,Collection
+894,75,3,2025,2,Service Technician,1249,New AMC
+895,76,3,2025,2,Service Technician,1561,New AMC
+896,79,4,2025,2,Lead Generator,4463,Target Achievement
+897,80,4,2025,2,Lead Generator,3483,Quality
+898,82,4,2025,2,Salesperson,5233,Target Achievement
+899,83,4,2025,2,Salesperson,10918,Collection
+900,84,4,2025,2,Salesperson,7197,Collection
+901,87,4,2025,2,Sales Manager,11168,Quality
+902,91,4,2025,2,Installation Engineer,3811,Collection
+903,93,4,2025,2,Service Sales Person,6500,Target Achievement
+904,96,4,2025,2,Service Supervisor,4560,Quality
+905,98,4,2025,2,Service Technician,3820,New AMC
+906,100,4,2025,2,Service Technician,1989,Quality
+907,103,4,2025,2,Service Technician,3059,Quality
+908,104,4,2025,2,Service Technician,4349,New AMC
+909,105,5,2025,2,Lead Generator,4206,Target Achievement
+910,106,5,2025,2,Lead Generator,1736,Quality
+911,108,5,2025,2,Salesperson,9528,Quality
+912,110,5,2025,2,Salesperson,3607,Target Achievement
+913,111,5,2025,2,Salesperson,10874,Target Achievement
+914,113,5,2025,2,Sales Manager,21188,New AMC
+915,116,5,2025,2,Installation Engineer,2459,New AMC
+916,117,5,2025,2,Installation Engineer,8208,New AMC
+917,118,5,2025,2,Installation Manager,12549,On-time
+918,119,5,2025,2,Service Sales Person,9092,On-time
+919,124,5,2025,2,Service Technician,2314,On-time
+920,126,5,2025,2,Service Technician,2760,New AMC
+921,130,5,2025,2,Service Technician,1649,Target Achievement
+922,1,1,2025,3,Lead Generator,1953,On-time
+923,3,1,2025,3,Lead Generator,4394,New AMC
+924,4,1,2025,3,Salesperson,9134,Target Achievement
+925,6,1,2025,3,Salesperson,3964,New AMC
+926,7,1,2025,3,Salesperson,4220,Target Achievement
+927,14,1,2025,3,Installation Manager,4405,Collection
+928,15,1,2025,3,Service Sales Person,4349,On-time
+929,18,1,2025,3,Service Supervisor,5706,Quality
+930,19,1,2025,3,Service Technician,3727,Quality
+931,21,1,2025,3,Service Technician,4052,New AMC
+932,23,1,2025,3,Service Technician,3795,On-time
+933,28,2,2025,3,Lead Generator,2143,Collection
+934,32,2,2025,3,Salesperson,13842,Quality
+935,35,2,2025,3,Sales Manager,8330,New AMC
+936,37,2,2025,3,Installation Engineer,7326,Target Achievement
+937,38,2,2025,3,Installation Engineer,4094,On-time
+938,39,2,2025,3,Installation Engineer,5641,On-time
+939,40,2,2025,3,Installation Manager,3663,Collection
+940,41,2,2025,3,Service Sales Person,7054,Collection
+941,44,2,2025,3,Service Supervisor,3656,Quality
+942,47,2,2025,3,Service Technician,1162,Target Achievement
+943,48,2,2025,3,Service Technician,3229,On-time
+944,50,2,2025,3,Service Technician,2933,New AMC
+945,51,2,2025,3,Service Technician,3922,Collection
+946,52,2,2025,3,Service Technician,4494,Quality
+947,53,3,2025,3,Lead Generator,5115,Quality
+948,58,3,2025,3,Salesperson,14358,New AMC
+949,59,3,2025,3,Salesperson,5140,Quality
+950,61,3,2025,3,Sales Manager,10194,Collection
+951,62,3,2025,3,Installation Engineer,8339,New AMC
+952,63,3,2025,3,Installation Engineer,4574,Target Achievement
+953,65,3,2025,3,Installation Engineer,6746,Quality
+954,66,3,2025,3,Installation Manager,4746,Quality
+955,69,3,2025,3,Service Supervisor,6247,Collection
+956,70,3,2025,3,Service Supervisor,2850,Target Achievement
+957,71,3,2025,3,Service Technician,3758,Collection
+958,73,3,2025,3,Service Technician,2244,On-time
+959,78,3,2025,3,Service Technician,3694,On-time
+960,82,4,2025,3,Salesperson,12666,Collection
+961,83,4,2025,3,Salesperson,4097,Target Achievement
+962,84,4,2025,3,Salesperson,9375,On-time
+963,85,4,2025,3,Salesperson,12472,Quality
+964,86,4,2025,3,Salesperson,10870,Target Achievement
+965,89,4,2025,3,Installation Engineer,8457,Target Achievement
+966,96,4,2025,3,Service Supervisor,5488,New AMC
+967,100,4,2025,3,Service Technician,1988,New AMC
+968,102,4,2025,3,Service Technician,1427,On-time
+969,105,5,2025,3,Lead Generator,2673,On-time
+970,106,5,2025,3,Lead Generator,1591,Quality
+971,107,5,2025,3,Lead Generator,3832,Collection
+972,108,5,2025,3,Salesperson,5561,On-time
+973,110,5,2025,3,Salesperson,13511,Quality
+974,112,5,2025,3,Salesperson,12706,New AMC
+975,114,5,2025,3,Installation Engineer,5058,Collection
+976,116,5,2025,3,Installation Engineer,2711,New AMC
+977,118,5,2025,3,Installation Manager,4396,Quality
+978,119,5,2025,3,Service Sales Person,6997,Quality
+979,123,5,2025,3,Service Technician,3575,On-time
+980,124,5,2025,3,Service Technician,2978,New AMC
+981,126,5,2025,3,Service Technician,1268,New AMC
+982,129,5,2025,3,Service Technician,2557,New AMC
+983,130,5,2025,3,Service Technician,3003,Target Achievement
+984,1,1,2025,4,Lead Generator,3341,Collection
+985,3,1,2025,4,Lead Generator,3983,Target Achievement
+986,4,1,2025,4,Salesperson,10125,On-time
+987,5,1,2025,4,Salesperson,13990,On-time
+988,6,1,2025,4,Salesperson,8089,Target Achievement
+989,9,1,2025,4,Sales Manager,13768,Target Achievement
+990,14,1,2025,4,Installation Manager,7606,New AMC
+991,16,1,2025,4,Service Sales Person,4833,On-time
+992,17,1,2025,4,Service Supervisor,1949,New AMC
+993,18,1,2025,4,Service Supervisor,6683,On-time
+994,21,1,2025,4,Service Technician,3139,New AMC
+995,24,1,2025,4,Service Technician,2038,Target Achievement
+996,26,1,2025,4,Service Technician,4431,Target Achievement
+997,27,2,2025,4,Lead Generator,4543,Quality
+998,31,2,2025,4,Salesperson,11815,New AMC
+999,35,2,2025,4,Sales Manager,12097,On-time
+1000,36,2,2025,4,Installation Engineer,7896,Collection
+1001,37,2,2025,4,Installation Engineer,7436,Target Achievement
+1002,38,2,2025,4,Installation Engineer,3475,Target Achievement
+1003,40,2,2025,4,Installation Manager,8917,Target Achievement
+1004,41,2,2025,4,Service Sales Person,4936,New AMC
+1005,43,2,2025,4,Service Supervisor,6486,Target Achievement
+1006,45,2,2025,4,Service Technician,4340,On-time
+1007,46,2,2025,4,Service Technician,3863,New AMC
+1008,47,2,2025,4,Service Technician,2524,New AMC
+1009,49,2,2025,4,Service Technician,1302,Target Achievement
+1010,51,2,2025,4,Service Technician,3326,On-time
+1011,52,2,2025,4,Service Technician,3987,New AMC
+1012,53,3,2025,4,Lead Generator,2576,Target Achievement
+1013,55,3,2025,4,Lead Generator,2955,Quality
+1014,56,3,2025,4,Salesperson,4233,Collection
+1015,58,3,2025,4,Salesperson,13972,On-time
+1016,60,3,2025,4,Salesperson,9742,On-time
+1017,62,3,2025,4,Installation Engineer,8471,On-time
+1018,63,3,2025,4,Installation Engineer,7588,Collection
+1019,66,3,2025,4,Installation Manager,10110,Collection
+1020,69,3,2025,4,Service Supervisor,5909,On-time
+1021,70,3,2025,4,Service Supervisor,3117,Collection
+1022,71,3,2025,4,Service Technician,3086,Collection
+1023,72,3,2025,4,Service Technician,3834,On-time
+1024,73,3,2025,4,Service Technician,3331,On-time
+1025,74,3,2025,4,Service Technician,2684,New AMC
+1026,76,3,2025,4,Service Technician,4112,Collection
+1027,83,4,2025,4,Salesperson,12384,Target Achievement
+1028,84,4,2025,4,Salesperson,7373,On-time
+1029,88,4,2025,4,Installation Engineer,5441,Collection
+1030,91,4,2025,4,Installation Engineer,8814,Target Achievement
+1031,92,4,2025,4,Installation Manager,2997,New AMC
+1032,93,4,2025,4,Service Sales Person,3446,On-time
+1033,95,4,2025,4,Service Supervisor,5288,New AMC
+1034,97,4,2025,4,Service Technician,2326,Collection
+1035,99,4,2025,4,Service Technician,4142,New AMC
+1036,100,4,2025,4,Service Technician,1457,On-time
+1037,102,4,2025,4,Service Technician,3141,Target Achievement
+1038,104,4,2025,4,Service Technician,1543,Collection
+1039,105,5,2025,4,Lead Generator,3722,Collection
+1040,108,5,2025,4,Salesperson,3507,New AMC
+1041,109,5,2025,4,Salesperson,7941,On-time
+1042,112,5,2025,4,Salesperson,5836,New AMC
+1043,113,5,2025,4,Sales Manager,13788,Collection
+1044,114,5,2025,4,Installation Engineer,7963,Collection
+1045,117,5,2025,4,Installation Engineer,8666,Target Achievement
+1046,118,5,2025,4,Installation Manager,3000,On-time
+1047,119,5,2025,4,Service Sales Person,8707,On-time
+1048,121,5,2025,4,Service Supervisor,5476,Target Achievement
+1049,128,5,2025,4,Service Technician,3919,Collection
+1050,129,5,2025,4,Service Technician,1661,Target Achievement
+1051,130,5,2025,4,Service Technician,3688,On-time
+1052,3,1,2025,5,Lead Generator,2284,Collection
+1053,4,1,2025,5,Salesperson,7822,On-time
+1054,5,1,2025,5,Salesperson,3775,Target Achievement
+1055,6,1,2025,5,Salesperson,10100,Collection
+1056,9,1,2025,5,Sales Manager,8796,New AMC
+1057,11,1,2025,5,Installation Engineer,5888,Collection
+1058,14,1,2025,5,Installation Manager,5179,Quality
+1059,16,1,2025,5,Service Sales Person,7149,Target Achievement
+1060,19,1,2025,5,Service Technician,1767,On-time
+1061,21,1,2025,5,Service Technician,2036,Collection
+1062,22,1,2025,5,Service Technician,1831,Quality
+1063,24,1,2025,5,Service Technician,2861,New AMC
+1064,25,1,2025,5,Service Technician,3962,New AMC
+1065,26,1,2025,5,Service Technician,3824,Quality
+1066,30,2,2025,5,Salesperson,6144,On-time
+1067,31,2,2025,5,Salesperson,11584,Collection
+1068,32,2,2025,5,Salesperson,12338,Collection
+1069,34,2,2025,5,Salesperson,11450,Collection
+1070,35,2,2025,5,Sales Manager,14996,New AMC
+1071,37,2,2025,5,Installation Engineer,2892,Target Achievement
+1072,38,2,2025,5,Installation Engineer,2426,Quality
+1073,41,2,2025,5,Service Sales Person,2781,New AMC
+1074,44,2,2025,5,Service Supervisor,2526,Quality
+1075,45,2,2025,5,Service Technician,1376,New AMC
+1076,46,2,2025,5,Service Technician,2878,Quality
+1077,47,2,2025,5,Service Technician,3192,Collection
+1078,48,2,2025,5,Service Technician,3782,Target Achievement
+1079,49,2,2025,5,Service Technician,3759,Target Achievement
+1080,50,2,2025,5,Service Technician,3892,Collection
+1081,51,2,2025,5,Service Technician,2577,Target Achievement
+1082,53,3,2025,5,Lead Generator,2485,On-time
+1083,55,3,2025,5,Lead Generator,2230,Target Achievement
+1084,56,3,2025,5,Salesperson,14297,New AMC
+1085,58,3,2025,5,Salesperson,8762,Collection
+1086,59,3,2025,5,Salesperson,6884,Target Achievement
+1087,60,3,2025,5,Salesperson,7461,Target Achievement
+1088,61,3,2025,5,Sales Manager,17153,On-time
+1089,64,3,2025,5,Installation Engineer,2050,New AMC
+1090,65,3,2025,5,Installation Engineer,2769,Target Achievement
+1091,66,3,2025,5,Installation Manager,10910,Quality
+1092,69,3,2025,5,Service Supervisor,3325,On-time
+1093,71,3,2025,5,Service Technician,3469,On-time
+1094,72,3,2025,5,Service Technician,3031,On-time
+1095,75,3,2025,5,Service Technician,3463,New AMC
+1096,76,3,2025,5,Service Technician,1021,Target Achievement
+1097,77,3,2025,5,Service Technician,1255,Collection
+1098,78,3,2025,5,Service Technician,4110,On-time
+1099,82,4,2025,5,Salesperson,10665,Quality
+1100,84,4,2025,5,Salesperson,8174,Quality
+1101,86,4,2025,5,Salesperson,13869,Collection
+1102,88,4,2025,5,Installation Engineer,7892,New AMC
+1103,89,4,2025,5,Installation Engineer,3050,New AMC
+1104,91,4,2025,5,Installation Engineer,5561,On-time
+1105,97,4,2025,5,Service Technician,2079,Quality
+1106,103,4,2025,5,Service Technician,1896,Target Achievement
+1107,104,4,2025,5,Service Technician,2959,Collection
+1108,106,5,2025,5,Lead Generator,2422,Quality
+1109,108,5,2025,5,Salesperson,12239,Collection
+1110,109,5,2025,5,Salesperson,9130,New AMC
+1111,110,5,2025,5,Salesperson,6372,On-time
+1112,112,5,2025,5,Salesperson,9879,On-time
+1113,114,5,2025,5,Installation Engineer,2340,Collection
+1114,115,5,2025,5,Installation Engineer,7132,On-time
+1115,121,5,2025,5,Service Supervisor,2244,Target Achievement
+1116,122,5,2025,5,Service Supervisor,3160,Collection
+1117,124,5,2025,5,Service Technician,1793,On-time
+1118,129,5,2025,5,Service Technician,1385,On-time
+1119,130,5,2025,5,Service Technician,4478,Quality
+1120,1,1,2025,6,Lead Generator,1637,New AMC
+1121,3,1,2025,6,Lead Generator,1391,New AMC
+1122,5,1,2025,6,Salesperson,9602,Target Achievement
+1123,8,1,2025,6,Salesperson,13338,On-time
+1124,11,1,2025,6,Installation Engineer,8051,Collection
+1125,12,1,2025,6,Installation Engineer,6819,Target Achievement
+1126,14,1,2025,6,Installation Manager,7055,Quality
+1127,17,1,2025,6,Service Supervisor,6545,On-time
+1128,18,1,2025,6,Service Supervisor,2445,New AMC
+1129,19,1,2025,6,Service Technician,1009,Collection
+1130,21,1,2025,6,Service Technician,1149,On-time
+1131,22,1,2025,6,Service Technician,1941,Quality
+1132,23,1,2025,6,Service Technician,1713,Quality
+1133,26,1,2025,6,Service Technician,1100,Quality
+1134,27,2,2025,6,Lead Generator,5168,On-time
+1135,28,2,2025,6,Lead Generator,1242,Collection
+1136,31,2,2025,6,Salesperson,6193,Collection
+1137,32,2,2025,6,Salesperson,8429,On-time
+1138,33,2,2025,6,Salesperson,11447,Collection
+1139,36,2,2025,6,Installation Engineer,4755,New AMC
+1140,37,2,2025,6,Installation Engineer,3353,Collection
+1141,38,2,2025,6,Installation Engineer,6319,Target Achievement
+1142,39,2,2025,6,Installation Engineer,7110,Target Achievement
+1143,41,2,2025,6,Service Sales Person,3542,Target Achievement
+1144,43,2,2025,6,Service Supervisor,3876,Collection
+1145,44,2,2025,6,Service Supervisor,4821,Quality
+1146,49,2,2025,6,Service Technician,3035,On-time
+1147,50,2,2025,6,Service Technician,1656,On-time
+1148,54,3,2025,6,Lead Generator,1855,New AMC
+1149,57,3,2025,6,Salesperson,12479,New AMC
+1150,58,3,2025,6,Salesperson,7834,Target Achievement
+1151,59,3,2025,6,Salesperson,10751,Quality
+1152,60,3,2025,6,Salesperson,7787,On-time
+1153,62,3,2025,6,Installation Engineer,8137,Collection
+1154,63,3,2025,6,Installation Engineer,7571,Collection
+1155,65,3,2025,6,Installation Engineer,8896,Collection
+1156,66,3,2025,6,Installation Manager,8962,Target Achievement
+1157,70,3,2025,6,Service Supervisor,2447,Collection
+1158,72,3,2025,6,Service Technician,3283,Target Achievement
+1159,74,3,2025,6,Service Technician,4400,New AMC
+1160,75,3,2025,6,Service Technician,4007,Target Achievement
+1161,77,3,2025,6,Service Technician,2875,Collection
+1162,78,3,2025,6,Service Technician,3496,Target Achievement
+1163,80,4,2025,6,Lead Generator,4714,On-time
+1164,81,4,2025,6,Lead Generator,1909,Collection
+1165,83,4,2025,6,Salesperson,3914,Target Achievement
+1166,84,4,2025,6,Salesperson,9898,Target Achievement
+1167,85,4,2025,6,Salesperson,4071,Quality
+1168,88,4,2025,6,Installation Engineer,8983,On-time
+1169,89,4,2025,6,Installation Engineer,8253,New AMC
+1170,91,4,2025,6,Installation Engineer,4762,On-time
+1171,94,4,2025,6,Service Sales Person,3516,Target Achievement
+1172,96,4,2025,6,Service Supervisor,4536,Quality
+1173,99,4,2025,6,Service Technician,2027,On-time
+1174,107,5,2025,6,Lead Generator,4938,On-time
+1175,108,5,2025,6,Salesperson,13140,Quality
+1176,109,5,2025,6,Salesperson,7831,Target Achievement
+1177,111,5,2025,6,Salesperson,12625,On-time
+1178,112,5,2025,6,Salesperson,6511,Quality
+1179,113,5,2025,6,Sales Manager,9455,New AMC
+1180,116,5,2025,6,Installation Engineer,4747,Target Achievement
+1181,117,5,2025,6,Installation Engineer,3772,On-time
+1182,118,5,2025,6,Installation Manager,6263,Target Achievement
+1183,119,5,2025,6,Service Sales Person,6458,On-time
+1184,120,5,2025,6,Service Sales Person,3596,On-time
+1185,121,5,2025,6,Service Supervisor,4035,New AMC
+1186,122,5,2025,6,Service Supervisor,2444,Quality
+1187,124,5,2025,6,Service Technician,1028,Quality
+1188,126,5,2025,6,Service Technician,2740,Quality
+1189,128,5,2025,6,Service Technician,1266,Quality
+1190,130,5,2025,6,Service Technician,2338,Quality
+1191,1,1,2025,7,Lead Generator,4363,Target Achievement
+1192,4,1,2025,7,Salesperson,12894,New AMC
+1193,5,1,2025,7,Salesperson,8744,Target Achievement
+1194,6,1,2025,7,Salesperson,14092,Collection
+1195,7,1,2025,7,Salesperson,13502,Quality
+1196,12,1,2025,7,Installation Engineer,7076,Collection
+1197,15,1,2025,7,Service Sales Person,7475,New AMC
+1198,16,1,2025,7,Service Sales Person,8896,On-time
+1199,17,1,2025,7,Service Supervisor,6685,On-time
+1200,21,1,2025,7,Service Technician,1455,On-time
+1201,22,1,2025,7,Service Technician,1677,Quality
+1202,24,1,2025,7,Service Technician,1639,Quality
+1203,26,1,2025,7,Service Technician,1409,New AMC
+1204,28,2,2025,7,Lead Generator,5108,Quality
+1205,30,2,2025,7,Salesperson,13265,Collection
+1206,31,2,2025,7,Salesperson,5184,On-time
+1207,33,2,2025,7,Salesperson,12274,New AMC
+1208,35,2,2025,7,Sales Manager,13726,Target Achievement
+1209,36,2,2025,7,Installation Engineer,5086,Collection
+1210,37,2,2025,7,Installation Engineer,3762,On-time
+1211,38,2,2025,7,Installation Engineer,3035,New AMC
+1212,39,2,2025,7,Installation Engineer,5867,Target Achievement
+1213,41,2,2025,7,Service Sales Person,8698,New AMC
+1214,45,2,2025,7,Service Technician,4143,New AMC
+1215,46,2,2025,7,Service Technician,1220,Target Achievement
+1216,50,2,2025,7,Service Technician,2267,Target Achievement
+1217,51,2,2025,7,Service Technician,3043,Target Achievement
+1218,52,2,2025,7,Service Technician,2474,Collection
+1219,53,3,2025,7,Lead Generator,1567,Quality
+1220,54,3,2025,7,Lead Generator,4141,New AMC
+1221,55,3,2025,7,Lead Generator,3819,Collection
+1222,57,3,2025,7,Salesperson,10609,Target Achievement
+1223,59,3,2025,7,Salesperson,3220,Collection
+1224,65,3,2025,7,Installation Engineer,3513,Collection
+1225,66,3,2025,7,Installation Manager,3098,Quality
+1226,69,3,2025,7,Service Supervisor,4967,Collection
+1227,72,3,2025,7,Service Technician,4477,Collection
+1228,73,3,2025,7,Service Technician,4484,On-time
+1229,75,3,2025,7,Service Technician,1076,Target Achievement
+1230,77,3,2025,7,Service Technician,3470,On-time
+1231,78,3,2025,7,Service Technician,2634,Target Achievement
+1232,80,4,2025,7,Lead Generator,1871,Target Achievement
+1233,81,4,2025,7,Lead Generator,2662,New AMC
+1234,82,4,2025,7,Salesperson,11574,New AMC
+1235,83,4,2025,7,Salesperson,10870,New AMC
+1236,85,4,2025,7,Salesperson,10454,On-time
+1237,86,4,2025,7,Salesperson,6693,Quality
+1238,88,4,2025,7,Installation Engineer,8941,On-time
+1239,89,4,2025,7,Installation Engineer,3082,Collection
+1240,91,4,2025,7,Installation Engineer,7121,Target Achievement
+1241,92,4,2025,7,Installation Manager,9004,Quality
+1242,93,4,2025,7,Service Sales Person,4555,New AMC
+1243,94,4,2025,7,Service Sales Person,3634,Collection
+1244,96,4,2025,7,Service Supervisor,5409,Quality
+1245,97,4,2025,7,Service Technician,2783,Target Achievement
+1246,98,4,2025,7,Service Technician,3187,New AMC
+1247,99,4,2025,7,Service Technician,2743,Collection
+1248,100,4,2025,7,Service Technician,2896,Target Achievement
+1249,102,4,2025,7,Service Technician,4112,New AMC
+1250,104,4,2025,7,Service Technician,4429,Collection
+1251,107,5,2025,7,Lead Generator,1763,On-time
+1252,110,5,2025,7,Salesperson,12016,On-time
+1253,111,5,2025,7,Salesperson,12084,New AMC
+1254,113,5,2025,7,Sales Manager,14516,On-time
+1255,114,5,2025,7,Installation Engineer,6402,Collection
+1256,119,5,2025,7,Service Sales Person,9611,On-time
+1257,120,5,2025,7,Service Sales Person,9445,Quality
+1258,122,5,2025,7,Service Supervisor,4725,On-time
+1259,124,5,2025,7,Service Technician,4352,Quality
+1260,128,5,2025,7,Service Technician,1246,On-time
+1261,129,5,2025,7,Service Technician,3641,Target Achievement
+1262,130,5,2025,7,Service Technician,2801,On-time
+1263,1,1,2025,8,Lead Generator,5109,Quality
+1264,3,1,2025,8,Lead Generator,4139,Collection
+1265,4,1,2025,8,Salesperson,13314,New AMC
+1266,6,1,2025,8,Salesperson,11261,New AMC
+1267,7,1,2025,8,Salesperson,10149,Quality
+1268,9,1,2025,8,Sales Manager,19224,Target Achievement
+1269,12,1,2025,8,Installation Engineer,6191,Quality
+1270,14,1,2025,8,Installation Manager,4720,Collection
+1271,15,1,2025,8,Service Sales Person,6227,Target Achievement
+1272,16,1,2025,8,Service Sales Person,9591,Quality
+1273,17,1,2025,8,Service Supervisor,4676,Quality
+1274,19,1,2025,8,Service Technician,4230,New AMC
+1275,27,2,2025,8,Lead Generator,3996,Collection
+1276,28,2,2025,8,Lead Generator,1782,Quality
+1277,37,2,2025,8,Installation Engineer,8116,Target Achievement
+1278,39,2,2025,8,Installation Engineer,5106,Quality
+1279,40,2,2025,8,Installation Manager,6887,Target Achievement
+1280,43,2,2025,8,Service Supervisor,2039,Quality
+1281,44,2,2025,8,Service Supervisor,2717,Collection
+1282,46,2,2025,8,Service Technician,2002,Quality
+1283,47,2,2025,8,Service Technician,4022,New AMC
+1284,48,2,2025,8,Service Technician,1919,Quality
+1285,50,2,2025,8,Service Technician,3447,On-time
+1286,51,2,2025,8,Service Technician,1755,Quality
+1287,57,3,2025,8,Salesperson,7312,Target Achievement
+1288,58,3,2025,8,Salesperson,5263,Target Achievement
+1289,59,3,2025,8,Salesperson,5770,Quality
+1290,60,3,2025,8,Salesperson,7848,Collection
+1291,61,3,2025,8,Sales Manager,11002,New AMC
+1292,62,3,2025,8,Installation Engineer,7347,Quality
+1293,65,3,2025,8,Installation Engineer,4869,On-time
+1294,69,3,2025,8,Service Supervisor,1686,Target Achievement
+1295,70,3,2025,8,Service Supervisor,4294,Quality
+1296,72,3,2025,8,Service Technician,3518,New AMC
+1297,74,3,2025,8,Service Technician,1096,New AMC
+1298,76,3,2025,8,Service Technician,2121,New AMC
+1299,77,3,2025,8,Service Technician,3922,Collection
+1300,78,3,2025,8,Service Technician,3753,Collection
+1301,79,4,2025,8,Lead Generator,5103,Quality
+1302,80,4,2025,8,Lead Generator,2327,New AMC
+1303,82,4,2025,8,Salesperson,10956,On-time
+1304,83,4,2025,8,Salesperson,12925,Target Achievement
+1305,84,4,2025,8,Salesperson,14013,New AMC
+1306,88,4,2025,8,Installation Engineer,4612,On-time
+1307,92,4,2025,8,Installation Manager,3375,Quality
+1308,96,4,2025,8,Service Supervisor,6729,On-time
+1309,97,4,2025,8,Service Technician,4202,New AMC
+1310,99,4,2025,8,Service Technician,2020,On-time
+1311,103,4,2025,8,Service Technician,4409,Quality
+1312,105,5,2025,8,Lead Generator,2332,Quality
+1313,106,5,2025,8,Lead Generator,4830,New AMC
+1314,107,5,2025,8,Lead Generator,3863,New AMC
+1315,109,5,2025,8,Salesperson,6620,Target Achievement
+1316,111,5,2025,8,Salesperson,11715,Quality
+1317,112,5,2025,8,Salesperson,10120,Collection
+1318,113,5,2025,8,Sales Manager,6468,Collection
+1319,114,5,2025,8,Installation Engineer,3238,Quality
+1320,115,5,2025,8,Installation Engineer,2710,New AMC
+1321,117,5,2025,8,Installation Engineer,4003,New AMC
+1322,118,5,2025,8,Installation Manager,10093,Target Achievement
+1323,119,5,2025,8,Service Sales Person,6166,Target Achievement
+1324,120,5,2025,8,Service Sales Person,7584,New AMC
+1325,122,5,2025,8,Service Supervisor,3519,Target Achievement
+1326,123,5,2025,8,Service Technician,2077,Target Achievement
+1327,126,5,2025,8,Service Technician,3554,New AMC
+1328,128,5,2025,8,Service Technician,3916,Quality
+1329,129,5,2025,8,Service Technician,2493,On-time
+1330,130,5,2025,8,Service Technician,2635,New AMC
+1331,4,1,2025,9,Salesperson,12164,Target Achievement
+1332,7,1,2025,9,Salesperson,13514,New AMC
+1333,9,1,2025,9,Sales Manager,7439,Target Achievement
+1334,14,1,2025,9,Installation Manager,4469,On-time
+1335,16,1,2025,9,Service Sales Person,6190,On-time
+1336,19,1,2025,9,Service Technician,2128,Quality
+1337,22,1,2025,9,Service Technician,3064,New AMC
+1338,23,1,2025,9,Service Technician,3830,On-time
+1339,26,1,2025,9,Service Technician,1509,Target Achievement
+1340,29,2,2025,9,Lead Generator,3322,New AMC
+1341,30,2,2025,9,Salesperson,5709,Target Achievement
+1342,31,2,2025,9,Salesperson,12250,Quality
+1343,32,2,2025,9,Salesperson,8691,Quality
+1344,33,2,2025,9,Salesperson,4356,Collection
+1345,36,2,2025,9,Installation Engineer,3276,New AMC
+1346,47,2,2025,9,Service Technician,2732,On-time
+1347,48,2,2025,9,Service Technician,2611,New AMC
+1348,49,2,2025,9,Service Technician,1559,New AMC
+1349,50,2,2025,9,Service Technician,1713,Target Achievement
+1350,51,2,2025,9,Service Technician,3869,Target Achievement
+1351,53,3,2025,9,Lead Generator,1260,Target Achievement
+1352,54,3,2025,9,Lead Generator,1533,Quality
+1353,55,3,2025,9,Lead Generator,2028,New AMC
+1354,56,3,2025,9,Salesperson,14218,Target Achievement
+1355,57,3,2025,9,Salesperson,13687,Quality
+1356,59,3,2025,9,Salesperson,3846,Quality
+1357,61,3,2025,9,Sales Manager,14413,New AMC
+1358,63,3,2025,9,Installation Engineer,4790,Quality
+1359,64,3,2025,9,Installation Engineer,3012,New AMC
+1360,65,3,2025,9,Installation Engineer,8616,Collection
+1361,67,3,2025,9,Service Sales Person,3073,Quality
+1362,71,3,2025,9,Service Technician,1209,Target Achievement
+1363,72,3,2025,9,Service Technician,3619,Target Achievement
+1364,73,3,2025,9,Service Technician,2478,Target Achievement
+1365,76,3,2025,9,Service Technician,3332,Target Achievement
+1366,77,3,2025,9,Service Technician,2016,New AMC
+1367,78,3,2025,9,Service Technician,3205,Collection
+1368,81,4,2025,9,Lead Generator,4464,Target Achievement
+1369,83,4,2025,9,Salesperson,7361,Target Achievement
+1370,84,4,2025,9,Salesperson,8660,New AMC
+1371,85,4,2025,9,Salesperson,6179,New AMC
+1372,86,4,2025,9,Salesperson,6875,New AMC
+1373,87,4,2025,9,Sales Manager,21406,Quality
+1374,88,4,2025,9,Installation Engineer,7908,On-time
+1375,89,4,2025,9,Installation Engineer,5581,On-time
+1376,91,4,2025,9,Installation Engineer,6612,New AMC
+1377,93,4,2025,9,Service Sales Person,10171,Quality
+1378,95,4,2025,9,Service Supervisor,5782,Target Achievement
+1379,98,4,2025,9,Service Technician,2176,On-time
+1380,99,4,2025,9,Service Technician,2918,Target Achievement
+1381,100,4,2025,9,Service Technician,4195,Collection
+1382,102,4,2025,9,Service Technician,3792,Quality
+1383,103,4,2025,9,Service Technician,1252,Collection
+1384,104,4,2025,9,Service Technician,1662,New AMC
+1385,108,5,2025,9,Salesperson,9886,On-time
+1386,111,5,2025,9,Salesperson,9625,Target Achievement
+1387,112,5,2025,9,Salesperson,11114,Collection
+1388,115,5,2025,9,Installation Engineer,5665,Quality
+1389,116,5,2025,9,Installation Engineer,5879,Target Achievement
+1390,117,5,2025,9,Installation Engineer,7144,On-time
+1391,118,5,2025,9,Installation Manager,7530,New AMC
+1392,119,5,2025,9,Service Sales Person,4939,New AMC
+1393,120,5,2025,9,Service Sales Person,7259,New AMC
+1394,121,5,2025,9,Service Supervisor,4675,Target Achievement
+1395,122,5,2025,9,Service Supervisor,1746,Collection
+1396,123,5,2025,9,Service Technician,3328,Quality
+1397,124,5,2025,9,Service Technician,1211,New AMC
+1398,1,1,2025,10,Lead Generator,1974,Quality
+1399,4,1,2025,10,Salesperson,8631,Collection
+1400,6,1,2025,10,Salesperson,11099,New AMC
+1401,7,1,2025,10,Salesperson,8023,Target Achievement
+1402,11,1,2025,10,Installation Engineer,4851,New AMC
+1403,12,1,2025,10,Installation Engineer,5326,Target Achievement
+1404,17,1,2025,10,Service Supervisor,6113,Collection
+1405,18,1,2025,10,Service Supervisor,4747,Quality
+1406,19,1,2025,10,Service Technician,2545,Collection
+1407,22,1,2025,10,Service Technician,2918,On-time
+1408,23,1,2025,10,Service Technician,3067,New AMC
+1409,24,1,2025,10,Service Technician,3366,Target Achievement
+1410,25,1,2025,10,Service Technician,2731,Collection
+1411,26,1,2025,10,Service Technician,3467,New AMC
+1412,28,2,2025,10,Lead Generator,4104,On-time
+1413,29,2,2025,10,Lead Generator,3341,Target Achievement
+1414,30,2,2025,10,Salesperson,7493,New AMC
+1415,32,2,2025,10,Salesperson,5595,Collection
+1416,33,2,2025,10,Salesperson,10046,Target Achievement
+1417,34,2,2025,10,Salesperson,8561,Quality
+1418,37,2,2025,10,Installation Engineer,4951,New AMC
+1419,40,2,2025,10,Installation Manager,12385,On-time
+1420,41,2,2025,10,Service Sales Person,8303,Quality
+1421,43,2,2025,10,Service Supervisor,6554,Target Achievement
+1422,44,2,2025,10,Service Supervisor,2170,Quality
+1423,46,2,2025,10,Service Technician,1238,Quality
+1424,47,2,2025,10,Service Technician,1659,Quality
+1425,48,2,2025,10,Service Technician,1037,Quality
+1426,50,2,2025,10,Service Technician,1409,Target Achievement
+1427,51,2,2025,10,Service Technician,3325,Collection
+1428,53,3,2025,10,Lead Generator,2200,Quality
+1429,54,3,2025,10,Lead Generator,1223,Collection
+1430,55,3,2025,10,Lead Generator,3744,New AMC
+1431,56,3,2025,10,Salesperson,7774,Target Achievement
+1432,59,3,2025,10,Salesperson,9700,Collection
+1433,62,3,2025,10,Installation Engineer,8584,New AMC
+1434,64,3,2025,10,Installation Engineer,5411,On-time
+1435,66,3,2025,10,Installation Manager,4905,Collection
+1436,70,3,2025,10,Service Supervisor,2370,Quality
+1437,71,3,2025,10,Service Technician,2603,New AMC
+1438,73,3,2025,10,Service Technician,1765,Quality
+1439,75,3,2025,10,Service Technician,3636,Quality
+1440,76,3,2025,10,Service Technician,3014,On-time
+1441,77,3,2025,10,Service Technician,3598,Target Achievement
+1442,78,3,2025,10,Service Technician,3750,Target Achievement
+1443,82,4,2025,10,Salesperson,8330,New AMC
+1444,84,4,2025,10,Salesperson,14078,On-time
+1445,85,4,2025,10,Salesperson,6796,Collection
+1446,91,4,2025,10,Installation Engineer,8242,Quality
+1447,92,4,2025,10,Installation Manager,4773,On-time
+1448,94,4,2025,10,Service Sales Person,10658,Collection
+1449,96,4,2025,10,Service Supervisor,2680,Collection
+1450,98,4,2025,10,Service Technician,3573,New AMC
+1451,100,4,2025,10,Service Technician,4110,Quality
+1452,103,4,2025,10,Service Technician,1288,New AMC
+1453,104,4,2025,10,Service Technician,2443,New AMC
+1454,106,5,2025,10,Lead Generator,4826,New AMC
+1455,107,5,2025,10,Lead Generator,4910,Target Achievement
+1456,108,5,2025,10,Salesperson,7901,Target Achievement
+1457,109,5,2025,10,Salesperson,9775,Target Achievement
+1458,111,5,2025,10,Salesperson,7310,Quality
+1459,114,5,2025,10,Installation Engineer,3627,Collection
+1460,115,5,2025,10,Installation Engineer,8569,Target Achievement
+1461,116,5,2025,10,Installation Engineer,3018,On-time
+1462,117,5,2025,10,Installation Engineer,8639,New AMC
+1463,119,5,2025,10,Service Sales Person,8161,Quality
+1464,121,5,2025,10,Service Supervisor,6510,Quality
+1465,122,5,2025,10,Service Supervisor,5902,Collection
+1466,123,5,2025,10,Service Technician,3583,Target Achievement
+1467,128,5,2025,10,Service Technician,1940,Target Achievement
+1468,3,1,2025,11,Lead Generator,3274,Quality
+1469,5,1,2025,11,Salesperson,14388,Collection
+1470,7,1,2025,11,Salesperson,11354,On-time
+1471,8,1,2025,11,Salesperson,13732,New AMC
+1472,11,1,2025,11,Installation Engineer,6072,Collection
+1473,12,1,2025,11,Installation Engineer,7343,Quality
+1474,14,1,2025,11,Installation Manager,3004,On-time
+1475,15,1,2025,11,Service Sales Person,10796,Target Achievement
+1476,18,1,2025,11,Service Supervisor,3813,New AMC
+1477,19,1,2025,11,Service Technician,2901,Target Achievement
+1478,24,1,2025,11,Service Technician,1591,Quality
+1479,27,2,2025,11,Lead Generator,4678,New AMC
+1480,28,2,2025,11,Lead Generator,3613,Quality
+1481,31,2,2025,11,Salesperson,9013,Target Achievement
+1482,32,2,2025,11,Salesperson,14276,On-time
+1483,33,2,2025,11,Salesperson,12537,Target Achievement
+1484,36,2,2025,11,Installation Engineer,6691,Target Achievement
+1485,40,2,2025,11,Installation Manager,7339,Target Achievement
+1486,41,2,2025,11,Service Sales Person,2603,Collection
+1487,46,2,2025,11,Service Technician,3048,On-time
+1488,48,2,2025,11,Service Technician,1644,Quality
+1489,51,2,2025,11,Service Technician,3153,Collection
+1490,55,3,2025,11,Lead Generator,1885,Target Achievement
+1491,56,3,2025,11,Salesperson,9003,Quality
+1492,57,3,2025,11,Salesperson,4321,On-time
+1493,60,3,2025,11,Salesperson,6242,New AMC
+1494,62,3,2025,11,Installation Engineer,5148,Collection
+1495,69,3,2025,11,Service Supervisor,2839,Target Achievement
+1496,73,3,2025,11,Service Technician,2096,Collection
+1497,74,3,2025,11,Service Technician,2648,On-time
+1498,75,3,2025,11,Service Technician,3302,Quality
+1499,78,3,2025,11,Service Technician,3263,On-time
+1500,79,4,2025,11,Lead Generator,5136,On-time
+1501,80,4,2025,11,Lead Generator,1398,On-time
+1502,82,4,2025,11,Salesperson,3618,Target Achievement
+1503,83,4,2025,11,Salesperson,6946,Target Achievement
+1504,84,4,2025,11,Salesperson,3517,Quality
+1505,86,4,2025,11,Salesperson,9701,Target Achievement
+1506,87,4,2025,11,Sales Manager,21239,New AMC
+1507,88,4,2025,11,Installation Engineer,6129,Target Achievement
+1508,89,4,2025,11,Installation Engineer,7419,Collection
+1509,91,4,2025,11,Installation Engineer,6680,Collection
+1510,94,4,2025,11,Service Sales Person,3824,On-time
+1511,95,4,2025,11,Service Supervisor,1707,Target Achievement
+1512,96,4,2025,11,Service Supervisor,4374,Target Achievement
+1513,97,4,2025,11,Service Technician,2197,Target Achievement
+1514,98,4,2025,11,Service Technician,3672,On-time
+1515,100,4,2025,11,Service Technician,1276,Collection
+1516,102,4,2025,11,Service Technician,3338,Target Achievement
+1517,103,4,2025,11,Service Technician,2775,Target Achievement
+1518,105,5,2025,11,Lead Generator,4554,Quality
+1519,106,5,2025,11,Lead Generator,5300,Target Achievement
+1520,107,5,2025,11,Lead Generator,2388,New AMC
+1521,108,5,2025,11,Salesperson,6026,Quality
+1522,109,5,2025,11,Salesperson,13412,Collection
+1523,110,5,2025,11,Salesperson,11480,Target Achievement
+1524,112,5,2025,11,Salesperson,7644,New AMC
+1525,115,5,2025,11,Installation Engineer,3234,On-time
+1526,119,5,2025,11,Service Sales Person,9181,Collection
+1527,120,5,2025,11,Service Sales Person,9116,On-time
+1528,121,5,2025,11,Service Supervisor,3316,Quality
+1529,122,5,2025,11,Service Supervisor,3843,Collection
+1530,124,5,2025,11,Service Technician,2078,Collection
+1531,130,5,2025,11,Service Technician,3044,Collection
+1532,1,1,2025,12,Lead Generator,1453,Target Achievement
+1533,3,1,2025,12,Lead Generator,1477,On-time
+1534,4,1,2025,12,Salesperson,4784,New AMC
+1535,7,1,2025,12,Salesperson,5324,Quality
+1536,12,1,2025,12,Installation Engineer,7152,Quality
+1537,14,1,2025,12,Installation Manager,6330,Target Achievement
+1538,15,1,2025,12,Service Sales Person,8346,Collection
+1539,16,1,2025,12,Service Sales Person,10651,On-time
+1540,17,1,2025,12,Service Supervisor,5021,Target Achievement
+1541,18,1,2025,12,Service Supervisor,4284,Target Achievement
+1542,22,1,2025,12,Service Technician,1536,On-time
+1543,24,1,2025,12,Service Technician,3574,New AMC
+1544,26,1,2025,12,Service Technician,3486,On-time
+1545,27,2,2025,12,Lead Generator,3734,Target Achievement
+1546,29,2,2025,12,Lead Generator,4294,Collection
+1547,36,2,2025,12,Installation Engineer,6274,Collection
+1548,37,2,2025,12,Installation Engineer,4986,New AMC
+1549,38,2,2025,12,Installation Engineer,8163,New AMC
+1550,39,2,2025,12,Installation Engineer,4920,On-time
+1551,41,2,2025,12,Service Sales Person,3094,Collection
+1552,43,2,2025,12,Service Supervisor,6973,Collection
+1553,44,2,2025,12,Service Supervisor,6866,Collection
+1554,47,2,2025,12,Service Technician,1492,Target Achievement
+1555,48,2,2025,12,Service Technician,1196,Collection
+1556,49,2,2025,12,Service Technician,2609,Collection
+1557,51,2,2025,12,Service Technician,3847,Quality
+1558,52,2,2025,12,Service Technician,1541,Collection
+1559,54,3,2025,12,Lead Generator,3132,On-time
+1560,56,3,2025,12,Salesperson,3861,Quality
+1561,58,3,2025,12,Salesperson,12869,Quality
+1562,60,3,2025,12,Salesperson,8335,Quality
+1563,61,3,2025,12,Sales Manager,8197,New AMC
+1564,63,3,2025,12,Installation Engineer,4598,Target Achievement
+1565,65,3,2025,12,Installation Engineer,2150,On-time
+1566,66,3,2025,12,Installation Manager,11714,On-time
+1567,72,3,2025,12,Service Technician,4302,On-time
+1568,73,3,2025,12,Service Technician,3039,Collection
+1569,76,3,2025,12,Service Technician,2715,Collection
+1570,77,3,2025,12,Service Technician,1985,On-time
+1571,78,3,2025,12,Service Technician,3210,Collection
+1572,82,4,2025,12,Salesperson,12703,New AMC
+1573,86,4,2025,12,Salesperson,4319,New AMC
+1574,87,4,2025,12,Sales Manager,6491,Quality
+1575,89,4,2025,12,Installation Engineer,8754,On-time
+1576,92,4,2025,12,Installation Manager,6838,Target Achievement
+1577,93,4,2025,12,Service Sales Person,7781,Quality
+1578,94,4,2025,12,Service Sales Person,5661,New AMC
+1579,95,4,2025,12,Service Supervisor,1876,Collection
+1580,96,4,2025,12,Service Supervisor,6021,Quality
+1581,97,4,2025,12,Service Technician,3865,Collection
+1582,102,4,2025,12,Service Technician,1585,New AMC
+1583,105,5,2025,12,Lead Generator,3038,Target Achievement
+1584,108,5,2025,12,Salesperson,5364,Quality
+1585,109,5,2025,12,Salesperson,9985,On-time
+1586,111,5,2025,12,Salesperson,9650,On-time
+1587,112,5,2025,12,Salesperson,7454,Target Achievement
+1588,116,5,2025,12,Installation Engineer,4188,Quality
+1589,117,5,2025,12,Installation Engineer,6806,Quality
+1590,118,5,2025,12,Installation Manager,6540,On-time
+1591,121,5,2025,12,Service Supervisor,2156,Quality
+1592,124,5,2025,12,Service Technician,2408,Collection
+1593,126,5,2025,12,Service Technician,3393,Collection
+1594,128,5,2025,12,Service Technician,2887,Quality
+1595,1,1,2026,1,Lead Generator,2471,Collection
+1596,3,1,2026,1,Lead Generator,2012,Quality
+1597,4,1,2026,1,Salesperson,6698,On-time
+1598,5,1,2026,1,Salesperson,5483,Target Achievement
+1599,8,1,2026,1,Salesperson,3476,Quality
+1600,9,1,2026,1,Sales Manager,5830,On-time
+1601,17,1,2026,1,Service Supervisor,6241,Collection
+1602,19,1,2026,1,Service Technician,2049,On-time
+1603,22,1,2026,1,Service Technician,1323,Target Achievement
+1604,23,1,2026,1,Service Technician,3145,Collection
+1605,24,1,2026,1,Service Technician,2752,Collection
+1606,25,1,2026,1,Service Technician,3980,On-time
+1607,26,1,2026,1,Service Technician,3534,Collection
+1608,31,2,2026,1,Salesperson,8531,On-time
+1609,33,2,2026,1,Salesperson,9560,New AMC
+1610,35,2,2026,1,Sales Manager,21056,On-time
+1611,36,2,2026,1,Installation Engineer,2712,On-time
+1612,37,2,2026,1,Installation Engineer,7235,New AMC
+1613,38,2,2026,1,Installation Engineer,4322,Quality
+1614,39,2,2026,1,Installation Engineer,8115,On-time
+1615,43,2,2026,1,Service Supervisor,1704,Target Achievement
+1616,44,2,2026,1,Service Supervisor,6257,Quality
+1617,46,2,2026,1,Service Technician,1617,Collection
+1618,49,2,2026,1,Service Technician,2833,New AMC
+1619,50,2,2026,1,Service Technician,1511,New AMC
+1620,52,2,2026,1,Service Technician,3228,Target Achievement
+1621,53,3,2026,1,Lead Generator,4231,Target Achievement
+1622,58,3,2026,1,Salesperson,10051,Collection
+1623,61,3,2026,1,Sales Manager,8284,Collection
+1624,62,3,2026,1,Installation Engineer,7805,On-time
+1625,64,3,2026,1,Installation Engineer,4429,Target Achievement
+1626,66,3,2026,1,Installation Manager,4237,Collection
+1627,67,3,2026,1,Service Sales Person,9628,New AMC
+1628,71,3,2026,1,Service Technician,2685,Collection
+1629,72,3,2026,1,Service Technician,3341,New AMC
+1630,74,3,2026,1,Service Technician,1397,Quality
+1631,75,3,2026,1,Service Technician,3974,On-time
+1632,76,3,2026,1,Service Technician,4399,New AMC
+1633,77,3,2026,1,Service Technician,2115,On-time
+1634,78,3,2026,1,Service Technician,3910,Target Achievement
+1635,83,4,2026,1,Salesperson,6956,Target Achievement
+1636,84,4,2026,1,Salesperson,14368,Collection
+1637,86,4,2026,1,Salesperson,13943,New AMC
+1638,88,4,2026,1,Installation Engineer,5489,Collection
+1639,92,4,2026,1,Installation Manager,9987,Collection
+1640,93,4,2026,1,Service Sales Person,4058,New AMC
+1641,95,4,2026,1,Service Supervisor,6021,On-time
+1642,96,4,2026,1,Service Supervisor,1716,Collection
+1643,97,4,2026,1,Service Technician,3062,Target Achievement
+1644,98,4,2026,1,Service Technician,3103,Target Achievement
+1645,99,4,2026,1,Service Technician,1614,New AMC
+1646,102,4,2026,1,Service Technician,1538,Quality
+1647,103,4,2026,1,Service Technician,1033,Collection
+1648,106,5,2026,1,Lead Generator,4014,Target Achievement
+1649,107,5,2026,1,Lead Generator,5344,Target Achievement
+1650,109,5,2026,1,Salesperson,7673,Collection
+1651,110,5,2026,1,Salesperson,6729,Quality
+1652,111,5,2026,1,Salesperson,10619,Target Achievement
+1653,113,5,2026,1,Sales Manager,5468,On-time
+1654,115,5,2026,1,Installation Engineer,5042,On-time
+1655,116,5,2026,1,Installation Engineer,2671,New AMC
+1656,120,5,2026,1,Service Sales Person,3487,Collection
+1657,121,5,2026,1,Service Supervisor,2284,Target Achievement
+1658,122,5,2026,1,Service Supervisor,5980,Quality
+1659,124,5,2026,1,Service Technician,1531,Target Achievement
+1660,128,5,2026,1,Service Technician,4291,Quality
+1661,129,5,2026,1,Service Technician,2672,Quality
+1662,1,1,2026,2,Lead Generator,2662,Target Achievement
+1663,3,1,2026,2,Lead Generator,4118,On-time
+1664,4,1,2026,2,Salesperson,11282,Target Achievement
+1665,5,1,2026,2,Salesperson,4910,On-time
+1666,8,1,2026,2,Salesperson,13324,New AMC
+1667,9,1,2026,2,Sales Manager,8405,New AMC
+1668,15,1,2026,2,Service Sales Person,9618,On-time
+1669,19,1,2026,2,Service Technician,3876,Quality
+1670,21,1,2026,2,Service Technician,1682,Quality
+1671,23,1,2026,2,Service Technician,1329,Collection
+1672,25,1,2026,2,Service Technician,3294,Quality
+1673,27,2,2026,2,Lead Generator,3970,Quality
+1674,28,2,2026,2,Lead Generator,3526,Target Achievement
+1675,30,2,2026,2,Salesperson,3837,Quality
+1676,32,2,2026,2,Salesperson,13188,On-time
+1677,34,2,2026,2,Salesperson,11907,New AMC
+1678,35,2,2026,2,Sales Manager,8057,On-time
+1679,36,2,2026,2,Installation Engineer,4459,Collection
+1680,40,2,2026,2,Installation Manager,3457,New AMC
+1681,43,2,2026,2,Service Supervisor,5969,Collection
+1682,46,2,2026,2,Service Technician,2738,Target Achievement
+1683,47,2,2026,2,Service Technician,3338,Collection
+1684,48,2,2026,2,Service Technician,2414,On-time
+1685,49,2,2026,2,Service Technician,2448,On-time
+1686,52,2,2026,2,Service Technician,3704,Quality
+1687,53,3,2026,2,Lead Generator,4980,On-time
+1688,54,3,2026,2,Lead Generator,3595,Target Achievement
+1689,55,3,2026,2,Lead Generator,3453,Collection
+1690,57,3,2026,2,Salesperson,10806,Collection
+1691,59,3,2026,2,Salesperson,13856,Collection
+1692,62,3,2026,2,Installation Engineer,3224,Collection
+1693,63,3,2026,2,Installation Engineer,7202,New AMC
+1694,64,3,2026,2,Installation Engineer,5753,Quality
+1695,65,3,2026,2,Installation Engineer,7129,On-time
+1696,67,3,2026,2,Service Sales Person,8992,On-time
+1697,72,3,2026,2,Service Technician,1762,Quality
+1698,74,3,2026,2,Service Technician,4458,Quality
+1699,75,3,2026,2,Service Technician,1437,On-time
+1700,76,3,2026,2,Service Technician,1126,Collection
+1701,78,3,2026,2,Service Technician,1458,Quality
+1702,80,4,2026,2,Lead Generator,3582,On-time
+1703,84,4,2026,2,Salesperson,13522,Target Achievement
+1704,85,4,2026,2,Salesperson,10074,Target Achievement
+1705,86,4,2026,2,Salesperson,5624,Target Achievement
+1706,87,4,2026,2,Sales Manager,20266,New AMC
+1707,91,4,2026,2,Installation Engineer,7362,Collection
+1708,93,4,2026,2,Service Sales Person,5776,On-time
+1709,94,4,2026,2,Service Sales Person,9598,New AMC
+1710,97,4,2026,2,Service Technician,2025,On-time
+1711,98,4,2026,2,Service Technician,4270,Target Achievement
+1712,104,4,2026,2,Service Technician,4240,Quality
+1713,109,5,2026,2,Salesperson,5214,Target Achievement
+1714,110,5,2026,2,Salesperson,9404,On-time
+1715,111,5,2026,2,Salesperson,3655,On-time
+1716,114,5,2026,2,Installation Engineer,5368,New AMC
+1717,115,5,2026,2,Installation Engineer,4176,On-time
+1718,117,5,2026,2,Installation Engineer,2227,Quality
+1719,118,5,2026,2,Installation Manager,8515,Target Achievement
+1720,119,5,2026,2,Service Sales Person,3002,New AMC
+1721,123,5,2026,2,Service Technician,3612,On-time
+1722,128,5,2026,2,Service Technician,1146,Collection
+1723,129,5,2026,2,Service Technician,4080,New AMC
+1724,3,1,2026,3,Lead Generator,4678,On-time
+1725,5,1,2026,3,Salesperson,7921,Quality
+1726,7,1,2026,3,Salesperson,6801,On-time
+1727,8,1,2026,3,Salesperson,4703,Collection
+1728,11,1,2026,3,Installation Engineer,4054,New AMC
+1729,12,1,2026,3,Installation Engineer,7081,On-time
+1730,15,1,2026,3,Service Sales Person,7416,Collection
+1731,16,1,2026,3,Service Sales Person,9425,On-time
+1732,17,1,2026,3,Service Supervisor,4490,On-time
+1733,18,1,2026,3,Service Supervisor,2647,New AMC
+1734,19,1,2026,3,Service Technician,2650,Target Achievement
+1735,22,1,2026,3,Service Technician,1224,Quality
+1736,23,1,2026,3,Service Technician,1599,Quality
+1737,26,1,2026,3,Service Technician,3662,Target Achievement
+1738,27,2,2026,3,Lead Generator,3529,New AMC
+1739,28,2,2026,3,Lead Generator,4437,New AMC
+1740,30,2,2026,3,Salesperson,11968,Collection
+1741,32,2,2026,3,Salesperson,4227,New AMC
+1742,34,2,2026,3,Salesperson,3769,New AMC
+1743,37,2,2026,3,Installation Engineer,3949,New AMC
+1744,38,2,2026,3,Installation Engineer,6719,Collection
+1745,40,2,2026,3,Installation Manager,6707,Target Achievement
+1746,41,2,2026,3,Service Sales Person,5011,Collection
+1747,44,2,2026,3,Service Supervisor,6510,New AMC
+1748,45,2,2026,3,Service Technician,3392,Collection
+1749,46,2,2026,3,Service Technician,1655,Quality
+1750,47,2,2026,3,Service Technician,3086,Collection
+1751,50,2,2026,3,Service Technician,1250,Collection
+1752,53,3,2026,3,Lead Generator,5169,On-time
+1753,54,3,2026,3,Lead Generator,4506,Target Achievement
+1754,58,3,2026,3,Salesperson,7702,Collection
+1755,62,3,2026,3,Installation Engineer,6742,New AMC
+1756,63,3,2026,3,Installation Engineer,7197,Quality
+1757,66,3,2026,3,Installation Manager,4701,Collection
+1758,73,3,2026,3,Service Technician,3509,On-time
+1759,75,3,2026,3,Service Technician,4332,Target Achievement
+1760,77,3,2026,3,Service Technician,1639,Collection
+1761,78,3,2026,3,Service Technician,1160,Target Achievement
+1762,82,4,2026,3,Salesperson,5247,Quality
+1763,83,4,2026,3,Salesperson,11568,Collection
+1764,85,4,2026,3,Salesperson,11180,Target Achievement
+1765,87,4,2026,3,Sales Manager,5902,Quality
+1766,89,4,2026,3,Installation Engineer,2048,New AMC
+1767,93,4,2026,3,Service Sales Person,7312,Quality
+1768,95,4,2026,3,Service Supervisor,3732,On-time
+1769,96,4,2026,3,Service Supervisor,5455,Quality
+1770,97,4,2026,3,Service Technician,1548,New AMC
+1771,100,4,2026,3,Service Technician,3255,New AMC
+1772,102,4,2026,3,Service Technician,1822,Target Achievement
+1773,104,4,2026,3,Service Technician,3758,On-time
+1774,106,5,2026,3,Lead Generator,1779,Collection
+1775,108,5,2026,3,Salesperson,6194,On-time
+1776,109,5,2026,3,Salesperson,14043,Collection
+1777,110,5,2026,3,Salesperson,6506,Collection
+1778,111,5,2026,3,Salesperson,12867,Target Achievement
+1779,112,5,2026,3,Salesperson,5330,On-time
+1780,113,5,2026,3,Sales Manager,5223,Target Achievement
+1781,114,5,2026,3,Installation Engineer,7736,Quality
+1782,115,5,2026,3,Installation Engineer,6253,Target Achievement
+1783,116,5,2026,3,Installation Engineer,8056,Target Achievement
+1784,119,5,2026,3,Service Sales Person,7205,Quality
+1785,121,5,2026,3,Service Supervisor,5284,Quality
+1786,122,5,2026,3,Service Supervisor,2791,New AMC
+1787,123,5,2026,3,Service Technician,2855,Quality
+1788,128,5,2026,3,Service Technician,3973,Target Achievement
+1789,1,1,2026,4,Lead Generator,1531,Collection
+1790,3,1,2026,4,Lead Generator,2156,On-time
+1791,4,1,2026,4,Salesperson,7494,On-time
+1792,8,1,2026,4,Salesperson,3387,On-time
+1793,9,1,2026,4,Sales Manager,15458,On-time
+1794,12,1,2026,4,Installation Engineer,3046,Quality
+1795,14,1,2026,4,Installation Manager,3452,On-time
+1796,15,1,2026,4,Service Sales Person,4421,New AMC
+1797,16,1,2026,4,Service Sales Person,8643,On-time
+1798,18,1,2026,4,Service Supervisor,3861,Collection
+1799,19,1,2026,4,Service Technician,4130,New AMC
+1800,21,1,2026,4,Service Technician,1931,Collection
+1801,22,1,2026,4,Service Technician,4168,Collection
+1802,24,1,2026,4,Service Technician,3698,Quality
+1803,25,1,2026,4,Service Technician,3727,On-time
+1804,26,1,2026,4,Service Technician,1759,Target Achievement
+1805,28,2,2026,4,Lead Generator,4894,Collection
+1806,29,2,2026,4,Lead Generator,2279,Target Achievement
+1807,30,2,2026,4,Salesperson,3455,Target Achievement
+1808,31,2,2026,4,Salesperson,13906,Quality
+1809,32,2,2026,4,Salesperson,11357,On-time
+1810,33,2,2026,4,Salesperson,5423,New AMC
+1811,34,2,2026,4,Salesperson,13631,On-time
+1812,39,2,2026,4,Installation Engineer,3433,On-time
+1813,41,2,2026,4,Service Sales Person,7010,On-time
+1814,43,2,2026,4,Service Supervisor,5187,Target Achievement
+1815,45,2,2026,4,Service Technician,1231,On-time
+1816,46,2,2026,4,Service Technician,1517,New AMC
+1817,47,2,2026,4,Service Technician,2060,On-time
+1818,48,2,2026,4,Service Technician,1574,Target Achievement
+1819,52,2,2026,4,Service Technician,1420,Quality
+1820,54,3,2026,4,Lead Generator,1334,Target Achievement
+1821,56,3,2026,4,Salesperson,9525,On-time
+1822,59,3,2026,4,Salesperson,12352,Collection
+1823,60,3,2026,4,Salesperson,6291,New AMC
+1824,61,3,2026,4,Sales Manager,21163,Collection
+1825,63,3,2026,4,Installation Engineer,8893,New AMC
+1826,66,3,2026,4,Installation Manager,7475,Target Achievement
+1827,69,3,2026,4,Service Supervisor,7127,On-time
+1828,70,3,2026,4,Service Supervisor,3917,Quality
+1829,73,3,2026,4,Service Technician,2768,New AMC
+1830,75,3,2026,4,Service Technician,2655,New AMC
+1831,79,4,2026,4,Lead Generator,2540,On-time
+1832,85,4,2026,4,Salesperson,10641,On-time
+1833,86,4,2026,4,Salesperson,8272,On-time
+1834,87,4,2026,4,Sales Manager,13764,Collection
+1835,88,4,2026,4,Installation Engineer,3830,Collection
+1836,91,4,2026,4,Installation Engineer,4130,Target Achievement
+1837,93,4,2026,4,Service Sales Person,3102,Quality
+1838,98,4,2026,4,Service Technician,3462,New AMC
+1839,99,4,2026,4,Service Technician,2810,Collection
+1840,102,4,2026,4,Service Technician,2544,Target Achievement
+1841,105,5,2026,4,Lead Generator,3249,Target Achievement
+1842,106,5,2026,4,Lead Generator,4353,New AMC
+1843,108,5,2026,4,Salesperson,12911,Target Achievement
+1844,112,5,2026,4,Salesperson,8048,Target Achievement
+1845,115,5,2026,4,Installation Engineer,4820,New AMC
+1846,116,5,2026,4,Installation Engineer,6838,New AMC
+1847,117,5,2026,4,Installation Engineer,3427,New AMC
+1848,120,5,2026,4,Service Sales Person,9214,Target Achievement
+1849,122,5,2026,4,Service Supervisor,5860,On-time
+1850,123,5,2026,4,Service Technician,2977,On-time
+1851,124,5,2026,4,Service Technician,3020,Target Achievement
+1852,126,5,2026,4,Service Technician,1758,New AMC
+1853,128,5,2026,4,Service Technician,4073,On-time
+1854,130,5,2026,4,Service Technician,1374,Quality
+1855,1,1,2026,5,Lead Generator,3135,New AMC
+1856,3,1,2026,5,Lead Generator,3416,New AMC
+1857,4,1,2026,5,Salesperson,12890,Collection
+1858,5,1,2026,5,Salesperson,13851,On-time
+1859,6,1,2026,5,Salesperson,6599,Collection
+1860,7,1,2026,5,Salesperson,9213,Quality
+1861,8,1,2026,5,Salesperson,9657,Quality
+1862,9,1,2026,5,Sales Manager,4830,Quality
+1863,11,1,2026,5,Installation Engineer,3487,On-time
+1864,14,1,2026,5,Installation Manager,11541,Collection
+1865,15,1,2026,5,Service Sales Person,7648,New AMC
+1866,18,1,2026,5,Service Supervisor,4920,New AMC
+1867,19,1,2026,5,Service Technician,1780,Collection
+1868,21,1,2026,5,Service Technician,1387,Target Achievement
+1869,22,1,2026,5,Service Technician,3124,Quality
+1870,23,1,2026,5,Service Technician,2927,New AMC
+1871,24,1,2026,5,Service Technician,3180,Target Achievement
+1872,25,1,2026,5,Service Technician,2597,Target Achievement
+1873,26,1,2026,5,Service Technician,4464,Target Achievement
+1874,28,2,2026,5,Lead Generator,2708,On-time
+1875,29,2,2026,5,Lead Generator,4496,New AMC
+1876,30,2,2026,5,Salesperson,12881,On-time
+1877,31,2,2026,5,Salesperson,8352,Target Achievement
+1878,34,2,2026,5,Salesperson,11837,On-time
+1879,37,2,2026,5,Installation Engineer,7905,New AMC
+1880,38,2,2026,5,Installation Engineer,4711,Collection
+1881,41,2,2026,5,Service Sales Person,9779,New AMC
+1882,43,2,2026,5,Service Supervisor,4424,Collection
+1883,45,2,2026,5,Service Technician,3394,Target Achievement
+1884,46,2,2026,5,Service Technician,1960,Target Achievement
+1885,50,2,2026,5,Service Technician,3009,New AMC
+1886,51,2,2026,5,Service Technician,2422,Quality
+1887,52,2,2026,5,Service Technician,2731,Collection
+1888,54,3,2026,5,Lead Generator,1301,Target Achievement
+1889,57,3,2026,5,Salesperson,10480,New AMC
+1890,58,3,2026,5,Salesperson,13017,On-time
+1891,59,3,2026,5,Salesperson,6565,Collection
+1892,62,3,2026,5,Installation Engineer,2333,Target Achievement
+1893,63,3,2026,5,Installation Engineer,3192,On-time
+1894,66,3,2026,5,Installation Manager,6084,Target Achievement
+1895,71,3,2026,5,Service Technician,4108,On-time
+1896,72,3,2026,5,Service Technician,3818,Quality
+1897,73,3,2026,5,Service Technician,2654,Target Achievement
+1898,75,3,2026,5,Service Technician,3679,Target Achievement
+1899,76,3,2026,5,Service Technician,2153,Collection
+1900,78,3,2026,5,Service Technician,1749,Target Achievement
+1901,79,4,2026,5,Lead Generator,5166,Target Achievement
+1902,81,4,2026,5,Lead Generator,4803,Target Achievement
+1903,85,4,2026,5,Salesperson,10812,Target Achievement
+1904,87,4,2026,5,Sales Manager,10363,Collection
+1905,88,4,2026,5,Installation Engineer,5850,On-time
+1906,91,4,2026,5,Installation Engineer,7651,New AMC
+1907,92,4,2026,5,Installation Manager,9156,On-time
+1908,93,4,2026,5,Service Sales Person,9425,Collection
+1909,94,4,2026,5,Service Sales Person,7452,On-time
+1910,96,4,2026,5,Service Supervisor,5846,On-time
+1911,100,4,2026,5,Service Technician,1766,New AMC
+1912,103,4,2026,5,Service Technician,1222,On-time
+1913,104,4,2026,5,Service Technician,3282,Quality
+1914,105,5,2026,5,Lead Generator,3098,Quality
+1915,106,5,2026,5,Lead Generator,3768,New AMC
+1916,107,5,2026,5,Lead Generator,4669,Collection
+1917,108,5,2026,5,Salesperson,6767,Quality
+1918,111,5,2026,5,Salesperson,8081,Quality
+1919,112,5,2026,5,Salesperson,12645,Collection
+1920,113,5,2026,5,Sales Manager,8159,Collection
+1921,114,5,2026,5,Installation Engineer,6143,New AMC
+1922,118,5,2026,5,Installation Manager,9611,Target Achievement
+1923,119,5,2026,5,Service Sales Person,10708,New AMC
+1924,120,5,2026,5,Service Sales Person,8506,Quality
+1925,121,5,2026,5,Service Supervisor,1825,On-time
+1926,122,5,2026,5,Service Supervisor,6737,On-time
+1927,123,5,2026,5,Service Technician,3733,New AMC
+1928,124,5,2026,5,Service Technician,4333,On-time
+1929,126,5,2026,5,Service Technician,3637,New AMC
+1930,128,5,2026,5,Service Technician,4016,New AMC
+1931,129,5,2026,5,Service Technician,2184,Quality
+1932,1,1,2026,6,Lead Generator,1438,Collection
+1933,3,1,2026,6,Lead Generator,4780,Quality
+1934,4,1,2026,6,Salesperson,12601,New AMC
+1935,5,1,2026,6,Salesperson,3554,Quality
+1936,6,1,2026,6,Salesperson,3739,New AMC
+1937,8,1,2026,6,Salesperson,4213,Target Achievement
+1938,9,1,2026,6,Sales Manager,6941,New AMC
+1939,11,1,2026,6,Installation Engineer,4399,Quality
+1940,12,1,2026,6,Installation Engineer,4984,Quality
+1941,17,1,2026,6,Service Supervisor,5216,Quality
+1942,18,1,2026,6,Service Supervisor,3171,Target Achievement
+1943,19,1,2026,6,Service Technician,3524,Collection
+1944,23,1,2026,6,Service Technician,3855,New AMC
+1945,24,1,2026,6,Service Technician,3428,New AMC
+1946,26,1,2026,6,Service Technician,4171,On-time
+1947,27,2,2026,6,Lead Generator,1743,Collection
+1948,28,2,2026,6,Lead Generator,4094,Target Achievement
+1949,29,2,2026,6,Lead Generator,4453,Target Achievement
+1950,31,2,2026,6,Salesperson,11513,New AMC
+1951,33,2,2026,6,Salesperson,7359,Target Achievement
+1952,37,2,2026,6,Installation Engineer,8200,Collection
+1953,38,2,2026,6,Installation Engineer,8837,Quality
+1954,41,2,2026,6,Service Sales Person,6630,New AMC
+1955,43,2,2026,6,Service Supervisor,5320,Quality
+1956,44,2,2026,6,Service Supervisor,7166,On-time
+1957,46,2,2026,6,Service Technician,2265,New AMC
+1958,49,2,2026,6,Service Technician,4373,On-time
+1959,50,2,2026,6,Service Technician,3101,New AMC
+1960,51,2,2026,6,Service Technician,2674,On-time
+1961,52,2,2026,6,Service Technician,1441,Collection
+1962,55,3,2026,6,Lead Generator,2666,Quality
+1963,56,3,2026,6,Salesperson,4149,Target Achievement
+1964,57,3,2026,6,Salesperson,5372,Target Achievement
+1965,58,3,2026,6,Salesperson,13890,On-time
+1966,60,3,2026,6,Salesperson,5845,Target Achievement
+1967,62,3,2026,6,Installation Engineer,2836,Quality
+1968,64,3,2026,6,Installation Engineer,3276,Collection
+1969,67,3,2026,6,Service Sales Person,6939,Quality
+1970,69,3,2026,6,Service Supervisor,3464,New AMC
+1971,70,3,2026,6,Service Supervisor,3517,New AMC
+1972,72,3,2026,6,Service Technician,2265,New AMC
+1973,74,3,2026,6,Service Technician,3290,Collection
+1974,75,3,2026,6,Service Technician,2021,Collection
+1975,76,3,2026,6,Service Technician,3619,Quality
+1976,79,4,2026,6,Lead Generator,1280,On-time
+1977,81,4,2026,6,Lead Generator,3905,New AMC
+1978,84,4,2026,6,Salesperson,4559,On-time
+1979,85,4,2026,6,Salesperson,13506,New AMC
+1980,86,4,2026,6,Salesperson,11871,Target Achievement
+1981,87,4,2026,6,Sales Manager,6104,Collection
+1982,88,4,2026,6,Installation Engineer,4838,Target Achievement
+1983,92,4,2026,6,Installation Manager,6237,Target Achievement
+1984,95,4,2026,6,Service Supervisor,7190,Collection
+1985,97,4,2026,6,Service Technician,2231,New AMC
+1986,98,4,2026,6,Service Technician,1065,On-time
+1987,100,4,2026,6,Service Technician,2429,Target Achievement
+1988,102,4,2026,6,Service Technician,4079,On-time
+1989,104,4,2026,6,Service Technician,1941,Quality
+1990,105,5,2026,6,Lead Generator,4543,Collection
+1991,106,5,2026,6,Lead Generator,4602,Collection
+1992,107,5,2026,6,Lead Generator,4691,Collection
+1993,108,5,2026,6,Salesperson,13661,On-time
+1994,109,5,2026,6,Salesperson,3415,Target Achievement
+1995,111,5,2026,6,Salesperson,5592,New AMC
+1996,112,5,2026,6,Salesperson,6261,New AMC
+1997,113,5,2026,6,Sales Manager,14515,Quality
+1998,114,5,2026,6,Installation Engineer,2351,New AMC
+1999,115,5,2026,6,Installation Engineer,4529,On-time
+2000,117,5,2026,6,Installation Engineer,2951,Collection
+2001,118,5,2026,6,Installation Manager,4431,On-time
+2002,120,5,2026,6,Service Sales Person,7521,Quality
+2003,123,5,2026,6,Service Technician,4325,New AMC
+2004,126,5,2026,6,Service Technician,4289,New AMC
+2005,128,5,2026,6,Service Technician,1568,On-time
+2006,129,5,2026,6,Service Technician,1579,Collection
+2007,130,5,2026,6,Service Technician,3897,Quality
+2008,1,1,2026,7,Lead Generator,5290,New AMC
+2009,3,1,2026,7,Lead Generator,2333,Collection
+2010,5,1,2026,7,Salesperson,4135,Quality
+2011,6,1,2026,7,Salesperson,10418,Target Achievement
+2012,7,1,2026,7,Salesperson,3221,Target Achievement
+2013,8,1,2026,7,Salesperson,4988,On-time
+2014,12,1,2026,7,Installation Engineer,2702,On-time
+2015,15,1,2026,7,Service Sales Person,3418,Target Achievement
+2016,19,1,2026,7,Service Technician,2440,Target Achievement
+2017,22,1,2026,7,Service Technician,3567,New AMC
+2018,24,1,2026,7,Service Technician,1805,On-time
+2019,27,2,2026,7,Lead Generator,3137,On-time
+2020,29,2,2026,7,Lead Generator,2770,Target Achievement
+2021,30,2,2026,7,Salesperson,4134,Quality
+2022,31,2,2026,7,Salesperson,10752,Collection
+2023,32,2,2026,7,Salesperson,5754,Quality
+2024,34,2,2026,7,Salesperson,9378,On-time
+2025,35,2,2026,7,Sales Manager,17570,Collection
+2026,37,2,2026,7,Installation Engineer,5230,New AMC
+2027,39,2,2026,7,Installation Engineer,7359,Collection
+2028,41,2,2026,7,Service Sales Person,7477,Collection
+2029,43,2,2026,7,Service Supervisor,6163,On-time
+2030,48,2,2026,7,Service Technician,1971,On-time
+2031,50,2,2026,7,Service Technician,3610,Collection
+2032,52,2,2026,7,Service Technician,1238,Collection
+2033,53,3,2026,7,Lead Generator,5044,Quality
+2034,54,3,2026,7,Lead Generator,5259,Quality
+2035,55,3,2026,7,Lead Generator,3085,On-time
+2036,57,3,2026,7,Salesperson,8176,Collection
+2037,59,3,2026,7,Salesperson,6782,Quality
+2038,60,3,2026,7,Salesperson,10836,On-time
+2039,67,3,2026,7,Service Sales Person,6323,Target Achievement
+2040,70,3,2026,7,Service Supervisor,1650,Collection
+2041,71,3,2026,7,Service Technician,4197,Target Achievement
+2042,74,3,2026,7,Service Technician,2105,On-time
+2043,75,3,2026,7,Service Technician,4141,Target Achievement
+2044,77,3,2026,7,Service Technician,1250,Quality
+2045,84,4,2026,7,Salesperson,9846,On-time
+2046,85,4,2026,7,Salesperson,6719,New AMC
+2047,86,4,2026,7,Salesperson,4076,New AMC
+2048,87,4,2026,7,Sales Manager,11474,On-time
+2049,91,4,2026,7,Installation Engineer,3628,On-time
+2050,92,4,2026,7,Installation Manager,7745,On-time
+2051,94,4,2026,7,Service Sales Person,2896,New AMC
+2052,95,4,2026,7,Service Supervisor,5009,Target Achievement
+2053,96,4,2026,7,Service Supervisor,4683,Target Achievement
+2054,97,4,2026,7,Service Technician,3184,On-time
+2055,98,4,2026,7,Service Technician,2563,On-time
+2056,100,4,2026,7,Service Technician,4167,Target Achievement
+2057,102,4,2026,7,Service Technician,2721,New AMC
+2058,103,4,2026,7,Service Technician,4221,On-time
+2059,107,5,2026,7,Lead Generator,2245,Target Achievement
+2060,109,5,2026,7,Salesperson,4075,Collection
+2061,111,5,2026,7,Salesperson,9305,Quality
+2062,112,5,2026,7,Salesperson,8420,New AMC
+2063,117,5,2026,7,Installation Engineer,2937,New AMC
+2064,120,5,2026,7,Service Sales Person,5376,Target Achievement
+2065,122,5,2026,7,Service Supervisor,3336,Collection
+2066,123,5,2026,7,Service Technician,2812,New AMC
+2067,124,5,2026,7,Service Technician,4058,Collection
+2068,129,5,2026,7,Service Technician,4377,Collection
+2069,130,5,2026,7,Service Technician,3915,Collection
+2070,1,1,2026,8,Lead Generator,2962,Collection
+2071,3,1,2026,8,Lead Generator,1843,Quality
+2072,4,1,2026,8,Salesperson,11787,Quality
+2073,5,1,2026,8,Salesperson,14305,New AMC
+2074,6,1,2026,8,Salesperson,3835,New AMC
+2075,7,1,2026,8,Salesperson,13925,Collection
+2076,11,1,2026,8,Installation Engineer,3464,Target Achievement
+2077,15,1,2026,8,Service Sales Person,4120,Collection
+2078,16,1,2026,8,Service Sales Person,9256,Collection
+2079,17,1,2026,8,Service Supervisor,5738,Quality
+2080,19,1,2026,8,Service Technician,3541,Collection
+2081,23,1,2026,8,Service Technician,3638,Collection
+2082,25,1,2026,8,Service Technician,1514,Collection
+2083,26,1,2026,8,Service Technician,3545,Collection
+2084,28,2,2026,8,Lead Generator,4078,Target Achievement
+2085,29,2,2026,8,Lead Generator,4875,Target Achievement
+2086,30,2,2026,8,Salesperson,14394,Quality
+2087,32,2,2026,8,Salesperson,6423,Collection
+2088,33,2,2026,8,Salesperson,10031,New AMC
+2089,38,2,2026,8,Installation Engineer,7475,New AMC
+2090,40,2,2026,8,Installation Manager,9749,On-time
+2091,45,2,2026,8,Service Technician,3954,On-time
+2092,46,2,2026,8,Service Technician,4145,Quality
+2093,47,2,2026,8,Service Technician,1581,Quality
+2094,50,2,2026,8,Service Technician,1706,New AMC
+2095,51,2,2026,8,Service Technician,1013,New AMC
+2096,53,3,2026,8,Lead Generator,4217,New AMC
+2097,54,3,2026,8,Lead Generator,1356,New AMC
+2098,55,3,2026,8,Lead Generator,1553,New AMC
+2099,56,3,2026,8,Salesperson,6091,New AMC
+2100,58,3,2026,8,Salesperson,13710,New AMC
+2101,61,3,2026,8,Sales Manager,10642,Target Achievement
+2102,62,3,2026,8,Installation Engineer,4937,Quality
+2103,63,3,2026,8,Installation Engineer,3517,On-time
+2104,65,3,2026,8,Installation Engineer,7465,Collection
+2105,67,3,2026,8,Service Sales Person,4735,Collection
+2106,71,3,2026,8,Service Technician,3659,Collection
+2107,74,3,2026,8,Service Technician,1111,Collection
+2108,75,3,2026,8,Service Technician,1569,New AMC
+2109,76,3,2026,8,Service Technician,1590,On-time
+2110,77,3,2026,8,Service Technician,1832,Quality
+2111,78,3,2026,8,Service Technician,3904,Collection
+2112,79,4,2026,8,Lead Generator,3605,New AMC
+2113,80,4,2026,8,Lead Generator,2650,Quality
+2114,81,4,2026,8,Lead Generator,4309,On-time
+2115,82,4,2026,8,Salesperson,10564,Quality
+2116,84,4,2026,8,Salesperson,9118,On-time
+2117,87,4,2026,8,Sales Manager,14510,Target Achievement
+2118,88,4,2026,8,Installation Engineer,6915,On-time
+2119,92,4,2026,8,Installation Manager,9236,New AMC
+2120,93,4,2026,8,Service Sales Person,2812,Quality
+2121,97,4,2026,8,Service Technician,3439,Quality
+2122,98,4,2026,8,Service Technician,3872,Target Achievement
+2123,99,4,2026,8,Service Technician,2729,Target Achievement
+2124,100,4,2026,8,Service Technician,3006,Target Achievement
+2125,102,4,2026,8,Service Technician,1036,New AMC
+2126,104,4,2026,8,Service Technician,4399,New AMC
+2127,105,5,2026,8,Lead Generator,2743,New AMC
+2128,106,5,2026,8,Lead Generator,3409,Quality
+2129,108,5,2026,8,Salesperson,10279,Quality
+2130,109,5,2026,8,Salesperson,11190,New AMC
+2131,110,5,2026,8,Salesperson,10074,Quality
+2132,112,5,2026,8,Salesperson,8087,New AMC
+2133,115,5,2026,8,Installation Engineer,3176,Quality
+2134,117,5,2026,8,Installation Engineer,2413,New AMC
+2135,118,5,2026,8,Installation Manager,9231,On-time
+2136,122,5,2026,8,Service Supervisor,6986,On-time
+2137,130,5,2026,8,Service Technician,3878,New AMC
+2138,4,1,2026,9,Salesperson,5742,Collection
+2139,6,1,2026,9,Salesperson,7113,Target Achievement
+2140,7,1,2026,9,Salesperson,13054,New AMC
+2141,8,1,2026,9,Salesperson,6589,On-time
+2142,9,1,2026,9,Sales Manager,5545,Quality
+2143,12,1,2026,9,Installation Engineer,2821,Quality
+2144,18,1,2026,9,Service Supervisor,4850,Quality
+2145,19,1,2026,9,Service Technician,4473,Target Achievement
+2146,21,1,2026,9,Service Technician,2010,On-time
+2147,22,1,2026,9,Service Technician,4182,New AMC
+2148,24,1,2026,9,Service Technician,4059,Target Achievement
+2149,26,1,2026,9,Service Technician,4288,On-time
+2150,29,2,2026,9,Lead Generator,2260,New AMC
+2151,30,2,2026,9,Salesperson,7707,Collection
+2152,33,2,2026,9,Salesperson,6220,Quality
+2153,34,2,2026,9,Salesperson,13995,Quality
+2154,35,2,2026,9,Sales Manager,4874,On-time
+2155,37,2,2026,9,Installation Engineer,5920,Quality
+2156,43,2,2026,9,Service Supervisor,4113,New AMC
+2157,44,2,2026,9,Service Supervisor,4824,New AMC
+2158,46,2,2026,9,Service Technician,4406,Quality
+2159,48,2,2026,9,Service Technician,3898,Collection
+2160,50,2,2026,9,Service Technician,4473,On-time
+2161,51,2,2026,9,Service Technician,3540,Collection
+2162,53,3,2026,9,Lead Generator,2480,Target Achievement
+2163,54,3,2026,9,Lead Generator,4464,Collection
+2164,55,3,2026,9,Lead Generator,5399,Quality
+2165,59,3,2026,9,Salesperson,9498,New AMC
+2166,64,3,2026,9,Installation Engineer,4853,On-time
+2167,67,3,2026,9,Service Sales Person,3012,Quality
+2168,69,3,2026,9,Service Supervisor,1685,Target Achievement
+2169,71,3,2026,9,Service Technician,1917,On-time
+2170,72,3,2026,9,Service Technician,4197,Quality
+2171,73,3,2026,9,Service Technician,2241,On-time
+2172,74,3,2026,9,Service Technician,3482,Quality
+2173,75,3,2026,9,Service Technician,1106,On-time
+2174,76,3,2026,9,Service Technician,1887,Target Achievement
+2175,77,3,2026,9,Service Technician,1211,Target Achievement
+2176,78,3,2026,9,Service Technician,1387,New AMC
+2177,79,4,2026,9,Lead Generator,4334,Collection
+2178,81,4,2026,9,Lead Generator,1621,Collection
+2179,82,4,2026,9,Salesperson,7570,Quality
+2180,83,4,2026,9,Salesperson,13006,Quality
+2181,84,4,2026,9,Salesperson,3765,New AMC
+2182,85,4,2026,9,Salesperson,11869,Quality
+2183,86,4,2026,9,Salesperson,4876,Collection
+2184,87,4,2026,9,Sales Manager,7995,Collection
+2185,88,4,2026,9,Installation Engineer,2814,Target Achievement
+2186,89,4,2026,9,Installation Engineer,6020,New AMC
+2187,91,4,2026,9,Installation Engineer,7739,Quality
+2188,94,4,2026,9,Service Sales Person,5183,On-time
+2189,95,4,2026,9,Service Supervisor,6356,On-time
+2190,96,4,2026,9,Service Supervisor,2083,On-time
+2191,98,4,2026,9,Service Technician,2921,Collection
+2192,100,4,2026,9,Service Technician,1125,Target Achievement
+2193,102,4,2026,9,Service Technician,2837,Target Achievement
+2194,105,5,2026,9,Lead Generator,4005,Target Achievement
+2195,107,5,2026,9,Lead Generator,3875,New AMC
+2196,108,5,2026,9,Salesperson,5632,New AMC
+2197,110,5,2026,9,Salesperson,4927,Quality
+2198,113,5,2026,9,Sales Manager,18813,Quality
+2199,118,5,2026,9,Installation Manager,5411,Target Achievement
+2200,120,5,2026,9,Service Sales Person,3482,Target Achievement
+2201,121,5,2026,9,Service Supervisor,3440,Quality
+2202,122,5,2026,9,Service Supervisor,3364,New AMC
+2203,124,5,2026,9,Service Technician,3078,Collection
+2204,129,5,2026,9,Service Technician,4121,Collection
+2205,1,1,2026,10,Lead Generator,4062,New AMC
+2206,4,1,2026,10,Salesperson,11942,Collection
+2207,7,1,2026,10,Salesperson,4813,Quality
+2208,9,1,2026,10,Sales Manager,12757,Quality
+2209,11,1,2026,10,Installation Engineer,2562,Quality
+2210,14,1,2026,10,Installation Manager,5589,Collection
+2211,16,1,2026,10,Service Sales Person,10333,Target Achievement
+2212,18,1,2026,10,Service Supervisor,4069,Target Achievement
+2213,24,1,2026,10,Service Technician,1574,Quality
+2214,25,1,2026,10,Service Technician,2283,Collection
+2215,27,2,2026,10,Lead Generator,2844,Collection
+2216,28,2,2026,10,Lead Generator,2382,New AMC
+2217,31,2,2026,10,Salesperson,4452,New AMC
+2218,32,2,2026,10,Salesperson,4689,Collection
+2219,33,2,2026,10,Salesperson,7538,Collection
+2220,35,2,2026,10,Sales Manager,14784,Quality
+2221,36,2,2026,10,Installation Engineer,8774,Target Achievement
+2222,37,2,2026,10,Installation Engineer,2389,New AMC
+2223,39,2,2026,10,Installation Engineer,6790,New AMC
+2224,40,2,2026,10,Installation Manager,5072,Quality
+2225,43,2,2026,10,Service Supervisor,6244,Quality
+2226,46,2,2026,10,Service Technician,1085,New AMC
+2227,48,2,2026,10,Service Technician,1960,On-time
+2228,49,2,2026,10,Service Technician,3845,Quality
+2229,50,2,2026,10,Service Technician,1399,Collection
+2230,51,2,2026,10,Service Technician,3046,New AMC
+2231,53,3,2026,10,Lead Generator,2645,Collection
+2232,55,3,2026,10,Lead Generator,3516,Target Achievement
+2233,56,3,2026,10,Salesperson,8514,On-time
+2234,57,3,2026,10,Salesperson,5017,Target Achievement
+2235,59,3,2026,10,Salesperson,7952,On-time
+2236,61,3,2026,10,Sales Manager,13884,On-time
+2237,62,3,2026,10,Installation Engineer,5717,Collection
+2238,64,3,2026,10,Installation Engineer,4834,Target Achievement
+2239,67,3,2026,10,Service Sales Person,9959,New AMC
+2240,70,3,2026,10,Service Supervisor,4535,Target Achievement
+2241,72,3,2026,10,Service Technician,4279,Target Achievement
+2242,73,3,2026,10,Service Technician,2432,Collection
+2243,79,4,2026,10,Lead Generator,4316,New AMC
+2244,80,4,2026,10,Lead Generator,2701,Quality
+2245,82,4,2026,10,Salesperson,13560,New AMC
+2246,83,4,2026,10,Salesperson,12228,Target Achievement
+2247,84,4,2026,10,Salesperson,13229,New AMC
+2248,86,4,2026,10,Salesperson,3726,New AMC
+2249,88,4,2026,10,Installation Engineer,8323,Collection
+2250,89,4,2026,10,Installation Engineer,6921,New AMC
+2251,92,4,2026,10,Installation Manager,8756,On-time
+2252,94,4,2026,10,Service Sales Person,6255,On-time
+2253,100,4,2026,10,Service Technician,2141,On-time
+2254,109,5,2026,10,Salesperson,5415,On-time
+2255,111,5,2026,10,Salesperson,4133,On-time
+2256,112,5,2026,10,Salesperson,10598,Quality
+2257,113,5,2026,10,Sales Manager,16504,New AMC
+2258,114,5,2026,10,Installation Engineer,8421,Quality
+2259,117,5,2026,10,Installation Engineer,5819,Target Achievement
+2260,119,5,2026,10,Service Sales Person,5120,Collection
+2261,124,5,2026,10,Service Technician,2219,Collection
+2262,128,5,2026,10,Service Technician,4191,Quality
+2263,130,5,2026,10,Service Technician,2150,Target Achievement

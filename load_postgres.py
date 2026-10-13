@@ -29,6 +29,7 @@ TABLES = [
     "fact_amc",
     "fact_repair_orders",
     "fact_incentives",
+    "fact_employee_targets",
 ]
 
 def main():

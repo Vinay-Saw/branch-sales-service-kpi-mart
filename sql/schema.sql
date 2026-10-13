@@ -14,10 +14,17 @@ CREATE TABLE kpi_mart.dim_branch (
     region          VARCHAR(50)
 );
 
+CREATE TABLE kpi_mart.dim_department (
+    department_id     INT PRIMARY KEY,
+    department_code   VARCHAR(10) NOT NULL,
+    department_name   VARCHAR(50) NOT NULL
+);
+
 CREATE TABLE kpi_mart.dim_employee (
     employee_id         INT PRIMARY KEY,
     employee_name       VARCHAR(100),
-    role                VARCHAR(50),  -- Lead Generator, Salesperson, Sales Manager, Installation Engineer, Installation Manager, Service Sales Person, Service Supervisor, Service Technician
+    role                VARCHAR(50),
+    department_id       INT REFERENCES kpi_mart.dim_department(department_id),
     branch_id           INT REFERENCES kpi_mart.dim_branch(branch_id),
     active              BOOLEAN,
     hire_date           DATE,
@@ -202,6 +209,20 @@ CREATE TABLE kpi_mart.fact_incentives (
     role                    VARCHAR(50),
     incentive_amount_inr    INT,
     basis                   VARCHAR(50)
+);
+
+-- Grain: one planned target. Quarter = sum of its months. Year = sum of its months.
+CREATE TABLE kpi_mart.fact_employee_targets (
+    target_id       INT PRIMARY KEY,
+    employee_id     INT REFERENCES kpi_mart.dim_employee(employee_id),
+    department_id   INT REFERENCES kpi_mart.dim_department(department_id),
+    branch_id       INT REFERENCES kpi_mart.dim_branch(branch_id),
+    role            VARCHAR(50),
+    metric          VARCHAR(40),
+    year            INT,
+    period_type     VARCHAR(10),  -- Month, Quarter, Year
+    period_index    INT,
+    target_value    INT
 );
 
 -- Indexes

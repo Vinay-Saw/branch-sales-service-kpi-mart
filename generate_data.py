@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 Synthetic ERP extracts for Branch Sales, Installation & Service KPI Mart
-Vertical transport company — Surat, Vadodara, Vapi branches.
+Vertical transport company — Surat, Vadodara, Vapi, Ahmedabad, and Pune.
 
 Realistic departmental flow:
 Sales (leads → inquiry → quotation → agreement/booking) → 
@@ -34,12 +34,50 @@ TODAY = datetime.now().date()
 # ---------------------------------------------------------------------------
 
 branches = pd.DataFrame({
-    "branch_id": [1, 2, 3],
-    "branch_code": ["SUR", "VAD", "VAP"],
-    "branch_name": ["Surat", "Vadodara", "Vapi"],
-    "state": ["Gujarat", "Gujarat", "Gujarat"],
-    "region": ["South Gujarat", "Central Gujarat", "South Gujarat"],
+    "branch_id": [1, 2, 3, 4, 5],
+    "branch_code": ["SUR", "VAD", "VAP", "AMD", "PUN"],
+    "branch_name": ["Surat", "Vadodara", "Vapi", "Ahmedabad", "Pune"],
+    "state": ["Gujarat", "Gujarat", "Gujarat", "Gujarat", "Maharashtra"],
+    "region": ["South Gujarat", "Central Gujarat", "South Gujarat", "North Gujarat", "Western Maharashtra"],
 })
+
+departments = pd.DataFrame({
+    "department_id": [1, 2, 3],
+    "department_code": ["SAL", "INS", "SRV"],
+    "department_name": ["Sales", "Installation", "Service"],
+})
+
+ROLE_DEPT = {
+    "Lead Generator": 1,
+    "Salesperson": 1,
+    "Sales Manager": 1,
+    "Installation Engineer": 2,
+    "Installation Manager": 2,
+    "Service Sales Person": 3,
+    "Service Supervisor": 3,
+    "Service Technician": 3,
+}
+ROLE_METRIC = {
+    "Lead Generator": "Leads",
+    "Salesperson": "Agreement value",
+    "Sales Manager": "Agreement value",
+    "Installation Engineer": "Units completed",
+    "Installation Manager": "Units completed",
+    "Service Sales Person": "AMC value",
+    "Service Supervisor": "Repair orders closed",
+    "Service Technician": "Repair orders closed",
+}
+MONTHLY_BASE = {
+    "Lead Generator": 28,
+    "Salesperson": 1_800_000,
+    "Sales Manager": 7_500_000,
+    "Installation Engineer": 3,
+    "Installation Manager": 10,
+    "Service Sales Person": 120_000,
+    "Service Supervisor": 10,
+    "Service Technician": 8,
+}
+BRANCH_SCALE = {1: 1.05, 2: 0.95, 3: 0.75, 4: 1.10, 5: 0.88}
 
 # Employees with roles across departments
 roles = [
@@ -49,7 +87,7 @@ roles = [
 ]
 employees = []
 eid = 1
-for branch_id in [1, 2, 3]:
+for branch_id in [1, 2, 3, 4, 5]:
     # More sales and service staff
     role_counts = {
         "Lead Generator": 3,
@@ -67,6 +105,7 @@ for branch_id in [1, 2, 3]:
                 "employee_id": eid,
                 "employee_name": fake.name(),
                 "role": role,
+                "department_id": ROLE_DEPT[role],
                 "branch_id": branch_id,
                 "active": random.random() > 0.05,
                 "hire_date": fake.date_between(start_date="-8y", end_date="-6m"),
@@ -85,8 +124,8 @@ for i in range(1, 401):
             "Residential Society", "Commercial Building", "Hospital", "Hotel",
             "Industrial", "Government", "Shopping Mall", "Educational"
         ]),
-        "city": random.choice(["Surat", "Vadodara", "Vapi", "Navsari", "Bharuch", "Anand", "Valsad"]),
-        "primary_branch_id": random.choice([1, 2, 3]),
+        "city": random.choice(["Surat", "Vadodara", "Vapi", "Ahmedabad", "Gandhinagar", "Pune", "Navsari", "Bharuch", "Anand", "Valsad"]),
+        "primary_branch_id": random.choice([1, 2, 3, 4, 5]),
     })
 dim_customer = pd.DataFrame(customers)
 
@@ -97,7 +136,7 @@ for i in range(1, 16):
         "vendor_id": i,
         "vendor_name": fake.company() + " Erectors",
         "specialty": random.choice(["Erection", "Scaffolding", "Electrical", "General"]),
-        "branch_coverage": random.choice([1, 2, 3, 0]),  # 0 = all
+        "branch_coverage": random.choice([1, 2, 3, 4, 5, 0]),  # 0 = all
     })
 dim_vendor = pd.DataFrame(vendors)
 
@@ -146,7 +185,7 @@ unit_seq_per_booking = defaultdict(int)
 # Generate ~4500 leads over 3 years for more volume
 for _ in range(4500):
     lead_date = fake.date_between(start_date="-3y", end_date="today")
-    branch_id = random.choices([1, 2, 3], weights=[0.42, 0.35, 0.23])[0]
+    branch_id = random.choices([1, 2, 3, 4, 5], weights=[0.26, 0.20, 0.12, 0.24, 0.18])[0]
     lg_id = pick_emp("Lead Generator", branch_id)
     # Some leads have existing customer, some are new
     if random.random() < 0.4:
@@ -557,9 +596,77 @@ fact_incentives = pd.DataFrame(incentives)
 print(f"Incentives: {len(fact_incentives)}")
 
 # ---------------------------------------------------------------------------
+# Employee targets: monthly plan, quarter = sum of months, year = sum of months
+# ---------------------------------------------------------------------------
+targets = []
+tid = 1
+for _, emp in dim_employee.iterrows():
+    scale = BRANCH_SCALE[int(emp.branch_id)]
+    person = random.uniform(0.82, 1.18)
+    monthly = MONTHLY_BASE[emp.role] * scale * person
+    if emp.role in ("Installation Engineer", "Installation Manager", "Service Supervisor", "Service Technician", "Lead Generator"):
+        monthly = max(1, round(monthly))
+    else:
+        monthly = int(round(monthly / 1000) * 1000)
+    for year in (2024, 2025, 2026):
+        month_vals = []
+        for month in range(1, 13):
+            # Mild seasonality: quieter monsoon, stronger Q4
+            season = {6: 0.9, 7: 0.88, 8: 0.92, 10: 1.08, 11: 1.1, 12: 1.06}.get(month, 1.0)
+            value = monthly * season
+            if emp.role in ("Installation Engineer", "Installation Manager", "Service Supervisor", "Service Technician", "Lead Generator"):
+                value = max(1, round(value))
+            else:
+                value = int(round(value / 1000) * 1000)
+            month_vals.append(value)
+            targets.append({
+                "target_id": tid,
+                "employee_id": int(emp.employee_id),
+                "department_id": int(emp.department_id),
+                "branch_id": int(emp.branch_id),
+                "role": emp.role,
+                "metric": ROLE_METRIC[emp.role],
+                "year": year,
+                "period_type": "Month",
+                "period_index": month,
+                "target_value": value,
+            })
+            tid += 1
+        for q in range(1, 5):
+            targets.append({
+                "target_id": tid,
+                "employee_id": int(emp.employee_id),
+                "department_id": int(emp.department_id),
+                "branch_id": int(emp.branch_id),
+                "role": emp.role,
+                "metric": ROLE_METRIC[emp.role],
+                "year": year,
+                "period_type": "Quarter",
+                "period_index": q,
+                "target_value": sum(month_vals[(q - 1) * 3:q * 3]),
+            })
+            tid += 1
+        targets.append({
+            "target_id": tid,
+            "employee_id": int(emp.employee_id),
+            "department_id": int(emp.department_id),
+            "branch_id": int(emp.branch_id),
+            "role": emp.role,
+            "metric": ROLE_METRIC[emp.role],
+            "year": year,
+            "period_type": "Year",
+            "period_index": year,
+            "target_value": sum(month_vals),
+        })
+        tid += 1
+fact_employee_targets = pd.DataFrame(targets)
+print(f"Employee targets: {len(fact_employee_targets)}")
+
+# ---------------------------------------------------------------------------
 # Save all
 # ---------------------------------------------------------------------------
 branches.to_csv(f"{OUT}/dim_branch.csv", index=False)
+departments.to_csv(f"{OUT}/dim_department.csv", index=False)
 dim_employee.to_csv(f"{OUT}/dim_employee.csv", index=False)
 dim_customer.to_csv(f"{OUT}/dim_customer.csv", index=False)
 dim_vendor.to_csv(f"{OUT}/dim_vendor.csv", index=False)
@@ -575,6 +682,7 @@ fact_warranty.to_csv(f"{OUT}/fact_warranty.csv", index=False)
 fact_amc.to_csv(f"{OUT}/fact_amc.csv", index=False)
 fact_repair_orders.to_csv(f"{OUT}/fact_repair_orders.csv", index=False)
 fact_incentives.to_csv(f"{OUT}/fact_incentives.csv", index=False)
+fact_employee_targets.to_csv(f"{OUT}/fact_employee_targets.csv", index=False)
 
 print("\n=== Final counts ===")
 for f in sorted(os.listdir(OUT)):
