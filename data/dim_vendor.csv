@@ -1,0 +1,16 @@
+vendor_id,vendor_name,specialty,branch_coverage
+1,Tata PLC Erectors,Erection,3
+2,"Babu, Varma and Khurana Erectors",General,1
+3,"Dhawan, Manne and Sanghvi Erectors",Erection,2
+4,Pandit and Sons Erectors,Scaffolding,0
+5,"Saha, Grover and Chada Erectors",General,3
+6,"Patel, Bir and Vora Erectors",General,2
+7,"Tripathi, Tripathi and Bahri Erectors",General,1
+8,Singhal-Bassi Erectors,General,0
+9,"Ram, Prakash and Kulkarni Erectors",Electrical,1
+10,"Babu, Parikh and Bir Erectors",Electrical,2
+11,Khosla-Chawla Erectors,General,0
+12,"Natarajan, Deol and Basu Erectors",Scaffolding,3
+13,Nigam-Gill Erectors,Erection,3
+14,"Shetty, Srinivas and Gopal Erectors",Electrical,1
+15,Bhatnagar Ltd Erectors,General,3

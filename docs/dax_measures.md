@@ -1,55 +1,36 @@
-# DAX Measures (Power BI)
+# DAX Measures (Power BI) — Updated for departmental model
 
-Connect to PostgreSQL kpi_mart schema. Create relationships:
+Connect to PostgreSQL `kpi_mart`. Key relationships:
 
-- fact_bookings[booking_date] → dim_calendar[full_date] (active)
-- fact_installations[scheduled_date] → dim_calendar[full_date] (inactive, activate when needed)
-- fact_service_calls[open_date] → dim_calendar[full_date]
-- fact_amc[end_date] → dim_calendar[full_date]
-- All facts → dim_branch, dim_product, dim_customer, dim_salesperson as appropriate.
+- fact_bookings[agreement_date] → dim_calendar
+- fact_units[installation_complete_date] → dim_calendar (inactive)
+- fact_amc[end_date] → dim_calendar
+- fact_repair_orders[open_date] → dim_calendar
+- All facts → dim_branch, dim_employee (role-playing where needed), dim_customer
 
-## Core measures
-
+## Sales
 ```dax
-Bookings Value = 
-CALCULATE(
-    SUM(fact_bookings[net_value_inr]),
-    fact_bookings[status] IN { "Confirmed", "Delivered" }
-)
+Bookings Value = SUM(fact_bookings[total_agreement_value_inr])
+Bookings MTD = TOTALMTD([Bookings Value], dim_calendar[full_date])
+Units Booked = SUM(fact_bookings[number_of_units])
+Equipment Cost = SUM(fact_bookings[total_equipment_cost_inr])
+```
 
-Bookings MTD = 
-TOTALMTD([Bookings Value], dim_calendar[full_date])
+## Installation
+```dax
+Units Completed = 
+CALCULATE(COUNTROWS(fact_units), fact_units[installation_status] = "Completed")
 
-Bookings QTD = 
-TOTALQTD([Bookings Value], dim_calendar[full_date])
+Installation Backlog = 
+CALCULATE(COUNTROWS(fact_units), fact_units[installation_status] IN {"Pending", "Scheduled", "In Progress"})
 
-Bookings Same Month LY = 
-CALCULATE(
-    [Bookings Value],
-    SAMEPERIODLASTYEAR(dim_calendar[full_date])
-)
+Third Party Cost = SUM(fact_installation_pos[amount_inr])
+```
 
-Target Value = 
-SUM(fact_targets[target_value_inr])
-
-Gap to Target = 
-[Bookings Value] - [Target Value]
-
-Gap to Target % = 
-DIVIDE([Gap to Target], [Target Value], 0)
-
-Installation Backlog Value = 
-CALCULATE(
-    SUM(fact_installations[value_inr]),
-    fact_installations[status] IN { "Scheduled", "Delayed" }
-)
-
-Open Calls Older than SLA = 
-CALCULATE(
-    COUNTROWS(fact_service_calls),
-    fact_service_calls[status] IN { "Open", "In Progress" },
-    fact_service_calls[exceeded_sla] = TRUE()
-)
+## Service
+```dax
+AMC Active = 
+CALCULATE(COUNTROWS(fact_amc), fact_amc[status] = "Active")
 
 AMC Renewals Due This Month = 
 CALCULATE(
@@ -58,26 +39,20 @@ CALCULATE(
     MONTH(fact_amc[end_date]) = MONTH(TODAY()),
     YEAR(fact_amc[end_date]) = YEAR(TODAY())
 )
-```
 
-## Ageing buckets (service)
-
-```dax
-Service Ageing Bucket = 
-SWITCH(
-    TRUE(),
-    fact_service_calls[resolution_hours] <= fact_service_calls[sla_hours], "Within SLA",
-    fact_service_calls[resolution_hours] <= fact_service_calls[sla_hours] * 2, "1-2x SLA",
-    "Over 2x SLA"
+Open Repair Orders > SLA = 
+CALCULATE(
+    COUNTROWS(fact_repair_orders),
+    fact_repair_orders[status] IN {"Open", "In Progress"},
+    fact_repair_orders[exceeded_sla] = TRUE()
 )
+
+Repair Parts Cost = SUM(fact_repair_orders[parts_cost_inr])
 ```
 
-## Reconciliation check
-
+## Incentives
 ```dax
-SQL Bookings Total (static) =  /* paste the SQL SUM result here for the period */ 0
-
-Dashboard vs SQL Variance = [Bookings Value] - [SQL Bookings Total (static)]
+Total Incentives = SUM(fact_incentives[incentive_amount_inr])
 ```
 
-Or maintain a small reconciliation table loaded from a SQL view that computes the same aggregates.
+Use branch slicer or RLS so Surat / Vadodara / Vapi numbers stay separate.

@@ -1,33 +1,26 @@
--- Reconciliation queries (run in PostgreSQL)
--- Dashboard total must equal these numbers for the same filters.
+-- Reconciliation queries
 
--- Bookings value (Confirmed + Delivered) — all time
-SELECT SUM(net_value_inr) AS bookings_value
+-- Bookings value
+SELECT SUM(total_agreement_value_inr) AS bookings_value
 FROM kpi_mart.fact_bookings
-WHERE status IN ('Confirmed', 'Delivered');
+WHERE status = 'Confirmed';
 
--- Bookings value by branch
-SELECT b.branch_name, SUM(f.net_value_inr) AS bookings_value
-FROM kpi_mart.fact_bookings f
-JOIN kpi_mart.dim_branch b ON f.branch_id = b.branch_id
-WHERE f.status IN ('Confirmed', 'Delivered')
-GROUP BY b.branch_name
-ORDER BY 1;
+-- Units by installation status
+SELECT installation_status, COUNT(*) 
+FROM kpi_mart.fact_units 
+GROUP BY 1;
 
--- Open service calls older than SLA
+-- AMC active and due this month
+SELECT 
+  COUNT(*) FILTER (WHERE status = 'Active') AS active_amc,
+  COUNT(*) FILTER (WHERE status = 'Active' AND TO_CHAR(end_date, 'YYYY-MM') = TO_CHAR(CURRENT_DATE, 'YYYY-MM')) AS due_this_month
+FROM kpi_mart.fact_amc;
+
+-- Open repair orders exceeding SLA
 SELECT COUNT(*) AS open_over_sla
-FROM kpi_mart.fact_service_calls
-WHERE status IN ('Open', 'In Progress')
-  AND exceeded_sla = true;
+FROM kpi_mart.fact_repair_orders
+WHERE status IN ('Open', 'In Progress') AND exceeded_sla = true;
 
--- Installation backlog value
-SELECT SUM(value_inr) AS backlog_value
-FROM kpi_mart.fact_installations
-WHERE status IN ('Scheduled', 'Delayed');
-
--- AMC renewals due this month (example for October 2026 — adjust)
-SELECT COUNT(*) AS amc_due
-FROM kpi_mart.fact_amc
-WHERE status = 'Active'
-  AND EXTRACT(MONTH FROM end_date) = EXTRACT(MONTH FROM CURRENT_DATE)
-  AND EXTRACT(YEAR FROM end_date) = EXTRACT(YEAR FROM CURRENT_DATE);
+-- Third-party installation cost
+SELECT SUM(amount_inr) AS total_po_cost
+FROM kpi_mart.fact_installation_pos;

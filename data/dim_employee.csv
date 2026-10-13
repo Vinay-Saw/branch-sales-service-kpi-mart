@@ -1,0 +1,79 @@
+employee_id,employee_name,role,branch_id,active,hire_date,incentive_eligible
+1,Aryan Maharaj,Lead Generator,1,True,2020-09-27,True
+2,Harsh Chahal,Lead Generator,1,False,2023-07-03,True
+3,Ayushman Chander,Lead Generator,1,True,2020-07-12,True
+4,Rushil Saini,Salesperson,1,True,2020-07-17,True
+5,Abeer Dutta,Salesperson,1,True,2024-05-13,True
+6,Arunima Dugal,Salesperson,1,True,2020-07-02,True
+7,Harsh Chanda,Salesperson,1,True,2021-10-26,True
+8,Hemangini Lalla,Salesperson,1,True,2025-03-27,True
+9,Jeet Radhakrishnan,Sales Manager,1,True,2019-05-31,True
+10,Janaki Handa,Installation Engineer,1,False,2024-06-01,True
+11,Vedant Mann,Installation Engineer,1,True,2026-08-29,True
+12,Harrison Rai,Installation Engineer,1,True,2021-01-01,True
+13,Nicholas Prabhakar,Installation Engineer,1,False,2021-08-15,True
+14,Ekbal Garg,Installation Manager,1,True,2023-01-20,True
+15,Nihal Shere,Service Sales Person,1,True,2021-10-25,True
+16,Ekta Bhalla,Service Sales Person,1,True,2020-08-12,True
+17,Diya Rattan,Service Supervisor,1,True,2020-12-03,True
+18,Divya Kala,Service Supervisor,1,True,2024-01-09,True
+19,Tara Dhar,Service Technician,1,True,2020-11-24,True
+20,Adya Sangha,Service Technician,1,False,2025-12-17,True
+21,Janaki Kanda,Service Technician,1,True,2026-10-04,True
+22,Yashodhara Tak,Service Technician,1,True,2019-07-05,True
+23,Imaran Dua,Service Technician,1,True,2023-10-19,True
+24,Devansh Rajan,Service Technician,1,True,2021-10-31,True
+25,Zayan Apte,Service Technician,1,True,2024-03-22,True
+26,Amara Oak,Service Technician,1,True,2019-09-03,True
+27,Nakul Setty,Lead Generator,2,True,2018-10-22,True
+28,Xiti Gokhale,Lead Generator,2,True,2022-11-03,True
+29,Chanchal Tripathi,Lead Generator,2,True,2023-08-26,True
+30,Kashvi Edwin,Salesperson,2,True,2023-02-04,True
+31,Ekiya Suresh,Salesperson,2,True,2018-12-08,True
+32,Damyanti Khatri,Salesperson,2,True,2019-03-31,True
+33,Frederick Sunder,Salesperson,2,True,2025-04-22,True
+34,Kabir Soman,Salesperson,2,True,2026-05-09,True
+35,Alka Wable,Sales Manager,2,True,2025-10-04,True
+36,Siddharth Zacharia,Installation Engineer,2,True,2024-10-27,True
+37,Devika Rastogi,Installation Engineer,2,True,2026-09-27,True
+38,Raksha Varughese,Installation Engineer,2,True,2022-05-23,True
+39,Umang Bhatt,Installation Engineer,2,True,2021-06-26,True
+40,Thomas Amble,Installation Manager,2,True,2019-05-08,True
+41,Veer Bir,Service Sales Person,2,True,2026-01-08,True
+42,Ekavir Varkey,Service Sales Person,2,False,2020-09-07,True
+43,Tanish Zacharia,Service Supervisor,2,True,2019-11-03,True
+44,Xavier Solanki,Service Supervisor,2,True,2025-03-28,True
+45,Girindra Chatterjee,Service Technician,2,True,2024-01-19,True
+46,Pallavi Roy,Service Technician,2,True,2022-07-08,True
+47,Guneet Bhat,Service Technician,2,True,2022-01-01,True
+48,Ikbal Kothari,Service Technician,2,True,2020-04-24,True
+49,Logan Sami,Service Technician,2,True,2020-03-31,True
+50,Zaid Borra,Service Technician,2,True,2022-04-29,True
+51,Chandresh Zachariah,Service Technician,2,True,2025-06-20,True
+52,Warjas Ganesan,Service Technician,2,True,2022-01-12,True
+53,Tanay Rattan,Lead Generator,3,True,2025-12-31,True
+54,Ladli Agate,Lead Generator,3,True,2026-08-30,True
+55,Suhani Mangal,Lead Generator,3,True,2022-03-01,True
+56,Mohammed Gupta,Salesperson,3,True,2021-02-25,True
+57,Darsh Murthy,Salesperson,3,True,2019-03-28,True
+58,Yadavi Wali,Salesperson,3,True,2020-01-15,True
+59,Quincy Biswas,Salesperson,3,True,2023-07-17,True
+60,Netra Dar,Salesperson,3,True,2026-04-24,True
+61,Balveer Bumb,Sales Manager,3,True,2022-02-18,True
+62,Advika Jayaraman,Installation Engineer,3,True,2024-02-20,True
+63,William Lanka,Installation Engineer,3,True,2021-12-12,True
+64,Tanvi Mutti,Installation Engineer,3,True,2026-03-18,True
+65,Aditya Shanker,Installation Engineer,3,True,2023-10-01,True
+66,Ethan Yogi,Installation Manager,3,True,2020-06-26,True
+67,Kevin Palla,Service Sales Person,3,True,2025-10-29,True
+68,Kala Mane,Service Sales Person,3,False,2020-01-16,True
+69,Abhiram Mistry,Service Supervisor,3,True,2026-03-26,True
+70,Krish Lalla,Service Supervisor,3,True,2019-09-15,True
+71,Nachiket Magar,Service Technician,3,True,2021-01-13,True
+72,Hemal Jani,Service Technician,3,True,2024-04-12,True
+73,Yashasvi Suresh,Service Technician,3,True,2020-10-15,True
+74,George Sampath,Service Technician,3,True,2025-05-31,True
+75,Aarush Nath,Service Technician,3,True,2024-12-12,True
+76,Neel Sathe,Service Technician,3,True,2023-03-12,True
+77,Aditya Choudhury,Service Technician,3,True,2019-05-20,True
+78,Balendra Pingle,Service Technician,3,True,2023-06-10,True

@@ -1,17 +1,23 @@
 # ERP Boundary
 
-Nightly export (or CDC) of these four core tables plus supporting dimensions:
+Nightly export of these core tables (plus dimensions):
 
-| Table | Grain | Key columns |
-|-------|-------|-------------|
-| Bookings | One booking line | booking_line_id, booking_date, branch_id, salesperson_id, customer_id, product_id, quantity, net_value_inr, status |
-| Installations | One installation job | installation_id, booking_line_id, scheduled_date, actual_completion_date, status, branch_id |
-| Service Calls | One service call | service_call_id, open_date, close_date, open_branch_id, close_branch_id, priority, sla_hours, status |
-| AMC Contracts | One contract | amc_id, customer_id, branch_id, start_date, end_date, annual_value_inr, status |
-
-Dimensions (branch, product, salesperson, customer, calendar) are refreshed less frequently or maintained as reference data.
+| Area | Table | Grain | Key columns |
+|------|-------|-------|-------------|
+| Sales | fact_leads | One lead | lead_date, branch, lead_generator, status |
+| Sales | fact_inquiries | One inquiry | inquiry_date, salesperson, product_interest |
+| Sales | fact_quotations | One quotation | quotation_date, total_value, status |
+| Sales | fact_bookings | One agreement | booking_id, agreement_date, equipment_cost, number_of_units |
+| Installation | fact_units | One unit | unit_id (BK-...L001), specs, installation_status, engineer |
+| Installation | fact_installation_pos | One PO line | unit_id, vendor, line_item, amount |
+| Service | fact_warranty | One unit | warranty_months, start/end |
+| Service | fact_amc | One contract | unit_id, amc_type, start/end, annual_value |
+| Service | fact_repair_orders | One RO | unit_id, supervisor, technician, SLA, costs |
+| All | fact_incentives | One monthly incentive | employee, amount, basis |
 
 **Ugly cases handled:**
-- Cancelled order still appears in the bookings fact with status = Cancelled (visible in pipeline, excluded from booked totals).
-- Target can change mid-quarter (revised_mid_period flag + revision_date).
-- Service call opened in one branch and closed in another (both branch IDs stored).
+- Cancelled / On Hold agreements still in pipeline
+- Units with incomplete installation
+- Repair orders on Non-comprehensive or out-of-AMC units
+- Cross-role incentives
+- Multiple AMC periods per unit

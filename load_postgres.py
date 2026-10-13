@@ -11,19 +11,24 @@ from pathlib import Path
 import psycopg2
 from psycopg2.extras import execute_values
 
-DATA = Path(__file__).parent.parent / "data"
+DATA = Path(__file__).parent / "data"
 
 TABLES = [
     "dim_branch",
-    "dim_product",
-    "dim_salesperson",
+    "dim_employee",
     "dim_customer",
+    "dim_vendor",
     "dim_calendar",
+    "fact_leads",
+    "fact_inquiries",
+    "fact_quotations",
     "fact_bookings",
-    "fact_installations",
-    "fact_service_calls",
-    "fact_targets",
+    "fact_units",
+    "fact_installation_pos",
+    "fact_warranty",
     "fact_amc",
+    "fact_repair_orders",
+    "fact_incentives",
 ]
 
 def main():
@@ -47,7 +52,6 @@ def main():
             print(f"Skip {table}: file not found")
             continue
         df = pd.read_csv(csv_path)
-        # Simple truncate + insert
         cur.execute(f"TRUNCATE TABLE kpi_mart.{table} CASCADE;")
         cols = list(df.columns)
         values = [tuple(None if pd.isna(v) else v for v in row) for row in df.itertuples(index=False)]

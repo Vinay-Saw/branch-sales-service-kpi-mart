@@ -1,39 +1,37 @@
-# Metric Dictionary — Branch Sales & Service KPI Mart
+# Metric Dictionary — Branch Sales, Installation & Service KPI Mart
 
 **Dataset is simulated.** Definitions match questions branch leadership actually asks.
 
-## Booking
-- **Includes**: Confirmed and Delivered booking lines (net value). On Hold is tracked but excluded from “booked” totals.
-- **Excludes**: Cancelled orders (still appear in the pipeline table with status = Cancelled so leadership can see leakage).
-- **Grain**: One row = one booking line (product + quantity on one booking). A multi-product order produces multiple rows.
-- **Measure**: Bookings Value = SUM(net_value_inr) WHERE status IN ('Confirmed', 'Delivered').
+## Departmental flow
+1. **Sales**: Leads → Inquiries → Quotations → Agreements (bookings). Only won agreements transfer to Installation.
+2. **Installation**: Works at **unit** grain (BK-YYYY-NNNNNL001). Third-party vendors execute via Purchase Orders (Erection & Installation, Scaffolding, Wiring, Misc).
+3. **Service**: After completion → Warranty (12/18/24 months) → AMC (Comprehensive or Non-comprehensive) introduced by Service Sales Person. Repair Orders for Non-comprehensive and units outside AMC portfolio. Service Supervisor owns the RO; Technicians execute.
 
-## Installation Backlog
-- **Includes**: Installation jobs with status IN ('Scheduled', 'Delayed') and scheduled_date <= today or within next 60 days.
-- **Excludes**: Completed and Cancelled.
-- **Grain**: One row = one installation job linked to a booking line.
+## Booking / Agreement
+- **Includes**: Confirmed agreements. Cancelled and On Hold remain visible for pipeline leakage.
+- **Grain**: One row = one won agreement (booking_id). Units are separate (fact_units).
+- **Equipment cost**: Tracked separately from total agreement value.
 
-## Open Service Calls Older than SLA
-- **Includes**: status IN ('Open', 'In Progress') AND (current_date - open_date) * 24 > sla_hours.
-- **Cross-branch**: A call opened in one branch and closed in another is attributed to the open_branch for backlog and to close_branch for resolution metrics. Both are stored.
-- **Grain**: One row = one service call.
+## Unit
+- **Grain**: One row = one lift unit linked to a booking.
+- Specs: product type (Passenger/Goods/Home), capacity (kg or passengers; 1 passenger = 68 kg), speed (mps), floors, stops, front/rear openings, door type, grouping (Simplex/Duplex/Triplex), material finish, license scope.
+- Installation status tracked here.
 
-## AMC Renewal Due This Month
-- **Includes**: Active contracts where end_date falls in the current calendar month.
-- **Excludes**: Already renewed (new contract row created) or expired without renewal.
-- **Grain**: One row = one AMC contract.
+## AMC
+- **Types**: Comprehensive (covers all parts) vs Non-comprehensive (parts not covered).
+- **Includes**: Active and historical contracts. Renewal due this month = Active where end_date is in current month.
+- **Grain**: One row = one AMC contract (can have multiple over time per unit).
+- Volume: 1,600+ records.
 
-## Target Variance
-- **Definition**: Bookings Value (MTD / QTD / YTD) − Target Value for the same period.
-- **Mid-quarter revision**: fact_targets.revised_mid_period = true. The measure uses the latest target value; revision_date is available for audit.
-- **Not a calculated column**: Implemented as a DAX measure so it recalculates with any filter (branch, product type, time).
+## Repair Order
+- **Includes**: Work for Non-comprehensive AMC and units not under AMC (or outside warranty).
+- **Grain**: One row = one repair order.
+- Attributes: supervisor, technician, priority, SLA, parts/labor cost, under_warranty / under_amc flags.
 
-## Ageing Buckets (Service)
-- 0–SLA: within SLA
-- SLA–2×SLA: mildly overdue
-- >2×SLA: severely overdue
+## Incentives
+- Available for all employee roles. Monthly amounts with basis (Target Achievement, Quality, On-time, New AMC, etc.).
 
-## North Star per Page
-- Sales page: Bookings vs Target (gap)
-- Delivery page: Installation backlog value and count
-- Service page: Open calls older than SLA + AMC renewals due
+## North Star per page
+- Sales: Bookings vs target (or agreement value vs prior period)
+- Installation: Unit backlog and third-party PO cost
+- Service: Open repair orders older than SLA + AMC renewals due + warranty expiring
