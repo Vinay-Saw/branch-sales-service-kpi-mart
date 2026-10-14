@@ -204,6 +204,7 @@ series = pd.concat([
     monthly(ro, "open_date", None, "ros_opened"),
     monthly(ro[ro.exceeded_sla], "open_date", None, "ros_breached"),
     monthly(amc, "start_date", "annual_value_inr", "new_amc_value"),
+    monthly(inc.assign(paid=pd.to_datetime(dict(year=inc.year, month=inc.month, day=1))), "paid", "incentive_amount_inr", "incentives"),
 ], axis=1)
 series["sales_target"] = [st.get(k, 0) if k[0] != "All" else sum(st.get((b, k[1]), 0) for b in ORDER)
                           for k in series.index]
@@ -328,6 +329,16 @@ op = ro[ro.status != "Closed"].copy()
 op["age_days"] = (AS_OF - op.open_date).dt.days
 op = op.merge(emp[["employee_id", "employee_name"]].rename(columns={"employee_id": "service_supervisor_id", "employee_name": "supervisor"}), on="service_supervisor_id")
 op["ro"] = "RO-" + op.repair_order_id.astype(str).str.zfill(4)
+AGE_BUCKETS = [(0, 30, "0–30 days"), (31, 90, "31–90 days"), (91, 180, "91–180 days"), (181, 365, "181–365 days"), (366, 10 ** 6, "Over a year")]
+age_rows = []
+for b in BRANCHES:
+    ob = op if b == "All" else op[op.branch == b]
+    for i, (lo, hi, lab) in enumerate(AGE_BUCKETS):
+        for pr in sorted(ro.priority.unique()):
+            age_rows.append({"branch": b, "step": i + 1, "age_bucket": lab, "priority": pr,
+                             "open_ros": int(((ob.age_days >= lo) & (ob.age_days <= hi) & (ob.priority == pr)).sum())})
+write("ro_age", age_rows)
+
 write("ro_open", op[["ro", "branch", "priority", "status", "open_date", "age_days", "sla_hours", "description",
                      "coverage", "supervisor", "unit_id"]].sort_values(["priority", "age_days"], ascending=[True, False]))
 
@@ -442,6 +453,14 @@ def branch_metrics(b):
         "expired_amc_lapsed": int((~later).sum()) if len(ex) else 0,
         "expired_amc_lapse_rate": float((~later).mean()) if len(ex) else None,
         "repair_cost_ytd": int(rr_y.cost.sum()),
+        "incentives_ytd": int(sel(inc)[(sel(inc).year == YEAR) & (sel(inc).month <= YTD_M)].incentive_amount_inr.sum()),
+        "headcount": int((sel(emp).active).sum()),
+        "salespeople_at_target": int(((sel(sp).attainment >= 1) & (sel(sp).target > 0)).sum()),
+        "salespeople": int((sel(sp).target > 0).sum()),
+        "roles_out_of_scale": int((~att[att.branch == "All"].calibrated).sum()),
+        "roles": int(att[att.branch == "All"].role.nunique()),
+        "new_amc_value_ytd": int(sel(amc)[in_ytd(sel(amc).start_date)].annual_value_inr.sum()),
+        "po_value_ytd": int(sel(pos)[in_ytd(sel(pos).po_date)].amount_inr.sum()),
     }
 
 
@@ -601,6 +620,33 @@ insights = [
      "detail": "Listed with the other data issues below. Fix the source before using incentive history for pay decisions."},
 ]
 write("insights", insights)
+
+# ---------------------------------------------------------------- callouts: one number + a short label, for the page
+vy = br_only.loc[worst_sales]
+callouts = [
+    ("overview", "ov-c1", "bad", w.sales_attainment, "pct", f"{worst_sales} · sales vs target", f"Company {pct(allr.sales_attainment)}"),
+    ("overview", "ov-c2", "bad", br_only.loc[yoy_drop].agreement_value_yoy, "signed", f"{yoy_drop} · value vs last year", f"{cr(br_only.loc[yoy_drop].agreement_value_ytd)} this year"),
+    ("overview", "ov-c3", "bad", allr.sla_breach_ytd, "pct", "Repairs past SLA", f"{YEAR}, all branches"),
+    ("overview", "ov-c4", "ok", br_only.loc[best_sales].sales_attainment, "pct", f"{best_sales} · sales vs target", "Best branch"),
+    ("sales", "sa-c1", "bad", lead_share, "pct", f"{worst_sales} leads vs branch average", f"{int(w.leads_ytd)} leads"),
+    ("sales", "sa-c2", "ok", q2a.max(), "pct", f"{q2a.idxmax()} · quotations won", f"Lowest {pct(q2a.min())}"),
+    ("sales", "sa-c3", "warn", bs[(bs.branch == "All") & (bs.status != "Confirmed")].value.sum(), "inr", "Cancelled + on-hold value", f"{pct(bs[(bs.branch == 'All') & (bs.status != 'Confirmed')].share_of_value.sum())} of signed"),
+    ("sales", "sa-c4", "warn", mon.loc[f"{YEAR}-04"].agreement_value, "inr", f"Apr {YEAR} bookings", "Weakest month"),
+    ("installation", "in-c1", "bad", q3 / h1 - 1, "signed", "Installs per month, Q3 vs H1", f"{q3:.0f} vs {h1:.0f} units"),
+    ("installation", "in-c2", "bad", int(allr.units_delayed), "int", "Units delayed", f"{cr(allr.open_po_value)} open POs"),
+    ("installation", "in-c3", "warn", dur_dly, "days", "Delayed job duration", f"On-time jobs {dur_done:.0f} days"),
+    ("installation", "in-c4", "info", pending_parked, "int", "Units parked on dead deals", "Not backlog"),
+    ("service", "se-c1", "bad", rq_all.loc[f"{YEAR}Q3"].breach_rate, "pct", f"SLA breach, Q3 {YEAR}", f"{pct(rq_all.loc[f'{PREV}Q4'].breach_rate)} in Q4 {PREV}"),
+    ("service", "se-c2", "bad", op.age_days.median(), "days", "Median open RO age", f"{int(allr.open_ros)} open ROs"),
+    ("service", "se-c3", "warn", warranty_cost_share, "pct", "Repair cost on warranty jobs", "Absorbed by company"),
+    ("service", "se-c4", "ok", allr.post_warranty_amc_cover, "pct", "Post-warranty AMC cover", f"{int(allr.active_amc):,} active contracts"),
+    ("people", "pe-c1", "warn", len(off), "int", f"of {len(calib)} roles with out-of-scale targets", "Below 50% or above 200%"),
+    ("people", "pe-c2", "info", int((sp_ok.attainment >= 1).sum()), "int", f"of {len(sp_ok)} salespeople at target", f"Range {pct(sp_ok.attainment.min())}–{pct(sp_ok.attainment.max())}"),
+    ("people", "pe-c3", "warn", pre_hire.incentive_amount_inr.sum(), "inr", "Incentives dated before hire", f"{len(pre_hire)} payments"),
+    ("people", "pe-c4", "info", inc_b.max() / inc_b.min(), "x", "Incentive spread, top vs bottom branch", f"Sales spread {br_only.sales_attainment.max() / br_only.sales_attainment.min():.1f}×"),
+]
+write("callouts", [{"tab": t, "id": i, "severity": sv, "value": float(v), "fmt": f, "label": l, "context": c}
+                   for t, i, sv, v, f, l, c in callouts])
 
 print(f"As of {AS_OF:%Y-%m-%d}; YTD = {YTD_LABEL}. Wrote {len(list(OUT.glob('*.json')))} files to {OUT.relative_to(ROOT)}")
 for i in insights:
