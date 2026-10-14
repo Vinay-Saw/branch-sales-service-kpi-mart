@@ -28,6 +28,7 @@ PostgreSQL star schema + Python loader + Power BI / DAX.
 - `data/` — CSVs
 - `sql/schema.sql` — star schema
 - `docs/` — metric dictionary, requirement note, ERP boundary, DAX
+- `dashboard/` — multi-tab KPI dashboard: data build script, aggregated datasets and page source (see `dashboard/README.md`)
 
 ## Do not claim
 Any real rupee impact. Dataset is simulated.

@@ -1,0 +1,1355 @@
+<style>
+/* Layout: header with branch picker and tabs; each tab = findings row, then a card grid that stacks to one column when narrow. */
+#dash-root .kp { container-type: inline-size; display: grid; gap: var(--cds-gap-xl); font-family: var(--font-anthropic-sans); color: var(--color-fg); }
+#dash-root .kp-head { display: grid; gap: var(--cds-gap-md); }
+#dash-root .kp-titlerow { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: var(--cds-gap-md); }
+#dash-root .kp-titles { display: grid; gap: var(--cds-gap-xs); min-width: 0; flex: 1 1 24rem; }
+#dash-root .kp-h1 { margin: 0; font-family: var(--font-anthropic-serif); font-weight: 400; font-size: var(--cds-font-size-title); line-height: 1.15; text-wrap: balance; }
+#dash-root .kp-take { margin: 0; font-size: var(--cds-font-size-body); max-width: 70ch; }
+#dash-root .kp-meta { margin: 0; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+#dash-root .kp-pick { display: grid; gap: var(--cds-gap-xs); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+#dash-root .kp-pick select { font: inherit; font-size: var(--cds-font-size-body); color: var(--color-fg); background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-xs) var(--cds-pad-sm); min-width: 11rem; }
+#dash-root .kp-tabs { display: flex; gap: var(--cds-gap-xs); overflow-x: auto; border-bottom: 1px solid var(--color-border-line); scrollbar-width: thin; }
+#dash-root .kp-tab { appearance: none; background: none; border: 0; border-bottom: 2px solid transparent; margin-bottom: -1px; padding: var(--cds-pad-sm) var(--cds-pad-md); font: inherit; font-size: var(--cds-font-size-body); color: var(--color-fg-muted); cursor: pointer; white-space: nowrap; }
+#dash-root .kp-tab:hover { color: var(--color-fg); }
+#dash-root .kp-tab[aria-selected="true"] { color: var(--color-fg); border-bottom-color: var(--color-fg); font-weight: var(--cds-font-weight-medium); }
+#dash-root .kp-tab:focus-visible, #dash-root .kp-table th button:focus-visible, #dash-root .kp-pick select:focus-visible, #dash-root .kp-search:focus-visible { outline: 2px solid var(--color-fg); outline-offset: 2px; }
+#dash-root .kp-page { display: grid; gap: var(--cds-gap-xl); }
+#dash-root .kp-section { display: grid; gap: var(--cds-gap-md); }
+#dash-root .kp-h2 { margin: 0; font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); }
+#dash-root .kp-lede { margin: 0; color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); max-width: 75ch; }
+
+#dash-root .kp-findings { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 19rem), 1fr)); gap: var(--cds-gap-md); }
+#dash-root .kp-find { display: grid; gap: var(--cds-gap-xs); align-content: start; padding: var(--cds-pad-md) var(--cds-pad-lg); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); background: var(--color-panel); }
+#dash-root .kp-find h3 { margin: 0; font-size: var(--cds-font-size-body); font-weight: var(--cds-font-weight-medium); line-height: 1.35; text-wrap: balance; }
+#dash-root .kp-find p { margin: 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); line-height: 1.5; }
+#dash-root .kp-chip { justify-self: start; font-size: var(--cds-font-size-caption); font-weight: var(--cds-font-weight-medium); letter-spacing: .02em; padding: 1px 8px; border-radius: 999px; }
+#dash-root .kp-chip[data-sev="bad"] { color: var(--color-bad); background: color-mix(in srgb, var(--color-bad) 13%, transparent); }
+#dash-root .kp-chip[data-sev="warn"] { color: var(--color-warn); background: color-mix(in srgb, var(--color-warn) 15%, transparent); }
+#dash-root .kp-chip[data-sev="ok"] { color: var(--color-ok); background: color-mix(in srgb, var(--color-ok) 13%, transparent); }
+#dash-root .kp-chip[data-sev="info"] { color: var(--color-fg-muted); background: color-mix(in srgb, var(--color-fg-muted) 13%, transparent); }
+
+#dash-root .kp-tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); gap: var(--cds-gap-md); }
+#dash-root .kp-tile { display: grid; gap: var(--cds-gap-xs); align-content: start; background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); min-width: 0; }
+#dash-root .kp-tl { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+#dash-root .kp-tl b { font-weight: var(--cds-font-weight-medium); color: var(--color-fg); }
+#dash-root .kp-big { font-family: var(--font-anthropic-serif); font-weight: 400; font-size: calc(var(--cds-font-size-title) * 1.2); line-height: 1.1; font-variant-numeric: tabular-nums; }
+#dash-root .kp-ts { font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); font-variant-numeric: tabular-nums; }
+#dash-root .kp-s-ok { color: var(--color-ok); }
+#dash-root .kp-s-warn { color: var(--color-warn); }
+#dash-root .kp-s-bad { color: var(--color-bad); }
+#dash-root .kp-ts .kp-s-ok, #dash-root .kp-ts .kp-s-warn, #dash-root .kp-ts .kp-s-bad { font-weight: var(--cds-font-weight-medium); }
+
+#dash-root .kp-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 22rem), 1fr)); gap: var(--cds-gap-md); }
+#dash-root .kp-card { display: grid; gap: var(--cds-gap-sm); align-content: start; min-width: 0; background: var(--color-panel); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-lg); }
+#dash-root .kp-card.kp-wide { grid-column: 1 / -1; }
+#dash-root .kp-card h3 { margin: 0; font-size: var(--cds-font-size-heading); font-weight: var(--cds-font-weight-medium); }
+#dash-root .kp-note { margin: 0; font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+#dash-root .kp-scope { font-weight: var(--cds-font-weight-medium); color: var(--color-fg); }
+#dash-root .kp-chart { position: relative; min-height: 220px; min-width: 0; }
+#dash-root .kp-chart svg { display: block; overflow: visible; }
+#dash-root .kp-chart.dash-skeleton { min-height: 220px; }
+#dash-root .kp-failed { position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; gap: var(--cds-gap-xs); color: var(--color-fg-muted); font-size: var(--cds-font-size-caption); }
+#dash-root .kp-failed i { width: .375rem; height: .375rem; border-radius: 50%; background: var(--color-bad); }
+#dash-root .kp-legend { display: flex; flex-wrap: wrap; gap: var(--cds-gap-xs) var(--cds-gap-md); font-size: var(--cds-font-size-caption); color: var(--color-fg-muted); }
+#dash-root .kp-legend span { display: inline-flex; align-items: center; gap: 6px; }
+#dash-root .kp-legend i { width: 10px; height: 10px; border-radius: 3px; display: inline-block; }
+#dash-root .kp-legend i.kp-tick-key { height: 2px; border-radius: 0; }
+
+#dash-root .kp-chart text { font-family: var(--font-anthropic-sans); }
+#dash-root .kp-tick { fill: var(--color-fg-muted); font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+#dash-root .kp-lab { fill: var(--color-fg); font-size: var(--cds-font-size-caption); }
+#dash-root .kp-lab.kp-dim { fill: var(--color-fg-muted); }
+#dash-root .kp-val { fill: var(--color-fg-muted); font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+#dash-root .kp-val.kp-strong { fill: var(--color-fg); }
+#dash-root .kp-gl { stroke: var(--cds-chart-grid); stroke-width: 1; }
+#dash-root .kp-axis { stroke: var(--cds-chart-axis); stroke-width: 1; }
+#dash-root .kp-ref { stroke: var(--cds-chart-reference); stroke-width: 1; stroke-dasharray: 4 3; }
+#dash-root .kp-hover { fill: var(--color-fg); opacity: 0; }
+#dash-root .kp-hover.on { opacity: .05; }
+#dash-root .kp-tip { position: absolute; z-index: 3; pointer-events: none; min-width: 9rem; max-width: 18rem; background: var(--cds-surface-popover); border: 1px solid var(--cds-border); border-radius: var(--cds-radius); box-shadow: var(--cds-shadow-popover); padding: var(--cds-pad-xs) var(--cds-pad-sm); font-size: var(--cds-font-size-caption); display: grid; gap: 2px; }
+#dash-root .kp-tip-h { color: var(--cds-text-secondary); margin-bottom: 2px; }
+#dash-root .kp-tip-r { display: flex; align-items: center; gap: 6px; }
+#dash-root .kp-tip-r span { flex: 1; }
+#dash-root .kp-tip-r b { font-weight: var(--cds-font-weight-medium); font-variant-numeric: tabular-nums; }
+#dash-root .kp-tip-r i { width: 8px; height: 8px; border-radius: 2px; flex: none; }
+
+#dash-root .kp-tools { display: flex; flex-wrap: wrap; gap: var(--cds-gap-sm); align-items: center; justify-content: space-between; }
+#dash-root .kp-search { font: inherit; font-size: var(--cds-font-size-caption); color: var(--color-fg); background: var(--color-bg); border: 1px solid var(--color-border-line); border-radius: var(--cds-radius); padding: var(--cds-pad-xs) var(--cds-pad-sm); min-width: 0; width: 14rem; max-width: 100%; }
+#dash-root .kp-tablebox { overflow: auto; max-height: 30rem; min-width: 0; }
+#dash-root .kp-tablebox.kp-short { max-height: none; }
+#dash-root .kp-table { width: 100%; border-collapse: collapse; font-size: var(--cds-font-size-caption); font-variant-numeric: tabular-nums; }
+#dash-root .kp-table th { position: sticky; top: 0; z-index: 1; background: var(--color-panel); text-align: left; padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); white-space: nowrap; vertical-align: bottom; }
+#dash-root .kp-table th button { appearance: none; background: none; border: 0; padding: 0; font: inherit; color: var(--color-fg-muted); font-weight: var(--cds-font-weight-medium); cursor: pointer; text-align: inherit; }
+#dash-root .kp-table th[aria-sort="ascending"] button::after { content: " ↑"; }
+#dash-root .kp-table th[aria-sort="descending"] button::after { content: " ↓"; }
+#dash-root .kp-table td { padding: var(--cds-pad-xs) var(--cds-pad-sm); border-bottom: 1px solid var(--color-border-line); white-space: nowrap; }
+#dash-root .kp-table .num { text-align: right; }
+#dash-root .kp-table tr.kp-total td { font-weight: var(--cds-font-weight-medium); border-top: 1px solid var(--cds-chart-axis); }
+#dash-root .kp-table tr.kp-sel td { background: color-mix(in srgb, var(--color-fg) 6%, transparent); }
+#dash-root .kp-table tr.kp-click { cursor: pointer; }
+#dash-root .kp-table tr.kp-click:hover td { background: color-mix(in srgb, var(--color-fg) 4%, transparent); }
+#dash-root .kp-table td.kp-wrap { white-space: normal; min-width: 16rem; color: var(--color-fg-muted); }
+#dash-root .kp-cb { display: inline-flex; align-items: center; gap: 8px; justify-content: flex-end; }
+#dash-root .kp-track { width: 56px; height: 6px; border-radius: 3px; background: var(--cds-chart-grid); overflow: hidden; display: inline-block; }
+#dash-root .kp-track i { display: block; height: 100%; border-radius: 3px; }
+#dash-root .kp-dl { margin: 0; display: grid; gap: var(--cds-gap-sm); font-size: var(--cds-font-size-caption); }
+#dash-root .kp-dl dt { font-weight: var(--cds-font-weight-medium); }
+#dash-root .kp-dl dd { margin: 0; color: var(--color-fg-muted); line-height: 1.5; max-width: 75ch; }
+#dash-root .kp-dl code, #dash-root .kp-note code { font-size: .95em; }
+#dash-root [data-dash-source-state=empty] { color: transparent; }
+#dash-root [data-dash-source-state=refreshing] { opacity: .5; transition: opacity var(--cds-dur-slow); }
+@container (max-width: 40rem) {
+  #dash-root .kp-hide-sm { display: none; }
+  #dash-root .kp-big { font-size: var(--cds-font-size-title); }
+}
+@media (prefers-reduced-motion: no-preference) {
+  #dash-root .kp-page:not([hidden]) { animation: kp-in var(--cds-dur-slow) var(--cds-ease-out); }
+  @keyframes kp-in { from { opacity: .4; } to { opacity: 1; } }
+}
+</style>
+
+<div class="kp" id="kp">
+  <header class="kp-head" id="kp-head">
+    <div class="kp-titlerow">
+      <div class="kp-titles">
+        <h1 class="kp-h1" id="kp-title">Branch sales, installation &amp; service</h1>
+        <p class="kp-take" id="kp-takeaway"><span data-source="insights" data-field="headline" data-where="id=ov-1" data-auto="text" class="dash-skeleton">—</span></p>
+        <p class="kp-meta">Data to <span data-source="branch_scorecard" data-field="as_of" data-where="branch=All" data-auto="date">—</span> · Year to date means <span data-source="branch_scorecard" data-field="ytd_label" data-where="branch=All" data-auto="text">—</span> · Simulated dataset</p>
+      </div>
+      <label class="kp-pick" for="kp-branch"><span>Branch</span>
+        <select id="kp-branch" data-source="branch_scorecard" aria-label="Branch"></select>
+      </label>
+    </div>
+    <nav class="kp-tabs" role="tablist" aria-label="Dashboard pages" id="kp-tabs">
+      <button class="kp-tab" role="tab" type="button" id="tab-overview" aria-controls="overview">Overview</button>
+      <button class="kp-tab" role="tab" type="button" id="tab-sales" aria-controls="sales">Sales</button>
+      <button class="kp-tab" role="tab" type="button" id="tab-installation" aria-controls="installation">Installation</button>
+      <button class="kp-tab" role="tab" type="button" id="tab-service" aria-controls="service">Service</button>
+      <button class="kp-tab" role="tab" type="button" id="tab-people" aria-controls="people">People &amp; targets</button>
+      <button class="kp-tab" role="tab" type="button" id="tab-notes" aria-controls="notes">Data notes</button>
+    </nav>
+  </header>
+
+  <!-- ============================== OVERVIEW ============================== -->
+  <section class="kp-page" id="overview" role="tabpanel" aria-labelledby="tab-overview">
+    <div class="kp-section" id="ov-kpis">
+      <h2 class="kp-h2">Headline numbers · <span class="kp-scope" data-scope>All branches</span></h2>
+      <div class="kp-tiles">
+        <div class="kp-tile" id="tile-value">
+          <div class="kp-tl"><b>Agreement value</b> · <span data-source="branch_scorecard" data-field="ytd_label" data-where="branch=All" data-auto="text">—</span></div>
+          <div class="kp-big"><span data-source="branch_scorecard" data-field="agreement_value_ytd" data-auto="inr" data-branch>—</span></div>
+          <div class="kp-ts"><span data-source="branch_scorecard" data-field="sales_attainment" data-auto="pct" data-status-field="sales_status" data-branch>—</span> of <span data-source="branch_scorecard" data-field="sales_target_ytd" data-auto="inr" data-branch>—</span> target</div>
+          <div class="kp-ts"><span data-source="branch_scorecard" data-field="agreement_value_yoy" data-auto="signed" data-tone="up" data-branch>—</span> vs <span data-source="funnel" data-field="period_label" data-where="period=prior&amp;branch=All&amp;step=1" data-auto="text">—</span></div>
+        </div>
+        <div class="kp-tile" id="tile-units">
+          <div class="kp-tl"><b>Units installed</b> · <span data-source="branch_scorecard" data-field="ytd_label" data-where="branch=All" data-auto="text">—</span></div>
+          <div class="kp-big"><span data-source="branch_scorecard" data-field="units_completed_ytd" data-auto="int" data-branch>—</span></div>
+          <div class="kp-ts"><span data-source="branch_scorecard" data-field="install_attainment" data-auto="pct" data-status-field="install_status" data-branch>—</span> of <span data-source="branch_scorecard" data-field="install_target_ytd" data-auto="int" data-branch>—</span> target</div>
+        </div>
+        <div class="kp-tile" id="tile-backlog">
+          <div class="kp-tl"><b>Installation backlog</b> · units now</div>
+          <div class="kp-big"><span data-source="branch_scorecard" data-field="install_backlog" data-auto="int" data-branch>—</span></div>
+          <div class="kp-ts"><span data-source="branch_scorecard" data-field="units_delayed" data-auto="int" data-branch>—</span> delayed · <span data-source="branch_scorecard" data-field="open_po_value" data-auto="inr" data-branch>—</span> open POs</div>
+        </div>
+        <div class="kp-tile" id="tile-sla">
+          <div class="kp-tl"><b>Repairs past SLA</b> · <span data-source="branch_scorecard" data-field="ytd_label" data-where="branch=All" data-auto="text">—</span></div>
+          <div class="kp-big"><span data-source="branch_scorecard" data-field="sla_breach_ytd" data-auto="pct" data-status-field="service_status" data-branch>—</span></div>
+          <div class="kp-ts"><span data-source="branch_scorecard" data-field="sla_breach_prev_ytd" data-auto="pct" data-branch>—</span> a year earlier · <span data-source="branch_scorecard" data-field="ros_ytd" data-auto="int" data-branch>—</span> repair orders</div>
+        </div>
+        <div class="kp-tile" id="tile-open">
+          <div class="kp-tl"><b>Open repair orders</b> · now</div>
+          <div class="kp-big"><span data-source="branch_scorecard" data-field="open_ros" data-auto="int" data-branch>—</span></div>
+          <div class="kp-ts"><span data-source="branch_scorecard" data-field="open_ros_p1" data-auto="int" data-branch>—</span> P1-Critical · <span data-source="branch_scorecard" data-field="open_ros_past_sla" data-auto="int" data-branch>—</span> past SLA</div>
+        </div>
+        <div class="kp-tile" id="tile-amc">
+          <div class="kp-tl"><b>AMC renewals due</b> · next 90 days</div>
+          <div class="kp-big"><span data-source="branch_scorecard" data-field="amc_due_90d" data-auto="int" data-branch>—</span></div>
+          <div class="kp-ts"><span data-source="branch_scorecard" data-field="amc_due_90d_value" data-auto="inr" data-branch>—</span> a year · <span data-source="branch_scorecard" data-field="warranty_expiring_90d" data-auto="int" data-branch>—</span> warranties end</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="kp-section" id="ov-findings-sec">
+      <h2 class="kp-h2">What the numbers say</h2>
+      <div class="kp-findings" id="overview-findings" data-source="insights"></div>
+    </div>
+
+    <div class="kp-card kp-wide" id="card-scorecard">
+      <h3>Branch scorecard</h3>
+      <p class="kp-note">Which branch is off target, and in which department. Sales and installation are measured against the team's own targets; service against SLA. Status colours: sales green from 85% of target, amber from 70%; installation green from 85%, amber from 60%; SLA green up to 25% breached, amber up to 32%. Click a branch to filter every tab.</p>
+      <div class="kp-tablebox kp-short">
+        <table class="kp-table" id="tbl-scorecard" data-source="branch_scorecard" data-row-key="branch"></table>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== SALES ============================== -->
+  <section class="kp-page" id="sales" role="tabpanel" aria-labelledby="tab-sales" hidden>
+    <div class="kp-section">
+      <h2 class="kp-h2">What the numbers say</h2>
+      <div class="kp-findings" id="sales-findings" data-source="insights"></div>
+    </div>
+    <div class="kp-grid">
+      <div class="kp-card kp-wide" id="card-sales-monthly">
+        <h3>Agreement value by month against target</h3>
+        <p class="kp-note"><span class="kp-scope" data-scope>All branches</span> · confirmed agreements by signing month. The tick on each bar is the salespeople's combined target. The latest month is partial.</p>
+        <div class="kp-legend" id="lg-sales-monthly"></div>
+        <div class="kp-chart" id="ch-sales-monthly" data-source="monthly"></div>
+      </div>
+      <div class="kp-card" id="card-funnel">
+        <h3>Sales funnel, this year against last</h3>
+        <p class="kp-note"><span class="kp-scope" data-scope>All branches</span> · same months each year. Thin bar is last year. Label shows the share kept from the step before; the biggest drop is in red.</p>
+        <div class="kp-chart" id="ch-funnel" data-source="funnel"></div>
+      </div>
+      <div class="kp-card" id="card-yoy">
+        <h3>Agreement value by branch, year on year</h3>
+        <p class="kp-note">All branches · year to date, with the same months last year as the thin bar.</p>
+        <div class="kp-chart" id="ch-yoy" data-source="branch_scorecard"></div>
+      </div>
+      <div class="kp-card" id="card-leads">
+        <h3>Lead volume and conversion by branch</h3>
+        <p class="kp-note">All branches · year to date. Label shows the share of leads that became agreements in the same period.</p>
+        <div class="kp-chart" id="ch-leads" data-source="funnel"></div>
+      </div>
+      <div class="kp-card" id="card-status">
+        <h3>Where signed value ended up</h3>
+        <p class="kp-note"><span class="kp-scope" data-scope>All branches</span> · every agreement since the extract began, by status.</p>
+        <div class="kp-chart" id="ch-status" data-source="booking_status"></div>
+      </div>
+      <div class="kp-card" id="card-sources">
+        <h3>Lead source conversion</h3>
+        <p class="kp-note">All branches, all history · share of leads from each source that became a confirmed agreement.</p>
+        <div class="kp-chart" id="ch-sources" data-source="lead_sources"></div>
+      </div>
+      <div class="kp-card kp-wide" id="card-salespeople">
+        <h3>Salespeople against target</h3>
+        <div class="kp-tools">
+          <p class="kp-note"><span class="kp-scope" data-scope>All branches</span> · year to date. Win rate is accepted quotations over quotations issued.</p>
+          <input class="kp-search" id="q-salespeople" type="search" placeholder="Search salespeople" aria-label="Search salespeople">
+        </div>
+        <div class="kp-tablebox">
+          <table class="kp-table" id="tbl-salespeople" data-source="salespeople" data-row-key="salesperson"></table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== INSTALLATION ============================== -->
+  <section class="kp-page" id="installation" role="tabpanel" aria-labelledby="tab-installation" hidden>
+    <div class="kp-section">
+      <h2 class="kp-h2">What the numbers say</h2>
+      <div class="kp-findings" id="installation-findings" data-source="insights"></div>
+    </div>
+    <div class="kp-grid">
+      <div class="kp-card kp-wide" id="card-units-monthly">
+        <h3>Units booked and units installed by month</h3>
+        <p class="kp-note"><span class="kp-scope" data-scope>All branches</span> · units on confirmed agreements by signing month, against units completed by completion month. When the booked line runs above the installed line, the backlog grows. The latest month is partial.</p>
+        <div class="kp-chart" id="ch-units-monthly" data-source="monthly"></div>
+      </div>
+      <div class="kp-card" id="card-ustatus">
+        <h3>Where every unit stands</h3>
+        <p class="kp-note"><span class="kp-scope" data-scope>All branches</span> · now. Parked units sit on cancelled or on-hold agreements and are not backlog.</p>
+        <div class="kp-chart" id="ch-ustatus" data-source="install_status"></div>
+      </div>
+      <div class="kp-card" id="card-inst-att">
+        <h3>Units installed against target</h3>
+        <p class="kp-note">All branches · year to date, against the installation engineers' combined target. Dashed line is 100%.</p>
+        <div class="kp-chart" id="ch-inst-att" data-source="branch_scorecard"></div>
+      </div>
+      <div class="kp-card" id="card-po">
+        <h3>Third-party PO cost by line item</h3>
+        <p class="kp-note"><span class="kp-scope" data-scope>All branches</span> · all POs to date. The darker part is still open.</p>
+        <div class="kp-chart" id="ch-po" data-source="po_lines"></div>
+      </div>
+      <div class="kp-card kp-wide" id="card-vendors">
+        <h3>Installation vendors</h3>
+        <div class="kp-tools">
+          <p class="kp-note">All branches · all POs to date. Delayed units counts the delayed units each vendor has a PO on.</p>
+          <input class="kp-search" id="q-vendors" type="search" placeholder="Search vendors" aria-label="Search vendors">
+        </div>
+        <div class="kp-tablebox">
+          <table class="kp-table" id="tbl-vendors" data-source="vendors" data-row-key="vendor_name"></table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== SERVICE ============================== -->
+  <section class="kp-page" id="service" role="tabpanel" aria-labelledby="tab-service" hidden>
+    <div class="kp-section">
+      <h2 class="kp-h2">What the numbers say</h2>
+      <div class="kp-findings" id="service-findings" data-source="insights"></div>
+    </div>
+    <div class="kp-grid">
+      <div class="kp-card kp-wide" id="card-roq">
+        <h3>Repair orders and SLA breaches by quarter</h3>
+        <p class="kp-note"><span class="kp-scope" data-scope>All branches</span> · by quarter opened. The full bar is every repair order; the red part breached its SLA. The latest quarter is partial.</p>
+        <div class="kp-legend" id="lg-roq"></div>
+        <div class="kp-chart" id="ch-roq" data-source="ro_quarterly"></div>
+      </div>
+      <div class="kp-card" id="card-rop">
+        <h3>SLA breach rate by priority</h3>
+        <p class="kp-note"><span class="kp-scope" data-scope>All branches</span> · all repair orders. Critical jobs should breach least; they do not.</p>
+        <div class="kp-chart" id="ch-rop" data-source="ro_priority"></div>
+      </div>
+      <div class="kp-card" id="card-cal">
+        <h3>Renewals and warranty expiries ahead</h3>
+        <p class="kp-note"><span class="kp-scope" data-scope>All branches</span> · next twelve months. Bars are active AMC contracts reaching their end date; the line is units leaving warranty.</p>
+        <div class="kp-legend" id="lg-cal"></div>
+        <div class="kp-chart" id="ch-cal" data-source="service_calendar"></div>
+      </div>
+      <div class="kp-card" id="card-amc">
+        <h3>Active AMC portfolio by branch</h3>
+        <p class="kp-note">All branches · active contracts now, by type.</p>
+        <div class="kp-legend" id="lg-amc"></div>
+        <div class="kp-chart" id="ch-amc" data-source="amc_portfolio"></div>
+      </div>
+      <div class="kp-card" id="card-cov">
+        <h3>Who carries repair cost</h3>
+        <p class="kp-note">All branches, all history · parts plus labour by the unit's cover when the job was opened.</p>
+        <div class="kp-chart" id="ch-cov" data-source="ro_coverage"></div>
+      </div>
+      <div class="kp-card" id="card-faults">
+        <h3>Most common faults</h3>
+        <p class="kp-note">All branches, all history · repair orders by fault, with the share that breached SLA.</p>
+        <div class="kp-chart" id="ch-faults" data-source="ro_faults"></div>
+      </div>
+      <div class="kp-card kp-wide" id="card-ro-open">
+        <h3>Open repair orders</h3>
+        <div class="kp-tools">
+          <p class="kp-note"><span class="kp-scope" data-scope>All branches</span> · every repair order not closed, oldest critical first. Age is days since opened.</p>
+          <input class="kp-search" id="q-ro-open" type="search" placeholder="Search open repair orders" aria-label="Search open repair orders">
+        </div>
+        <div class="kp-tablebox">
+          <table class="kp-table" id="tbl-ro-open" data-source="ro_open" data-row-key="ro"></table>
+        </div>
+      </div>
+      <div class="kp-card kp-wide" id="card-techs">
+        <h3>Technicians</h3>
+        <div class="kp-tools">
+          <p class="kp-note"><span class="kp-scope" data-scope>All branches</span> · all repair orders each technician executed.</p>
+          <input class="kp-search" id="q-techs" type="search" placeholder="Search technicians" aria-label="Search technicians">
+        </div>
+        <div class="kp-tablebox">
+          <table class="kp-table" id="tbl-techs" data-source="technicians" data-row-key="technician"></table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== PEOPLE ============================== -->
+  <section class="kp-page" id="people" role="tabpanel" aria-labelledby="tab-people" hidden>
+    <div class="kp-section">
+      <h2 class="kp-h2">What the numbers say</h2>
+      <div class="kp-findings" id="people-findings" data-source="insights"></div>
+    </div>
+    <div class="kp-grid">
+      <div class="kp-card" id="card-att">
+        <h3>Target attainment by role</h3>
+        <p class="kp-note"><span class="kp-scope" data-scope>All branches</span> · year to date. Dashed line is 100%. Grey bars are roles whose target is out of scale (company-wide attainment below half or above double the target); bars stop at 200%.</p>
+        <div class="kp-chart" id="ch-att" data-source="attainment"></div>
+      </div>
+      <div class="kp-card" id="card-inc">
+        <h3>Incentives paid by year and role</h3>
+        <p class="kp-note"><span class="kp-scope" data-scope>All branches</span> · the current year runs to the latest payment month.</p>
+        <div class="kp-legend" id="lg-inc"></div>
+        <div class="kp-chart" id="ch-inc" data-source="incentives"></div>
+      </div>
+      <div class="kp-card kp-wide" id="card-att-matrix">
+        <h3>Attainment by role and branch</h3>
+        <p class="kp-note">Year to date. Roles marked out of scale have targets that do not match the volume the business handles, so their percentages are not a performance signal.</p>
+        <div class="kp-tablebox kp-short">
+          <table class="kp-table" id="tbl-att-matrix"></table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============================== NOTES ============================== -->
+  <section class="kp-page" id="notes" role="tabpanel" aria-labelledby="tab-notes" hidden>
+    <div class="kp-grid">
+      <div class="kp-card kp-wide" id="card-dq">
+        <h3>Data issues found in the extract</h3>
+        <p class="kp-note">Each one changes how a number on this dashboard should be read. Amount is the money on the affected rows.</p>
+        <div class="kp-tablebox kp-short">
+          <table class="kp-table" id="tbl-dq" data-source="data_quality" data-row-key="check"></table>
+        </div>
+      </div>
+      <div class="kp-card" id="card-defs">
+        <h3>Definitions</h3>
+        <dl class="kp-dl">
+          <dt>Year to date</dt><dd>1 January to the end of the last complete month, compared with the same months a year earlier.</dd>
+          <dt>Agreement value</dt><dd>Total agreement value of confirmed agreements, by signing date. Cancelled and on-hold agreements are excluded but shown on the Sales tab.</dd>
+          <dt>Sales target</dt><dd>Sum of the salespeople's monthly targets. Sales managers carry an overlapping target that is not added on top.</dd>
+          <dt>Units installed and target</dt><dd>Units with installation status Completed, by completion date, against the installation engineers' combined "Units completed" target.</dd>
+          <dt>Installation backlog</dt><dd>Units on confirmed agreements that are Scheduled, In Progress or Delayed. Units on cancelled or on-hold agreements are parked, not backlog.</dd>
+          <dt>Repairs past SLA</dt><dd>Share of repair orders opened in the period whose resolution exceeded the SLA hours for their priority.</dd>
+          <dt>Open repair orders</dt><dd>Repair orders with status Open or In Progress today, whatever their age.</dd>
+          <dt>AMC renewals due</dt><dd>Active AMC contracts whose end date falls in the next 90 days.</dd>
+          <dt>Lapsed AMC</dt><dd>An expired contract with no later contract on the same unit.</dd>
+          <dt>Out-of-scale target</dt><dd>A role whose company-wide attainment is below half or above double its target.</dd>
+        </dl>
+      </div>
+      <div class="kp-card" id="card-sources-note">
+        <h3>Where the numbers come from</h3>
+        <dl class="kp-dl">
+          <dt>Source tables</dt><dd>The CSV extracts in <code>data/</code> of the branch-sales-service-kpi-mart repository: leads, inquiries, quotations, bookings, units, installation POs, warranty, AMC, repair orders, incentives and employee targets.</dd>
+          <dt>Aggregation</dt><dd><code>dashboard/build_dashboard_data.py</code> turns them into the files listed under Sources. The finding sentences are generated from the same numbers, so they stay correct when the data is rebuilt.</dd>
+          <dt>Caveat</dt><dd>The dataset is simulated. Use it to shape the questions and the dashboard, not to claim real rupee impact.</dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+(() => {
+  const $ = (s, r = document) => r.querySelector(s);
+  const $$ = (s, r = document) => [...r.querySelectorAll(s)];
+  const root = $('#kp');
+  const fmtInt = d3.format(',');
+  const pct = (v) => v == null ? '—' : d3.format('.0%')(v);
+  const pct1 = (v) => v == null ? '—' : d3.format('.1%')(v);
+  const signed = (v) => v == null ? '—' : (v > 0.0005 ? '+' : v < -0.0005 ? '−' : '') + d3.format('.0%')(Math.abs(v));
+  const inr = (v) => {
+    if (v == null) return '—';
+    const a = Math.abs(v);
+    if (a >= 1e7) return '₹' + (v / 1e7).toFixed(2) + ' Cr';
+    if (a >= 1e5) return '₹' + (v / 1e5).toFixed(1) + ' L';
+    return '₹' + fmtInt(Math.round(v));
+  };
+  const inrAxis = (v) => {
+    if (v === 0) return '0';
+    if (Math.abs(v) >= 1e7) return '₹' + String(+(v / 1e7).toFixed(2)) + ' Cr';
+    return '₹' + String(+(v / 1e5).toFixed(1)) + ' L';
+  };
+  const int = (v) => v == null ? '—' : fmtInt(Math.round(v));
+  const hours = (v) => v == null ? '—' : String(+v.toFixed(1)) + ' h';
+  const dateFmt = d3.utcFormat('%-d %b %Y');
+  const date = (v) => v ? dateFmt(new Date(v + 'T00:00:00Z')) : '—';
+  const monthLong = (m) => d3.utcFormat('%b %Y')(new Date(m + '-01T00:00:00Z'));
+  const monthShort = (m) => d3.utcFormat('%b %y')(new Date(m + '-01T00:00:00Z'));
+  const qLabel = (q) => q.slice(4) + ' ' + q.slice(0, 4);
+  const FMT = { inr, pct, pct1, int, signed, text: (v) => v ?? '—', date };
+  const enc = (s) => String(s).replace(/%/g, '%25').replace(/&/g, '%26').replace(/=/g, '%3D');
+  const whereOf = (o) => Object.entries(o).map(([k, v]) => enc(k) + '=' + enc(v)).join('&');
+  const col = (i) => dash.colors[i % dash.colors.length];
+  const MUTED = 'var(--cds-chart-muted)';
+  const CRIT = 'var(--cds-chart-status-critical)';
+  const BRANCH_ORDER = ['Surat', 'Vadodara', 'Vapi', 'Ahmedabad', 'Pune'];
+
+  const branch = () => dash.params().branch || 'All';
+  const ok = (id) => dash.data(id).status === 'ok';
+  const rows = (id) => ok(id) ? dash.data(id).data : [];
+
+  // ------------------------------------------------------------ marks filled from one row
+  function fillAuto(scope) {
+    for (const el of $$('[data-auto]', scope)) {
+      if (el.hasAttribute('data-branch')) el.setAttribute('data-where', whereOf({ branch: branch() }));
+      const d = dash.data(el.dataset.source);
+      el.classList.remove('kp-s-ok', 'kp-s-warn', 'kp-s-bad');
+      if (d.status !== 'ok') {
+        el.textContent = '—';
+        el.classList.toggle('dash-skeleton', d.status === 'loading');
+        continue;
+      }
+      el.classList.remove('dash-skeleton');
+      const cond = [...new URLSearchParams(el.getAttribute('data-where') || '')];
+      const row = d.data.find((r) => cond.every(([k, v]) => String(r[k]) === v));
+      const v = row ? row[el.dataset.field] : null;
+      el.textContent = row ? FMT[el.dataset.auto](v) : '—';
+      if (row && el.dataset.statusField) {
+        const s = row[el.dataset.statusField];
+        if (s === 'ok' || s === 'warn' || s === 'bad') el.classList.add('kp-s-' + s);
+      }
+      if (row && el.dataset.tone && v != null && Math.abs(v) > 0.0005) {
+        const good = el.dataset.tone === 'up' ? v > 0 : v < 0;
+        el.classList.add(good ? 'kp-s-ok' : 'kp-s-bad');
+      }
+    }
+    for (const el of $$('[data-scope]', scope)) el.textContent = branch() === 'All' ? 'All branches' : branch();
+  }
+
+  // ------------------------------------------------------------ findings cards
+  const SEV = { bad: 'Act now', warn: 'Watch', ok: 'Working', info: 'Context' };
+  function findings(tab) {
+    const box = $('#' + tab + '-findings');
+    box.replaceChildren();
+    if (!ok('insights')) { box.classList.toggle('dash-skeleton', dash.data('insights').status === 'loading'); return; }
+    box.classList.remove('dash-skeleton');
+    for (const f of rows('insights').filter((r) => r.tab === tab)) {
+      const card = document.createElement('article');
+      card.className = 'kp-find';
+      card.id = 'finding-' + f.id;
+      const chip = document.createElement('span');
+      chip.className = 'kp-chip';
+      chip.dataset.sev = f.severity;
+      chip.textContent = SEV[f.severity] || 'Note';
+      const h = document.createElement('h3');
+      const hs = document.createElement('span');
+      hs.setAttribute('data-source', 'insights');
+      hs.setAttribute('data-field', 'headline');
+      hs.setAttribute('data-where', whereOf({ id: f.id }));
+      hs.textContent = f.headline;
+      h.append(hs);
+      const p = document.createElement('p');
+      const ps = document.createElement('span');
+      ps.setAttribute('data-source', 'insights');
+      ps.setAttribute('data-field', 'detail');
+      ps.setAttribute('data-where', whereOf({ id: f.id }));
+      ps.textContent = f.detail;
+      p.append(ps);
+      card.append(chip, h, p);
+      box.append(card);
+    }
+  }
+
+  // ------------------------------------------------------------ chart scaffolding
+  function ready(el, ids) {
+    const st = ids.map((id) => dash.data(id).status);
+    if (st.every((s) => s === 'ok')) { el.classList.remove('dash-skeleton'); return true; }
+    el.replaceChildren();
+    if (st.some((s) => s === 'loading')) { el.classList.add('dash-skeleton'); return false; }
+    el.classList.remove('dash-skeleton');
+    const f = document.createElement('div');
+    f.className = 'kp-failed';
+    const dot = document.createElement('i');
+    const t = document.createElement('span');
+    t.textContent = 'Failed to load';
+    f.append(dot, t);
+    el.append(f);
+    return false;
+  }
+  function frame(el, height) {
+    el.replaceChildren();
+    const w = Math.max(260, el.clientWidth);
+    const svg = d3.select(el).append('svg').attr('width', '100%').attr('height', height)
+      .attr('viewBox', `0 0 ${w} ${height}`).attr('role', 'img');
+    const tip = document.createElement('div');
+    tip.className = 'kp-tip';
+    tip.hidden = true;
+    el.append(tip);
+    el.style.minHeight = height + 'px';
+    return { svg, w, h: height, tip };
+  }
+  function measure(svg, strings, cls) {
+    const t = svg.append('text').attr('class', cls || 'kp-tick');
+    let m = 0;
+    for (const s of strings) { t.text(s); m = Math.max(m, t.node().getComputedTextLength()); }
+    t.remove();
+    return m;
+  }
+  function setTip(tip, head, lines) {
+    tip.replaceChildren();
+    const h = document.createElement('div');
+    h.className = 'kp-tip-h';
+    h.textContent = head;
+    tip.append(h);
+    for (const l of lines) {
+      const r = document.createElement('div');
+      r.className = 'kp-tip-r';
+      if (l.color) { const s = document.createElement('i'); s.style.background = l.color; r.append(s); }
+      const n = document.createElement('span');
+      n.textContent = l.name;
+      const v = document.createElement('b');
+      v.textContent = l.value;
+      r.append(n, v);
+      tip.append(r);
+    }
+  }
+  function placeTip(el, tip, x, y) {
+    tip.hidden = false;
+    const tw = tip.offsetWidth, th = tip.offsetHeight, W = el.clientWidth;
+    let left = x + 14;
+    if (left + tw > W) left = x - 14 - tw;
+    if (left < 0) left = Math.max(0, Math.min(W - tw, x - tw / 2));
+    let top = y - th - 10;
+    if (top < 0) top = y + 14;
+    tip.style.left = left + 'px';
+    tip.style.top = top + 'px';
+  }
+  function legend(box, items) {
+    box.replaceChildren();
+    for (const it of items) {
+      const s = document.createElement('span');
+      const i = document.createElement('i');
+      i.style.background = it.color;
+      if (it.kind === 'tick') i.className = 'kp-tick-key';
+      if (it.kind === 'line') { i.className = 'kp-tick-key'; }
+      const t = document.createElement('span');
+      t.textContent = it.name;
+      s.append(i, t);
+      box.append(s);
+    }
+  }
+
+  // Vertical bars over categories. series stack (stack: true) or overlay from zero (overlay: true).
+  // Optional marker (short tick per band) and line (point to point), all on one y scale.
+  function vbars(el, o) {
+    const H = o.height || 260;
+    const { svg, w, h, tip } = frame(el, H);
+    const cats = o.cats;
+    const top = (c) => Math.max(
+      o.stack ? d3.sum(o.series, (s) => s.get(c) || 0) : d3.max(o.series, (s) => s.get(c) || 0),
+      o.marker ? (o.marker.get(c) || 0) : 0,
+      o.line ? (o.line.get(c) || 0) : 0);
+    const y = d3.scaleLinear([0, d3.max(cats, top) || 1], [h - 26, 10]).nice();
+    const ticks = y.ticks(4);
+    const ml = measure(svg, ticks.map(o.yFmt)) + 10;
+    const x = d3.scaleBand(cats.map((c) => c.cat), [ml, w - 4]).paddingInner(o.pad ?? 0.3).paddingOuter(0.15);
+    const g = svg.append('g');
+    g.selectAll('line.kp-gl').data(ticks).join('line').attr('class', 'kp-gl')
+      .attr('x1', ml).attr('x2', w - 4).attr('y1', (d) => y(d)).attr('y2', (d) => y(d));
+    g.selectAll('text.kp-yt').data(ticks).join('text').attr('class', 'kp-tick kp-yt')
+      .attr('x', ml - 8).attr('y', (d) => y(d)).attr('dy', '0.32em').attr('text-anchor', 'end').text(o.yFmt);
+    const lw = measure(svg, cats.map((c) => c.label)) + 12;
+    const every = Math.max(1, Math.ceil(lw / x.step()));
+    const lastIdx = cats.length - 1;
+    g.selectAll('text.kp-xt').data(cats.filter((c, i) => (lastIdx - i) % every === 0)).join('text')
+      .attr('class', 'kp-tick kp-xt').attr('x', (c) => x(c.cat) + x.bandwidth() / 2).attr('y', h - 6)
+      .attr('text-anchor', 'middle').text((c) => c.label);
+    const hov = svg.append('g');
+    const bars = svg.append('g');
+    for (const c of cats) {
+      const op = c.partial ? 0.45 : 1;
+      if (o.stack) {
+        let acc = 0;
+        for (const s of o.series) {
+          const v = s.get(c) || 0;
+          if (v > 0) bars.append('rect').attr('x', x(c.cat)).attr('width', x.bandwidth())
+            .attr('y', y(acc + v)).attr('height', Math.max(0, y(acc) - y(acc + v)))
+            .attr('rx', Math.min(3, x.bandwidth() / 2)).attr('fill', s.color).attr('opacity', op);
+          acc += v;
+        }
+      } else {
+        for (const s of o.series) {
+          const v = s.get(c) || 0;
+          bars.append('rect').attr('x', x(c.cat)).attr('width', x.bandwidth())
+            .attr('y', y(v)).attr('height', Math.max(0, y(0) - y(v)))
+            .attr('rx', Math.min(4, x.bandwidth() / 2)).attr('fill', s.color).attr('opacity', op);
+        }
+      }
+      if (o.marker && o.marker.get(c) != null) {
+        const mv = o.marker.get(c);
+        bars.append('line').attr('x1', x(c.cat) - 2).attr('x2', x(c.cat) + x.bandwidth() + 2)
+          .attr('y1', y(mv)).attr('y2', y(mv)).attr('stroke', o.marker.color).attr('stroke-width', 2);
+      }
+    }
+    if (o.line) {
+      const pts = cats.map((c) => [x(c.cat) + x.bandwidth() / 2, o.line.get(c)]);
+      svg.append('path').attr('fill', 'none').attr('stroke', o.line.color).attr('stroke-width', 2)
+        .attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round')
+        .attr('d', d3.line().defined((p) => p[1] != null).x((p) => p[0]).y((p) => y(p[1]))(pts));
+      svg.append('g').selectAll('circle').data(pts.filter((p) => p[1] != null)).join('circle')
+        .attr('cx', (p) => p[0]).attr('cy', (p) => y(p[1])).attr('r', 2.5).attr('fill', o.line.color);
+    }
+    svg.append('line').attr('class', 'kp-axis').attr('x1', ml).attr('x2', w - 4).attr('y1', y(0)).attr('y2', y(0));
+    for (const c of cats) {
+      const r = hov.append('rect').attr('class', 'kp-hover').attr('x', x(c.cat) - x.step() * (o.pad ?? 0.3) / 2)
+        .attr('width', x.step()).attr('y', 6).attr('height', h - 30);
+      const box = svg.append('rect').attr('fill', 'transparent').attr('x', x(c.cat) - x.step() * (o.pad ?? 0.3) / 2)
+        .attr('width', x.step()).attr('y', 6).attr('height', h - 30);
+      box.on('pointerenter pointermove', () => {
+        r.classed('on', true);
+        const t = o.tip(c);
+        setTip(tip, t.head, t.lines);
+        placeTip(el, tip, x(c.cat) + x.bandwidth() / 2, y(top(c)));
+      }).on('pointerleave', () => { r.classed('on', false); tip.hidden = true; });
+    }
+  }
+
+  // Lines over categories, labelled at their end.
+  function lines(el, o) {
+    const H = o.height || 260;
+    const { svg, w, h, tip } = frame(el, H);
+    const cats = o.cats;
+    const maxV = d3.max(o.series, (s) => d3.max(cats, (c) => s.get(c) || 0)) || 1;
+    const y = d3.scaleLinear([0, maxV], [h - 26, 12]).nice();
+    const ticks = y.ticks(4);
+    const ml = measure(svg, ticks.map(o.yFmt)) + 10;
+    const mr = measure(svg, o.series.map((s) => s.name), 'kp-lab') + 14;
+    const x = d3.scalePoint(cats.map((c) => c.cat), [ml + 6, w - mr]);
+    svg.append('g').selectAll('line').data(ticks).join('line').attr('class', 'kp-gl')
+      .attr('x1', ml).attr('x2', w - mr + 4).attr('y1', (d) => y(d)).attr('y2', (d) => y(d));
+    svg.append('g').selectAll('text').data(ticks).join('text').attr('class', 'kp-tick')
+      .attr('x', ml - 8).attr('y', (d) => y(d)).attr('dy', '0.32em').attr('text-anchor', 'end').text(o.yFmt);
+    const lw = measure(svg, cats.map((c) => c.label)) + 12;
+    const step = cats.length > 1 ? x.step() : w;
+    const every = Math.max(1, Math.ceil(lw / step));
+    const lastIdx = cats.length - 1;
+    svg.append('g').selectAll('text').data(cats.filter((c, i) => (lastIdx - i) % every === 0)).join('text')
+      .attr('class', 'kp-tick').attr('x', (c) => x(c.cat)).attr('y', h - 6).attr('text-anchor', 'middle').text((c) => c.label);
+    svg.append('line').attr('class', 'kp-axis').attr('x1', ml).attr('x2', w - mr + 4).attr('y1', y(0)).attr('y2', y(0));
+    const ends = [];
+    o.series.forEach((s) => {
+      const pts = cats.map((c) => [x(c.cat), s.get(c)]);
+      svg.append('path').attr('fill', 'none').attr('stroke', s.color).attr('stroke-width', 2)
+        .attr('stroke-linecap', 'round').attr('stroke-linejoin', 'round')
+        .attr('d', d3.line().defined((p) => p[1] != null).x((p) => p[0]).y((p) => y(p[1]))(pts));
+      const last = pts.filter((p) => p[1] != null).pop();
+      if (last) ends.push({ s, x: last[0], y: y(last[1]) });
+    });
+    ends.sort((a, b) => a.y - b.y);
+    for (let i = 1; i < ends.length; i++) if (ends[i].y - ends[i - 1].y < 14) ends[i].y = ends[i - 1].y + 14;
+    for (const e of ends) {
+      svg.append('circle').attr('cx', e.x).attr('cy', y(e.s.get(cats[cats.length - 1]) || 0)).attr('r', 3).attr('fill', e.s.color);
+      svg.append('text').attr('class', 'kp-lab').attr('x', e.x + 8).attr('y', e.y).attr('dy', '0.32em').attr('fill', e.s.color).text(e.s.name);
+    }
+    const rule = svg.append('line').attr('class', 'kp-axis').attr('y1', 8).attr('y2', h - 26).attr('opacity', 0);
+    const dots = svg.append('g');
+    svg.append('rect').attr('fill', 'transparent').attr('x', ml).attr('width', Math.max(0, w - mr - ml)).attr('y', 0).attr('height', h - 20)
+      .on('pointermove', (ev) => {
+        const [mx] = d3.pointer(ev);
+        let best = cats[0], bd = Infinity;
+        for (const c of cats) { const d = Math.abs(x(c.cat) - mx); if (d < bd) { bd = d; best = c; } }
+        rule.attr('x1', x(best.cat)).attr('x2', x(best.cat)).attr('opacity', 1);
+        dots.selectAll('circle').data(o.series).join('circle').attr('cx', x(best.cat))
+          .attr('cy', (s) => y(s.get(best) || 0)).attr('r', 4).attr('fill', (s) => s.color);
+        const t = o.tip(best);
+        setTip(tip, t.head, t.lines);
+        placeTip(el, tip, x(best.cat), d3.min(o.series, (s) => y(s.get(best) || 0)));
+      })
+      .on('pointerleave', () => { rule.attr('opacity', 0); dots.selectAll('circle').remove(); tip.hidden = true; });
+  }
+
+  // Horizontal bars from one left edge. Optional thin prior bar, overlay part, reference line, clamp.
+  function hbars(el, o) {
+    const n = o.rows.length;
+    const rowH = o.rowH || (o.prior ? 38 : 30);
+    const top = o.ref ? 20 : 4;
+    const H = top + n * rowH + 4;
+    const { svg, w, h, tip } = frame(el, H);
+    const labels = o.rows.map(o.label);
+    const lw = Math.min(w * 0.38, measure(svg, labels, 'kp-lab') + 12);
+    const texts = o.rows.map(o.text);
+    const tw = Math.min(w * 0.45, measure(svg, texts, 'kp-val') + 10);
+    const dataMax = d3.max(o.rows, (r) => Math.max(o.value(r) || 0, o.prior ? (o.prior(r) || 0) : 0)) || 1;
+    const natural = o.max != null ? o.max : Math.max(dataMax, o.ref ? o.ref.value : 0);
+    const maxV = o.clamp ? Math.min(o.clamp, natural) : natural;
+    const x = d3.scaleLinear([0, maxV], [lw, Math.max(lw + 40, w - tw)]);
+    const bh = Math.min(16, rowH * 0.42);
+    o.rows.forEach((r, i) => {
+      const cy = top + i * rowH + rowH / 2 - (o.prior ? 3 : 0);
+      const v = o.value(r) || 0;
+      const vc = Math.min(v, maxV);
+      const hi = o.hi ? o.hi(r) : true;
+      const gr = svg.append('g');
+      gr.append('text').attr('class', 'kp-lab' + (hi ? '' : ' kp-dim')).attr('x', lw - 10).attr('y', cy).attr('dy', '0.32em')
+        .attr('text-anchor', 'end').text(labels[i]);
+      gr.append('rect').attr('x', lw).attr('y', cy - bh / 2).attr('height', bh).attr('width', Math.max(0, x(vc) - lw))
+        .attr('rx', 4).attr('fill', o.color(r)).attr('opacity', hi ? 1 : 0.55);
+      if (o.overlay) {
+        const ov = Math.min(o.overlay(r).value || 0, maxV);
+        gr.append('rect').attr('x', lw).attr('y', cy - bh / 2).attr('height', bh).attr('width', Math.max(0, x(ov) - lw))
+          .attr('rx', 4).attr('fill', o.overlay(r).color);
+      }
+      if (o.prior && o.prior(r) != null) {
+        const pv = Math.min(o.prior(r), maxV);
+        gr.append('rect').attr('x', lw).attr('y', cy + bh / 2 + 3).attr('height', 4).attr('width', Math.max(0, x(pv) - lw))
+          .attr('rx', 2).attr('fill', MUTED);
+      }
+      const endX = Math.max(x(vc), o.prior && o.prior(r) != null ? x(Math.min(o.prior(r), maxV)) : 0);
+      gr.append('text').attr('class', 'kp-val' + (hi ? ' kp-strong' : '')).attr('x', endX + 6).attr('y', cy).attr('dy', '0.32em')
+        .text(texts[i] + (v > maxV ? ' ›' : ''));
+      const hit = gr.append('rect').attr('fill', 'transparent').attr('x', 0).attr('width', w).attr('y', top + i * rowH).attr('height', rowH);
+      if (o.tip) hit.on('pointerenter pointermove', (ev) => {
+        const t = o.tip(r);
+        setTip(tip, t.head, t.lines);
+        const [mx] = d3.pointer(ev, svg.node());
+        placeTip(el, tip, Math.min(mx, x(vc)), cy - bh / 2);
+      }).on('pointerleave', () => { tip.hidden = true; });
+      if (o.onClick) hit.style('cursor', 'pointer').on('click', () => o.onClick(r));
+    });
+    if (o.ref) {
+      const rx = x(Math.min(o.ref.value, maxV));
+      svg.append('line').attr('class', 'kp-ref').attr('x1', rx).attr('x2', rx).attr('y1', top - 4).attr('y2', H - 2);
+      svg.append('text').attr('class', 'kp-tick').attr('x', rx).attr('y', 10).attr('text-anchor', 'middle').text(o.ref.label);
+    }
+  }
+
+  // ------------------------------------------------------------ tables
+  const sortState = {};
+  function table(tbl, data, cols, o) {
+    o = o || {};
+    const st = sortState[tbl.id] || o.sort || { field: null, dir: 1 };
+    let list = data.slice();
+    const q = o.search ? o.search.value.trim().toLowerCase() : '';
+    if (q) list = list.filter((r) => cols.some((c) => String(r[c.field] ?? '').toLowerCase().includes(q)));
+    if (st.field) {
+      const c = cols.find((k) => k.field === st.field);
+      list.sort((a, b) => {
+        const va = a[st.field], vb = b[st.field];
+        if (va == null && vb == null) return 0;
+        if (va == null) return 1;
+        if (vb == null) return -1;
+        return (c && c.num ? va - vb : String(va).localeCompare(String(vb))) * st.dir;
+      });
+    }
+    if (o.pinLast) {
+      const pinned = list.filter(o.pinLast);
+      list = list.filter((r) => !o.pinLast(r)).concat(pinned);
+    }
+    const thead = tbl.tHead || tbl.createTHead();
+    thead.replaceChildren();
+    const hr = thead.insertRow();
+    for (const c of cols) {
+      const th = document.createElement('th');
+      th.setAttribute('data-field', c.field);
+      th.scope = 'col';
+      if (c.num) th.classList.add('num');
+      if (c.hideSm) th.classList.add('kp-hide-sm');
+      th.setAttribute('aria-sort', st.field === c.field ? (st.dir > 0 ? 'ascending' : 'descending') : 'none');
+      const b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = c.label;
+      b.addEventListener('click', () => {
+        sortState[tbl.id] = { field: c.field, dir: st.field === c.field ? -st.dir : (c.num ? -1 : 1) };
+        o.redraw();
+      });
+      th.append(b);
+      hr.append(th);
+    }
+    const tb = tbl.tBodies[0] || tbl.createTBody();
+    tb.replaceChildren();
+    for (const r of list) {
+      const tr = tb.insertRow();
+      if (o.rowClass) for (const k of o.rowClass(r)) tr.classList.add(k);
+      if (o.onClick) { tr.classList.add('kp-click'); tr.addEventListener('click', () => o.onClick(r)); }
+      for (const c of cols) {
+        const td = tr.insertCell();
+        if (c.num) td.classList.add('num');
+        if (c.hideSm) td.classList.add('kp-hide-sm');
+        if (c.wrap) td.classList.add('kp-wrap');
+        const v = r[c.field];
+        const txt = c.fmt ? c.fmt(v, r) : (v ?? '—');
+        if (c.status) { const s = c.status(v, r); if (s) td.classList.add('kp-s-' + s); }
+        if (c.bar && v != null) {
+          const wrap = document.createElement('span');
+          wrap.className = 'kp-cb';
+          const t = document.createElement('span');
+          t.textContent = txt;
+          const tr2 = document.createElement('span');
+          tr2.className = 'kp-track';
+          tr2.setAttribute('aria-hidden', 'true');
+          const fill = document.createElement('i');
+          fill.style.width = Math.max(0, Math.min(100, (v / c.bar.max) * 100)) + '%';
+          fill.style.background = c.bar.color ? c.bar.color(v, r) : col(0);
+          tr2.append(fill);
+          wrap.append(t, tr2);
+          td.append(wrap);
+        } else td.textContent = txt;
+      }
+    }
+  }
+  function tableState(tbl, id) {
+    const d = dash.data(id);
+    if (d.status === 'ok') { tbl.classList.remove('dash-skeleton'); return true; }
+    (tbl.tBodies[0] || tbl.createTBody()).replaceChildren();
+    tbl.classList.toggle('dash-skeleton', d.status === 'loading');
+    if (d.status !== 'loading') {
+      const tr = tbl.tBodies[0].insertRow();
+      const td = tr.insertCell();
+      td.textContent = 'Failed to load';
+      td.className = 'kp-wrap';
+    }
+    return false;
+  }
+  const statusColor = (s) => s === 'bad' ? CRIT : s === 'warn' ? 'var(--color-warn)' : s === 'ok' ? 'var(--color-ok)' : col(0);
+  const levelStatus = (v, good, warn) => v == null ? null : v >= good ? 'ok' : v >= warn ? 'warn' : 'bad';
+
+  // ------------------------------------------------------------ OVERVIEW
+  function drawOverview() {
+    fillAuto($('#overview'));
+    findings('overview');
+    const tbl = $('#tbl-scorecard');
+    if (!tableState(tbl, 'branch_scorecard')) return;
+    const b = branch();
+    table(tbl, rows('branch_scorecard'), [
+      { field: 'branch', label: 'Branch' },
+      { field: 'agreement_value_ytd', label: 'Agreement value', num: true, fmt: inr },
+      { field: 'sales_attainment', label: 'Sales vs target', num: true, fmt: pct, bar: { max: 1.2, color: (v, r) => statusColor(r.sales_status) }, status: (v, r) => r.sales_status },
+      { field: 'agreement_value_yoy', label: 'Value vs last year', num: true, fmt: signed, status: (v) => v == null ? null : v >= 0 ? 'ok' : 'bad' },
+      { field: 'leads_ytd', label: 'Leads', num: true, fmt: int, hideSm: true },
+      { field: 'install_attainment', label: 'Installs vs target', num: true, fmt: pct, bar: { max: 1.2, color: (v, r) => statusColor(r.install_status) }, status: (v, r) => r.install_status },
+      { field: 'units_delayed', label: 'Units delayed', num: true, fmt: int, hideSm: true },
+      { field: 'sla_breach_ytd', label: 'Repairs past SLA', num: true, fmt: pct, status: (v, r) => r.service_status },
+      { field: 'open_ros', label: 'Open ROs', num: true, fmt: int, hideSm: true },
+      { field: 'amc_due_90d', label: 'AMC due in 90 days', num: true, fmt: int, hideSm: true },
+      { field: 'problem_areas', label: 'Off target in' },
+    ], {
+      redraw: drawOverview,
+      pinLast: (r) => r.branch === 'All',
+      rowClass: (r) => [r.branch === 'All' ? 'kp-total' : '', r.branch === b && b !== 'All' ? 'kp-sel' : ''].filter(Boolean),
+      onClick: (r) => dash.setParams({ branch: r.branch === b ? 'All' : r.branch }),
+      sort: { field: null, dir: 1 },
+    });
+  }
+
+  // ------------------------------------------------------------ SALES
+  function drawSales() {
+    fillAuto($('#sales'));
+    findings('sales');
+    const b = branch();
+    // monthly value vs target
+    const elM = $('#ch-sales-monthly');
+    legend($('#lg-sales-monthly'), [{ name: 'Agreement value', color: col(0) }, { name: 'Target', color: 'var(--color-fg)', kind: 'tick' }]);
+    if (ready(elM, ['monthly'])) {
+      const ms = rows('monthly').filter((r) => r.branch === b);
+      vbars(elM, {
+        cats: ms.map((r) => ({ cat: r.month, label: monthShort(r.month), partial: r.partial, r })),
+        series: [{ name: 'Agreement value', color: col(0), get: (c) => c.r.agreement_value }],
+        marker: { color: 'var(--color-fg)', get: (c) => c.r.sales_target || null },
+        yFmt: inrAxis, height: 270, pad: 0.25,
+        tip: (c) => ({ head: monthLong(c.cat) + (c.partial ? ' (partial)' : ''), lines: [
+          { name: 'Agreement value', value: inr(c.r.agreement_value), color: col(0) },
+          { name: 'Target', value: inr(c.r.sales_target) },
+          { name: 'Agreements', value: int(c.r.bookings) },
+          { name: 'Leads', value: int(c.r.leads) }] }),
+      });
+    }
+    // funnel
+    const elF = $('#ch-funnel');
+    if (ready(elF, ['funnel'])) {
+      const fr = rows('funnel').filter((r) => r.branch === b);
+      const cur = fr.filter((r) => r.period === 'current').sort((a, c) => a.step - c.step);
+      const prior = new Map(fr.filter((r) => r.period === 'prior').map((r) => [r.step, r]));
+      const worst = cur.filter((r) => r.from_prev != null).reduce((m, r) => (m == null || r.from_prev < m.from_prev ? r : m), null);
+      hbars(elF, {
+        rows: cur, label: (r) => r.stage, value: (r) => r.count, prior: (r) => prior.get(r.step) ? prior.get(r.step).count : null,
+        color: (r) => worst && r.step === worst.step ? CRIT : col(0),
+        text: (r) => int(r.count) + (r.from_prev != null ? ' · ' + pct(r.from_prev) + ' kept' : ''),
+        tip: (r) => ({ head: r.stage, lines: [
+          { name: r.period_label, value: int(r.count), color: worst && r.step === worst.step ? CRIT : col(0) },
+          { name: prior.get(r.step) ? prior.get(r.step).period_label : 'Last year', value: prior.get(r.step) ? int(prior.get(r.step).count) : '—', color: MUTED },
+          { name: 'Kept from step before', value: r.from_prev != null ? pct(r.from_prev) : '—' },
+          { name: 'Share of leads', value: pct1(r.of_first) }] }),
+      });
+    }
+    // yoy by branch
+    const elY = $('#ch-yoy');
+    if (ready(elY, ['branch_scorecard'])) {
+      const sc = rows('branch_scorecard').filter((r) => r.branch !== 'All');
+      hbars(elY, {
+        rows: sc, label: (r) => r.branch, value: (r) => r.agreement_value_ytd, prior: (r) => r.agreement_value_prev_ytd,
+        color: (r) => r.agreement_value_yoy < 0 ? CRIT : col(0), hi: (r) => b === 'All' || r.branch === b,
+        text: (r) => inr(r.agreement_value_ytd) + ' · ' + signed(r.agreement_value_yoy),
+        onClick: (r) => dash.setParams({ branch: r.branch }),
+        tip: (r) => ({ head: r.branch, lines: [
+          { name: 'This year', value: inr(r.agreement_value_ytd), color: r.agreement_value_yoy < 0 ? CRIT : col(0) },
+          { name: 'Same months last year', value: inr(r.agreement_value_prev_ytd), color: MUTED },
+          { name: 'Change', value: signed(r.agreement_value_yoy) }] }),
+      });
+    }
+    // leads by branch
+    const elL = $('#ch-leads');
+    if (ready(elL, ['funnel'])) {
+      const fr = rows('funnel').filter((r) => r.period === 'current' && r.branch !== 'All');
+      const leadsBy = fr.filter((r) => r.step === 1);
+      const conv = new Map(fr.filter((r) => r.step === 4).map((r) => [r.branch, r]));
+      const priorLeads = new Map(rows('funnel').filter((r) => r.period === 'prior' && r.step === 1).map((r) => [r.branch, r.count]));
+      const minLeads = d3.min(leadsBy, (r) => r.count);
+      hbars(elL, {
+        rows: leadsBy, label: (r) => r.branch, value: (r) => r.count, prior: (r) => priorLeads.get(r.branch) ?? null,
+        color: (r) => r.count === minLeads ? CRIT : col(0), hi: (r) => b === 'All' || r.branch === b,
+        text: (r) => int(r.count) + ' leads · ' + pct1(conv.get(r.branch) ? conv.get(r.branch).of_first : null),
+        onClick: (r) => dash.setParams({ branch: r.branch }),
+        tip: (r) => ({ head: r.branch, lines: [
+          { name: 'Leads this year', value: int(r.count), color: r.count === minLeads ? CRIT : col(0) },
+          { name: 'Leads same months last year', value: int(priorLeads.get(r.branch)), color: MUTED },
+          { name: 'Agreements won', value: int(conv.get(r.branch) ? conv.get(r.branch).count : null) },
+          { name: 'Lead to agreement', value: pct1(conv.get(r.branch) ? conv.get(r.branch).of_first : null) }] }),
+      });
+    }
+    // booking status
+    const elS = $('#ch-status');
+    if (ready(elS, ['booking_status'])) {
+      const order = ['Confirmed', 'On Hold', 'Cancelled'];
+      const bs = rows('booking_status').filter((r) => r.branch === b).sort((a, c) => order.indexOf(a.status) - order.indexOf(c.status));
+      hbars(elS, {
+        rows: bs, label: (r) => r.status, value: (r) => r.value,
+        color: (r) => r.status === 'Confirmed' ? col(0) : r.status === 'On Hold' ? col(2) : CRIT,
+        text: (r) => inr(r.value) + ' · ' + pct(r.share_of_value),
+        tip: (r) => ({ head: r.status, lines: [
+          { name: 'Value', value: inr(r.value) }, { name: 'Share of signed value', value: pct1(r.share_of_value) },
+          { name: 'Agreements', value: int(r.agreements) }, { name: 'Units', value: int(r.units) }] }),
+      });
+    }
+    // lead sources
+    const elSo = $('#ch-sources');
+    if (ready(elSo, ['lead_sources'])) {
+      const src = rows('lead_sources');
+      const best = d3.max(src, (r) => r.lead_to_agreement);
+      hbars(elSo, {
+        rows: src, label: (r) => r.source, value: (r) => r.lead_to_agreement,
+        color: (r) => r.lead_to_agreement === best ? col(0) : MUTED,
+        text: (r) => pct1(r.lead_to_agreement) + ' of ' + int(r.leads),
+        tip: (r) => ({ head: r.source, lines: [
+          { name: 'Leads', value: int(r.leads) }, { name: 'Agreements', value: int(r.agreements) },
+          { name: 'Conversion', value: pct1(r.lead_to_agreement) }, { name: 'Agreement value', value: inr(r.agreement_value) },
+          { name: 'Average deal', value: inr(r.avg_deal) }] }),
+      });
+    }
+    // salespeople
+    const tbl = $('#tbl-salespeople');
+    if (tableState(tbl, 'salespeople')) {
+      table(tbl, rows('salespeople').filter((r) => b === 'All' || r.branch === b), [
+        { field: 'salesperson', label: 'Salesperson' },
+        { field: 'branch', label: 'Branch' },
+        { field: 'agreement_value', label: 'Agreement value', num: true, fmt: inr },
+        { field: 'target', label: 'Target', num: true, fmt: inr, hideSm: true },
+        { field: 'attainment', label: 'Attainment', num: true, fmt: pct, bar: { max: 1.4, color: (v) => statusColor(levelStatus(v, 0.85, 0.7)) }, status: (v) => levelStatus(v, 0.85, 0.7) },
+        { field: 'agreements', label: 'Agreements', num: true, fmt: int },
+        { field: 'quotes', label: 'Quotations', num: true, fmt: int, hideSm: true },
+        { field: 'quote_win_rate', label: 'Win rate', num: true, fmt: pct, hideSm: true },
+      ], { redraw: drawSales, search: $('#q-salespeople'), sort: { field: 'attainment', dir: -1 } });
+    }
+  }
+
+  // ------------------------------------------------------------ INSTALLATION
+  function drawInstallation() {
+    fillAuto($('#installation'));
+    findings('installation');
+    const b = branch();
+    const elU = $('#ch-units-monthly');
+    if (ready(elU, ['monthly'])) {
+      const ms = rows('monthly').filter((r) => r.branch === b);
+      lines(elU, {
+        cats: ms.map((r) => ({ cat: r.month, label: monthShort(r.month), r, partial: r.partial })),
+        series: [
+          { name: 'Units booked', color: col(0), get: (c) => c.r.units_booked },
+          { name: 'Units installed', color: col(1), get: (c) => c.r.units_completed },
+        ],
+        yFmt: int, height: 260,
+        tip: (c) => ({ head: monthLong(c.cat) + (c.partial ? ' (partial)' : ''), lines: [
+          { name: 'Units booked', value: int(c.r.units_booked), color: col(0) },
+          { name: 'Units installed', value: int(c.r.units_completed), color: col(1) },
+          { name: 'Vendor PO value raised', value: inr(c.r.po_value) }] }),
+      });
+    }
+    const elS = $('#ch-ustatus');
+    if (ready(elS, ['install_status'])) {
+      const order = ['Completed', 'In Progress', 'Scheduled', 'Delayed', 'Parked (On Hold agreement)', 'Parked (Cancelled agreement)'];
+      const st = rows('install_status').filter((r) => r.branch === b).sort((a, c) => order.indexOf(a.bucket) - order.indexOf(c.bucket));
+      hbars(elS, {
+        rows: st, label: (r) => r.bucket.replace(' agreement)', ')'), value: (r) => r.units,
+        color: (r) => r.bucket === 'Delayed' ? CRIT : r.bucket.startsWith('Parked') ? MUTED : r.bucket === 'Completed' ? col(1) : col(0),
+        text: (r) => int(r.units) + ' · ' + pct(r.share),
+        tip: (r) => ({ head: r.bucket, lines: [{ name: 'Units', value: int(r.units) }, { name: 'Share of all units', value: pct1(r.share) }] }),
+      });
+    }
+    const elA = $('#ch-inst-att');
+    if (ready(elA, ['branch_scorecard'])) {
+      const sc = rows('branch_scorecard').filter((r) => r.branch !== 'All');
+      hbars(elA, {
+        rows: sc, label: (r) => r.branch, value: (r) => r.install_attainment, ref: { value: 1, label: '100%' },
+        color: (r) => statusColor(r.install_status), hi: (r) => b === 'All' || r.branch === b,
+        text: (r) => pct(r.install_attainment) + ' · ' + int(r.units_completed_ytd) + ' of ' + int(r.install_target_ytd),
+        onClick: (r) => dash.setParams({ branch: r.branch }),
+        tip: (r) => ({ head: r.branch, lines: [
+          { name: 'Units installed', value: int(r.units_completed_ytd) }, { name: 'Target', value: int(r.install_target_ytd) },
+          { name: 'Attainment', value: pct(r.install_attainment) }, { name: 'Backlog now', value: int(r.install_backlog) },
+          { name: 'Delayed now', value: int(r.units_delayed) }, { name: 'Delayed share of confirmed units', value: pct(r.delayed_share) }] }),
+      });
+    }
+    const elP = $('#ch-po');
+    if (ready(elP, ['po_lines'])) {
+      const pl = rows('po_lines').filter((r) => r.branch === b).sort((a, c) => c.amount - a.amount);
+      hbars(elP, {
+        rows: pl, label: (r) => r.line_item.replace(' Charges', '').replace(' Project Cost', ''), value: (r) => r.amount,
+        color: () => col(0), overlay: (r) => ({ value: r.open_amount, color: col(3) }),
+        text: (r) => inr(r.amount) + ' · ' + inr(r.open_amount) + ' open',
+        tip: (r) => ({ head: r.line_item, lines: [
+          { name: 'All POs', value: inr(r.amount), color: col(0) }, { name: 'Still open', value: inr(r.open_amount), color: col(3) },
+          { name: 'PO lines', value: int(r.pos) }] }),
+      });
+    }
+    const tbl = $('#tbl-vendors');
+    if (tableState(tbl, 'vendors')) {
+      const vs = rows('vendors');
+      const maxAmt = d3.max(vs, (r) => r.amount) || 1;
+      table(tbl, vs, [
+        { field: 'vendor_name', label: 'Vendor' },
+        { field: 'specialty', label: 'Specialty', hideSm: true },
+        { field: 'pos', label: 'PO lines', num: true, fmt: int, hideSm: true },
+        { field: 'units', label: 'Units', num: true, fmt: int },
+        { field: 'amount', label: 'PO value', num: true, fmt: inr, bar: { max: maxAmt } },
+        { field: 'open_amount', label: 'Open', num: true, fmt: inr },
+        { field: 'open_share', label: 'Open share', num: true, fmt: pct, hideSm: true },
+        { field: 'delayed_units', label: 'Delayed units', num: true, fmt: int },
+      ], { redraw: drawInstallation, search: $('#q-vendors'), sort: { field: 'amount', dir: -1 } });
+    }
+  }
+
+  // ------------------------------------------------------------ SERVICE
+  function drawService() {
+    fillAuto($('#service'));
+    findings('service');
+    const b = branch();
+    const elQ = $('#ch-roq');
+    legend($('#lg-roq'), [{ name: 'Repair orders', color: MUTED }, { name: 'Breached SLA', color: CRIT }]);
+    if (ready(elQ, ['ro_quarterly'])) {
+      const q = rows('ro_quarterly').filter((r) => r.branch === b).sort((a, c) => a.quarter.localeCompare(c.quarter));
+      vbars(elQ, {
+        cats: q.map((r) => ({ cat: r.quarter, label: qLabel(r.quarter), partial: r.partial, r })),
+        series: [{ name: 'Repair orders', color: MUTED, get: (c) => c.r.ros }, { name: 'Breached', color: CRIT, get: (c) => c.r.breached }],
+        yFmt: int, height: 250, pad: 0.35,
+        tip: (c) => ({ head: qLabel(c.cat) + (c.partial ? ' (partial)' : ''), lines: [
+          { name: 'Repair orders', value: int(c.r.ros), color: MUTED }, { name: 'Breached SLA', value: int(c.r.breached), color: CRIT },
+          { name: 'Breach rate', value: pct(c.r.breach_rate) }, { name: 'Median resolution', value: hours(c.r.median_resolution_h) }] }),
+      });
+    }
+    const elP = $('#ch-rop');
+    if (ready(elP, ['ro_priority'])) {
+      const pr = rows('ro_priority').filter((r) => r.branch === b).sort((a, c) => a.priority.localeCompare(c.priority));
+      hbars(elP, {
+        rows: pr, label: (r) => r.priority, value: (r) => r.breach_rate, max: 1,
+        color: (r) => r.priority.startsWith('P1') ? CRIT : col(0),
+        text: (r) => pct(r.breach_rate) + ' of ' + int(r.ros) + ' · SLA ' + hours(r.sla_hours),
+        tip: (r) => ({ head: r.priority, lines: [
+          { name: 'Repair orders', value: int(r.ros) }, { name: 'Breached', value: int(r.breached) },
+          { name: 'Breach rate', value: pct1(r.breach_rate) }, { name: 'SLA', value: hours(r.sla_hours) },
+          { name: 'Median resolution', value: hours(r.median_resolution_h) }, { name: 'Open now', value: int(r.open) }] }),
+      });
+    }
+    const elC = $('#ch-cal');
+    legend($('#lg-cal'), [{ name: 'Comprehensive AMC', color: col(0) }, { name: 'Non-comprehensive AMC', color: col(1) }, { name: 'Warranty expiring', color: col(3), kind: 'line' }]);
+    if (ready(elC, ['service_calendar'])) {
+      const cal = rows('service_calendar').filter((r) => r.branch === b).sort((a, c) => a.month.localeCompare(c.month));
+      vbars(elC, {
+        cats: cal.map((r) => ({ cat: r.month, label: monthShort(r.month), r })), stack: true,
+        series: [{ name: 'Comprehensive', color: col(0), get: (c) => c.r.comprehensive }, { name: 'Non-comprehensive', color: col(1), get: (c) => c.r.non_comprehensive }],
+        line: { color: col(3), get: (c) => c.r.warranty_expiring },
+        yFmt: int, height: 240,
+        tip: (c) => ({ head: monthLong(c.cat), lines: [
+          { name: 'AMC renewals', value: int(c.r.amc_renewals) },
+          { name: 'Comprehensive', value: int(c.r.comprehensive), color: col(0) },
+          { name: 'Non-comprehensive', value: int(c.r.non_comprehensive), color: col(1) },
+          { name: 'Annual value up for renewal', value: inr(c.r.amc_renewal_value) },
+          { name: 'Warranties expiring', value: int(c.r.warranty_expiring), color: col(3) }] }),
+      });
+    }
+    const elA = $('#ch-amc');
+    legend($('#lg-amc'), [{ name: 'Comprehensive', color: col(0) }, { name: 'Non-comprehensive', color: col(1) }]);
+    if (ready(elA, ['amc_portfolio'])) {
+      const ap = rows('amc_portfolio').filter((r) => r.branch !== 'All');
+      const by = d3.group(ap, (r) => r.branch);
+      const cats = BRANCH_ORDER.filter((k) => by.has(k)).map((k) => {
+        const get = (t) => (by.get(k).find((r) => r.amc_type === t) || {});
+        return { cat: k, label: k, comp: get('Comprehensive'), non: get('Non-comprehensive') };
+      });
+      vbars(elA, {
+        cats, stack: true, height: 240, pad: 0.4,
+        series: [{ name: 'Comprehensive', color: col(0), get: (c) => c.comp.contracts }, { name: 'Non-comprehensive', color: col(1), get: (c) => c.non.contracts }],
+        yFmt: int,
+        tip: (c) => ({ head: c.cat, lines: [
+          { name: 'Comprehensive', value: int(c.comp.contracts) + ' · ' + inr(c.comp.annual_value), color: col(0) },
+          { name: 'Non-comprehensive', value: int(c.non.contracts) + ' · ' + inr(c.non.annual_value), color: col(1) }] }),
+      });
+    }
+    const elV = $('#ch-cov');
+    if (ready(elV, ['ro_coverage'])) {
+      const cv = rows('ro_coverage');
+      hbars(elV, {
+        rows: cv, label: (r) => r.coverage, value: (r) => r.cost,
+        color: (r) => r.coverage.startsWith('Warranty') ? col(2) : col(0),
+        text: (r) => inr(r.cost) + ' · ' + pct(r.share_of_cost),
+        tip: (r) => ({ head: r.coverage, lines: [
+          { name: 'Repair orders', value: int(r.ros) }, { name: 'Parts', value: inr(r.parts) }, { name: 'Labour', value: inr(r.labor) },
+          { name: 'Share of repair cost', value: pct1(r.share_of_cost) }, { name: 'Breach rate', value: pct(r.breach_rate) }] }),
+      });
+    }
+    const elF = $('#ch-faults');
+    if (ready(elF, ['ro_faults'])) {
+      const fr = rows('ro_faults');
+      const top = d3.max(fr, (r) => r.ros);
+      hbars(elF, {
+        rows: fr, label: (r) => r.description, value: (r) => r.ros, rowH: 26,
+        color: (r) => r.ros === top ? col(0) : MUTED,
+        text: (r) => int(r.ros) + ' · ' + pct(r.breach_rate) + ' breached',
+        tip: (r) => ({ head: r.description, lines: [
+          { name: 'Repair orders', value: int(r.ros) }, { name: 'Breach rate', value: pct1(r.breach_rate) },
+          { name: 'Average cost', value: inr(r.avg_cost) }, { name: 'Total cost', value: inr(r.total_cost) },
+          { name: 'Median resolution', value: hours(r.median_resolution_h) }] }),
+      });
+    }
+    const tbl = $('#tbl-ro-open');
+    if (tableState(tbl, 'ro_open')) {
+      table(tbl, rows('ro_open').filter((r) => b === 'All' || r.branch === b), [
+        { field: 'ro', label: 'Repair order' },
+        { field: 'branch', label: 'Branch' },
+        { field: 'priority', label: 'Priority', status: (v) => v === 'P1-Critical' ? 'bad' : null },
+        { field: 'open_date', label: 'Opened', fmt: date, hideSm: true },
+        { field: 'age_days', label: 'Age (days)', num: true, fmt: int },
+        { field: 'sla_hours', label: 'SLA', num: true, fmt: hours, hideSm: true },
+        { field: 'description', label: 'Fault' },
+        { field: 'coverage', label: 'Cover', hideSm: true },
+        { field: 'supervisor', label: 'Supervisor', hideSm: true },
+        { field: 'unit_id', label: 'Unit', hideSm: true },
+      ], { redraw: drawService, search: $('#q-ro-open') });
+    }
+    const tt = $('#tbl-techs');
+    if (tableState(tt, 'technicians')) {
+      table(tt, rows('technicians').filter((r) => b === 'All' || r.branch === b), [
+        { field: 'technician', label: 'Technician' },
+        { field: 'branch', label: 'Branch' },
+        { field: 'ros', label: 'Repair orders', num: true, fmt: int },
+        { field: 'breach_rate', label: 'Breach rate', num: true, fmt: pct, bar: { max: 1, color: (v) => v > 0.4 ? CRIT : v > 0.3 ? 'var(--color-warn)' : col(0) } },
+        { field: 'median_resolution_h', label: 'Median resolution', num: true, fmt: hours, hideSm: true },
+        { field: 'open', label: 'Open now', num: true, fmt: int },
+        { field: 'active', label: 'Status', fmt: (v) => v ? 'Active' : 'Left', hideSm: true },
+      ], { redraw: drawService, search: $('#q-techs'), sort: { field: 'breach_rate', dir: -1 } });
+    }
+  }
+
+  // ------------------------------------------------------------ PEOPLE
+  const ROLE_ORDER = ['Lead Generator', 'Salesperson', 'Sales Manager', 'Installation Engineer', 'Installation Manager', 'Service Sales Person', 'Service Supervisor', 'Service Technician'];
+  function drawPeople() {
+    fillAuto($('#people'));
+    findings('people');
+    const b = branch();
+    const elA = $('#ch-att');
+    if (ready(elA, ['attainment'])) {
+      const at = rows('attainment').filter((r) => r.branch === b).sort((a, c) => ROLE_ORDER.indexOf(a.role) - ROLE_ORDER.indexOf(c.role));
+      hbars(elA, {
+        rows: at, label: (r) => r.role, value: (r) => r.attainment, ref: { value: 1, label: '100%' }, clamp: 2,
+        color: (r) => r.calibrated ? statusColor(levelStatus(r.attainment, 0.85, 0.7)) : MUTED,
+        text: (r) => pct(r.attainment) + (r.calibrated ? '' : ' · out of scale'),
+        tip: (r) => ({ head: r.role + ' · ' + r.metric, lines: [
+          { name: 'Actual', value: r.metric.endsWith('value') ? inr(r.actual) : int(r.actual) },
+          { name: 'Target', value: r.metric.endsWith('value') ? inr(r.target) : int(r.target) },
+          { name: 'Attainment', value: pct(r.attainment) }, { name: 'Active headcount', value: int(r.headcount) }] }),
+      });
+    }
+    const elI = $('#ch-inc');
+    const roleCols = ROLE_ORDER.map((r, i) => ({ name: r, color: col(i) }));
+    legend($('#lg-inc'), roleCols);
+    if (ready(elI, ['incentives'])) {
+      const ic = rows('incentives').filter((r) => r.branch === b);
+      const years = [...new Set(ic.map((r) => r.year))].sort();
+      const cats = years.map((y) => {
+        const yr = ic.filter((r) => r.year === y);
+        return { cat: String(y), label: yr[0].year_label, by: new Map(yr.map((r) => [r.role, r])) };
+      });
+      vbars(elI, {
+        cats, stack: true, height: 260, pad: 0.45,
+        series: roleCols.map((rc) => ({ name: rc.name, color: rc.color, get: (c) => c.by.get(rc.name) ? c.by.get(rc.name).amount : 0 })),
+        yFmt: inrAxis,
+        tip: (c) => ({ head: c.label, lines: roleCols.filter((rc) => c.by.get(rc.name)).map((rc) => ({ name: rc.name, value: inr(c.by.get(rc.name).amount), color: rc.color })) }),
+      });
+    }
+    const tm = $('#tbl-att-matrix');
+    if (ok('attainment')) {
+      tm.classList.remove('dash-skeleton');
+      const at = rows('attainment');
+      const branches = BRANCH_ORDER.concat(['All']);
+      const thead = tm.tHead || tm.createTHead();
+      thead.replaceChildren();
+      const hr = thead.insertRow();
+      for (const h of ['Role', 'Measured on'].concat(branches.map((x) => x === 'All' ? 'Company' : x)).concat(['Target scale'])) {
+        const th = document.createElement('th');
+        th.scope = 'col';
+        th.textContent = h;
+        if (branches.includes(h) || h === 'Company') th.className = 'num';
+        hr.append(th);
+      }
+      const tb = tm.tBodies[0] || tm.createTBody();
+      tb.replaceChildren();
+      for (const role of ROLE_ORDER) {
+        const rr = at.filter((r) => r.role === role);
+        if (!rr.length) continue;
+        const tr = tb.insertRow();
+        tr.insertCell().textContent = role;
+        tr.insertCell().textContent = rr[0].metric;
+        for (const br of branches) {
+          const cell = rr.find((r) => r.branch === br);
+          const td = tr.insertCell();
+          td.className = 'num';
+          if (br === b && b !== 'All') td.style.fontWeight = 'var(--cds-font-weight-medium)';
+          if (!cell) { td.textContent = '—'; continue; }
+          td.setAttribute('data-source', 'attainment');
+          td.setAttribute('data-field', 'attainment');
+          td.setAttribute('data-where', whereOf({ role, branch: br }));
+          td.textContent = pct(cell.attainment);
+          if (cell.calibrated) { const s = levelStatus(cell.attainment, 0.85, 0.7); if (s) td.classList.add('kp-s-' + s); }
+          else td.style.color = 'var(--color-fg-muted)';
+        }
+        const sc = tr.insertCell();
+        sc.textContent = rr[0].calibrated ? 'In scale' : 'Out of scale';
+        if (!rr[0].calibrated) sc.classList.add('kp-s-warn');
+      }
+    } else {
+      tm.classList.toggle('dash-skeleton', dash.data('attainment').status === 'loading');
+    }
+  }
+
+  // ------------------------------------------------------------ NOTES
+  function drawNotes() {
+    const tbl = $('#tbl-dq');
+    if (!tableState(tbl, 'data_quality')) return;
+    table(tbl, rows('data_quality'), [
+      { field: 'check', label: 'Issue', wrap: true },
+      { field: 'table', label: 'Table' },
+      { field: 'rows', label: 'Rows', num: true, fmt: int },
+      { field: 'amount', label: 'Amount', num: true, fmt: inr },
+      { field: 'impact', label: 'What it means', wrap: true },
+    ], { redraw: drawNotes });
+  }
+
+  // ------------------------------------------------------------ tabs, branch picker, links
+  const DRAW = { overview: drawOverview, sales: drawSales, installation: drawInstallation, service: drawService, people: drawPeople, notes: drawNotes };
+  const TABS = Object.keys(DRAW);
+  let current = 'overview';
+
+  function drawAll() {
+    fillAuto($('#kp-head'));
+    const sel = $('#kp-branch');
+    const sc = dash.data('branch_scorecard');
+    const names = sc.status === 'ok' ? sc.data.map((r) => r.branch).filter((x) => x !== 'All') : [];
+    if (sel.options.length !== names.length + 1) {
+      sel.replaceChildren(new Option('All branches', 'All'), ...names.map((n) => new Option(n, n)));
+    }
+    sel.value = branch();
+    DRAW[current]();
+  }
+
+  function show(tab, link) {
+    current = tab;
+    for (const t of TABS) {
+      $('#' + t).hidden = t !== tab;
+      const btn = $('#tab-' + t);
+      btn.setAttribute('aria-selected', String(t === tab));
+      btn.tabIndex = t === tab ? 0 : -1;
+    }
+    if (link !== false) dash.setLink(tab);
+    drawAll();
+  }
+
+  $('#kp-branch').addEventListener('change', (e) => dash.setParams({ branch: e.target.value || 'All' }));
+  for (const t of TABS) $('#tab-' + t).addEventListener('click', () => show(t));
+  $('#kp-tabs').addEventListener('keydown', (e) => {
+    const i = TABS.indexOf(current);
+    let n = null;
+    if (e.key === 'ArrowRight') n = TABS[(i + 1) % TABS.length];
+    if (e.key === 'ArrowLeft') n = TABS[(i - 1 + TABS.length) % TABS.length];
+    if (e.key === 'Home') n = TABS[0];
+    if (e.key === 'End') n = TABS[TABS.length - 1];
+    if (n) { e.preventDefault(); show(n); $('#tab-' + n).focus(); }
+  });
+  for (const id of ['q-salespeople', 'q-vendors', 'q-ro-open', 'q-techs']) $('#' + id).addEventListener('input', () => DRAW[current]());
+
+  // Open the tab (or element inside a tab) the link names.
+  const hash = decodeURIComponent(location.hash.slice(1));
+  let target = null;
+  if (TABS.includes(hash)) current = hash;
+  else if (hash) {
+    const el = document.getElementById(hash);
+    const page = el && el.closest('.kp-page');
+    if (page) { current = page.id; target = el; }
+  }
+  show(current, false);
+  if (target) { target.scrollIntoView(); dash.setLink(target.id); }
+
+  dash.onData(drawAll);
+})();
+</script>
